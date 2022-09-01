@@ -1,26 +1,40 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@tailwind base;
+@tailwind components;
 
-* {
-  box-sizing: border-box;
-}
+@layer base {
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply  font-bold
   }
-  body {
-    color: white;
-    background: black;
+  h1{
+    @apply text-4xl md:text-6xl
+  }
+  h2{
+    @apply text-2xl md:text-5xl
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }
+
+.input{
+  @apply p-2 border-2 border-gray-200 text-lg font-light focus:outline-none hover:border-gray-400 hover:transition-colors 
+  
+}
+.text-gradient{
+  @apply bg-gradient-to-r from-pink-600 to-[#0f3c89ee] text-transparent bg-clip-text
+}
+.bg-gradient{
+  @apply bg-gradient-to-r from-pink-600 to-[#0f3c89ee]
+}
+li{ 
+  @apply  cursor-pointer
+}
+.btn{
+  @apply  shadow-gray-400 rounded-xl  bg-gradient-to-r from-[#e551e0] to-[#0f3c89ee] text-white
+}
+@tailwind utilities;
