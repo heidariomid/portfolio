@@ -5,13 +5,13 @@ import {FaGithub, FaLinkedinIn} from 'react-icons/fa';
 
 const Hero = () => {
 	return (
-		<div className='h-screen w-full text-center'>
+		<div id='hero' className='h-screen w-full text-center'>
 			<div className='max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center'>
 				<div>
-					<h1 className='text-zinc-800'>
+					<h1 className='text-zinc-600'>
 						Hi, I&apos;m <span className='text-gradient'>Omid</span>
 					</h1>
-					<h2 className='text-zinc-700  pt-4 pb-2'>A Full-Stack Developer</h2>
+					<h2 className='text-zinc-600  pt-4 pb-2'>A Full-Stack Developer</h2>
 					<p className='max-w-[70%] mx-auto text-center  text-zinc-600 text-xl py-4'>
 						I&apos;m a full-stack developer with a passion for building beautiful,
 						performant, and accessible websites.

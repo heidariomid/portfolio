@@ -1,40 +1,43 @@
-
 @tailwind base;
 @tailwind components;
-
+html {
+	scroll-behavior: smooth;
+}
 @layer base {
-
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply  font-bold
-  }
-  h1{
-    @apply text-4xl md:text-6xl
-  }
-  h2{
-    @apply text-2xl md:text-5xl
-  }
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-bold;
+	}
+	h1 {
+		@apply text-4xl md:text-6xl;
+	}
+	h2 {
+		@apply text-2xl md:text-5xl;
+	}
+	input[type='number']::-webkit-inner-spin-button,
+	input[type='number']::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
 }
 
-.input{
-  @apply p-2 border-2 border-gray-200 text-lg font-light focus:outline-none hover:border-gray-400 hover:transition-colors 
-  
+.input {
+	@apply p-2 border-2 border-gray-200 text-lg font-light focus:outline-none hover:border-gray-400 hover:transition-colors;
 }
-.text-gradient{
-  @apply bg-gradient-to-r from-pink-600 to-[#0f3c89ee] text-transparent bg-clip-text
+.text-gradient {
+	@apply bg-gradient-to-r from-pink-600 to-[#0f3c89ee] text-transparent bg-clip-text;
 }
-.bg-gradient{
-  @apply bg-gradient-to-r from-pink-600 to-[#0f3c89ee]
+.bg-gradient {
+	@apply bg-gradient-to-r from-pink-700 to-[#0f3c89ee];
 }
-li{ 
-  @apply  cursor-pointer
+li {
+	@apply cursor-pointer;
 }
-.btn{
-  @apply  shadow-gray-400 rounded-xl  bg-gradient-to-r from-[#e551e0] to-[#0f3c89ee] text-white
+.btn {
+	@apply shadow-gray-400 rounded-xl  bg-gradient-to-r from-[#e551e0] to-[#0f3c89ee] text-white;
 }
 @tailwind utilities;
