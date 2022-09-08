@@ -1,13 +1,32 @@
 import Image from 'next/image';
 import React from 'react';
 import MeImg from '../../public/assets/images/omid-heidari.jpeg';
+import {motion} from 'framer-motion';
+import {useStateValue} from '../../store/Context';
+
 const About = () => {
+	const [state] = useStateValue();
+	const {isDark} = state.theme;
+
 	return (
-		<div id='about' className='w-full   p-2 mb-[200px] md:mb-[400px]  flex items-center py-16'>
-			<div className='max-w-[1240px] mx-auto md:grid grid-cols-3 gap-8 '>
-				<div className='col-span-2'>
-					<h2 className='tracking-widest text-zinc-700 px-10'>About Me</h2>
-					<p className=' text-zinc-600 text-xl py-4 text-justify leading-loose px-10'>
+		<div
+			id='about'
+			className='snap-start  w-full h-screen p-2 mb-[200px] md:mb-[400px]  flex items-center justify-center '
+		>
+			<motion.div className=' max-w-[1240px] mx-auto md:grid grid-cols-3 gap-8 '>
+				<motion.div className='col-span-2 '>
+					<motion.h2
+						initial={{opacity: 0, x: -400}}
+						whileInView={{opacity: 1, x: 0}}
+						transition={{
+							duration: 1.2,
+							ease: 'easeInOut',
+						}}
+						className='tracking-widest text-zinc-700 px-10 uppercase'
+					>
+						About Me
+					</motion.h2>
+					<p className=' text-zinc-600 text-xl py-4 text-justify leading-loose px-10 '>
 						I am a software engineer with a passion for building web applications. I
 						have a background in computer science and have been working in the industry
 						for over 5 years. I have experience working with a variety of technologies
@@ -28,19 +47,27 @@ const About = () => {
 						technologies and languages. I am always looking to improve my skills and
 						knowledge.
 					</p>
-				</div>
-				<div className='bg-clip-content bg-cover md:p-[15px] m-[45px] md:m-0 md:border-4 '>
-					<div className='relative  md:h-full w-full  h-96  '>
+				</motion.div>
+				<motion.div className='bg-clip-content bg-cover md:p-[15px] m-[45px]  border-gray-200 md:m-0 md:border-4 animate-wiggl ease-in-out duration-1000'>
+					<motion.div
+						className='relative  md:h-full w-full  h-96 '
+						initial={{opacity: 0, scale: 0.6}}
+						whileInView={{opacity: 1, scale: 1}}
+						transition={{
+							duration: 1.2,
+							ease: 'easeIn',
+						}}
+					>
 						<Image
-							className='absolute'
+							className='absolute '
 							src={MeImg}
 							alt='Profile'
 							layout='fill'
 							objectFit='cover'
 						/>
-					</div>
-				</div>
-			</div>
+					</motion.div>
+				</motion.div>
+			</motion.div>
 		</div>
 	);
 };

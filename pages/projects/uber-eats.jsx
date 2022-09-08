@@ -4,17 +4,16 @@ import uberEatsImg from '../../public/assets/images/projects/uber-eats.jpeg';
 
 const UberEats = () => {
 	return (
-		<div className='w-full '>
-			<div className='w-screen h-[30vh] lg:h-[40vh] relative'>
-				<div className='absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/70 z-10 '>
-					<Image src={uberEatsImg} alt='uber-eats' layout='fill' objectFit='cover' />
+		<div className='w-full  '>
+			<div className='py-10'></div>
+			<div className='w-full h-[30vh] lg:h-[40vh] relative  '>
+				<Image src={uberEatsImg} alt='uber-eats' layout='fill' objectFit='cover' />
 
-					<div className='absolute top-[75%] left-[50%] p-10 right-[50%] w-10/12 translate-x-[-50%] translate-y-[-50%] max-w-[1240px] text-white bg-gradient-to-r from-pink-700 to-[#0f3c89ee]/20 '>
-						<h1 className='py-2 md:text-4xl lg:text-5xl'>Uber Eats</h1>
-						<h2 className='py-2 md:text-3xl lg:text-4xl'>
-							React JS | Nest JS | GraphQL | Tailwind{' '}
-						</h2>
-					</div>
+				<div className='absolute top-[85%] left-[0%] px-20 py-8 right-[0%] w-10/12 translate-x-[0%] translate-y-[-50%] max-w-[1240px] text-white bg-gradient '>
+					<h1 className='mb-4 md:text-4xl lg:text-5xl'>Uber Eats</h1>
+					<h2 className=' md:text-3xl lg:text-4xl'>
+						React JS | Nest JS | GraphQL | Tailwind{' '}
+					</h2>
 				</div>
 			</div>
 			<div className='max-w-[1240px] mx-auto h-full  p-2 grid md:grid-cols-5  mt-4  gap-8 pt-8'>

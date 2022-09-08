@@ -2,7 +2,9 @@
 @tailwind components;
 html {
 	scroll-behavior: smooth;
+	/* background-color: #1c7bce; */
 }
+
 @layer base {
 	h1,
 	h2,
@@ -29,15 +31,15 @@ html {
 	@apply p-2 border-2 border-gray-200 text-lg font-light focus:outline-none hover:border-gray-400 hover:transition-colors;
 }
 .text-gradient {
-	@apply bg-gradient-to-r from-pink-600 to-[#0f3c89ee] text-transparent bg-clip-text;
+	@apply bg-gradient-to-br from-indigo-600 via-violet-500 to-fuchsia-500  text-transparent bg-clip-text;
 }
 .bg-gradient {
-	@apply bg-gradient-to-r from-pink-700 to-[#0f3c89ee];
+	@apply bg-gradient-to-bl from-indigo-600 via-violet-500 to-fuchsia-500;
 }
 li {
 	@apply cursor-pointer;
 }
 .btn {
-	@apply shadow-gray-400 rounded-xl  bg-gradient-to-r from-[#e551e0] to-[#0f3c89ee] text-white;
+	@apply shadow-gray-400 rounded-xl  bg-gradient-to-bl from-indigo-600 via-violet-500 to-fuchsia-500 text-white;
 }
 @tailwind utilities;

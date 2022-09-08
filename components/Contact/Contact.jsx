@@ -6,11 +6,26 @@ import {BsFillPersonLinesFill} from 'react-icons/bs';
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa';
 import {HiOutlineChevronDoubleUp} from 'react-icons/hi';
 import callImg from '../../public/assets/images/projects/telephone.jpeg';
+import {motion} from 'framer-motion';
+
 const Contact = () => {
 	return (
-		<div id='contact' className='w-full lg:h-[1000px]  p-2 '>
-			<div className='max-w-[1240px] mx-auto px-2 py-16 '>
-				<h2 className='tracking-widest text-zinc-700 px-10 pb-10'>Contact</h2>
+		<div
+			id='contact'
+			className='snap-start  w-full h-screen p-2 mb-[200px] md:mb-[400px]  flex items-center justify-center '
+		>
+			<motion.div className='max-w-[1240px] mx-auto px-2 pb-60 '>
+				<motion.h2
+					initial={{opacity: 0, x: -400}}
+					whileInView={{opacity: 1, x: 0}}
+					transition={{
+						duration: 1.2,
+						ease: 'easeInOut',
+					}}
+					className='tracking-widest text-zinc-700  pb-24 uppercase'
+				>
+					Contacts
+				</motion.h2>{' '}
 				<div className='grid lg:grid-cols-4 gap-8 '>
 					<div className='col-span-3 lg:col-span-2 w-full h-full shadow-md shadow-gray-400 lg:p-4 bg-gray-50'>
 						<div className='p-4 h-full'>
@@ -106,14 +121,14 @@ const Contact = () => {
 						</div>
 					</div>
 				</div>
-				<div className='flex justify-center py-24'>
-					<Link href={'/'}>
+				<div className='flex justify-center  mt-48'>
+					<Link href={'/#hero'}>
 						<div className='rounded-full shadow-gray-400 shadow-md p-3  cursor-pointer hover:scale-105 ease-in duration-500 '>
-							<HiOutlineChevronDoubleUp size={32} />
+							<HiOutlineChevronDoubleUp size={36} />
 						</div>
 					</Link>
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 };

@@ -1,11 +1,25 @@
 import Image from 'next/image';
 import React from 'react';
+import {motion} from 'framer-motion';
 
 const Skills = () => {
 	return (
-		<div id='skills' className='w-full mb-[200px] md:mb-[400px] p-2 '>
-			<div className='max-w-[1240px] mx-auto flex flex-col h-full lg:h-[760px]  justify-center '>
-				<h2 className='tracking-widest text-zinc-700 px-10 pb-10'>Skills</h2>
+		<motion.div
+			id='skills'
+			className='snap-start  w-full h-screen p-2 mb-[200px] md:mb-[400px]  flex items-center justify-center'
+		>
+			<motion.div className='max-w-[1240px] mx-auto flex flex-col h-full  justify-center '>
+				<motion.h2
+					initial={{opacity: 0, x: -400}}
+					whileInView={{opacity: 1, x: 0}}
+					transition={{
+						duration: 1.2,
+						ease: 'easeInOut',
+					}}
+					className='tracking-widest text-zinc-700  pb-24 uppercase'
+				>
+					Skills
+				</motion.h2>
 				<div className='max-w-[1240px] mx-auto grid md:grid-cols-2 md:gap-x-8 lg:grid-cols-4  lg:gap-x-14 gap-y-16 '>
 					<div className='p-6 shadow-md rounded-lg hover:scale-105 ease-in duration-300 relative'>
 						<div className='bg-green-700 text-white absolute top-0 h-full left-0    text-center'>
@@ -267,8 +281,8 @@ const Skills = () => {
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</motion.div>
+		</motion.div>
 	);
 };
 
