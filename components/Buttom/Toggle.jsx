@@ -10,7 +10,7 @@ function classNames(...classes) {
 }
 
 const Toggle = () => {
-	const [enabled, setEnabled] = useState(false);
+	const [enabled, setEnabled] = useState(true);
 	const [state, dispatch] = useStateValue();
 
 	const {isDark} = state.theme;
@@ -26,7 +26,7 @@ const Toggle = () => {
 			checked={enabled}
 			onChange={themeHandler}
 			className={classNames(
-				enabled ? 'bg-zinc-400/80' : 'bg-purple-400',
+				enabled ? 'shadow-inner shadow-gray-500 bg-white ' : 'bg-purple-300',
 				'relative inline-flex items-center  flex-shrink-0 h-5 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none ',
 			)}
 		>
@@ -53,7 +53,7 @@ const Toggle = () => {
 						enabled
 							? 'opacity-100 ease-in duration-200'
 							: 'opacity-0 ease-out duration-100',
-						'absolute inset-0 h-full w-full flex items-center justify-center transition-opacity text-black bg-zinc-300 rounded-full',
+						'absolute inset-0 h-full w-full flex items-center justify-center transition-opacity text-black bg-orange-200 rounded-full',
 					)}
 					aria-hidden='true'
 				>

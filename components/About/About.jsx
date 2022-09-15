@@ -22,11 +22,17 @@ const About = () => {
 							duration: 1.2,
 							ease: 'easeInOut',
 						}}
-						className='tracking-widest text-zinc-700 px-10 uppercase'
+						className={`tracking-widest 	${
+							isDark ? 'text-white' : 'text-zinc-700'
+						} px-10 uppercase `}
 					>
 						About Me
 					</motion.h2>
-					<p className=' text-zinc-600 text-xl py-4 text-justify leading-loose px-10 '>
+					<p
+						className={` ${
+							isDark ? 'text-zinc-200' : 'text-zinc-600'
+						} text-xl py-4 text-justify leading-loose px-10 `}
+					>
 						I am a software engineer with a passion for building web applications. I
 						have a background in computer science and have been working in the industry
 						for over 5 years. I have experience working with a variety of technologies
@@ -42,13 +48,21 @@ const About = () => {
 						</a>
 						.
 					</p>
-					<p className=' text-zinc-600 text-xl py-4  leading-loose px-10'>
+					<p
+						className={` ${
+							isDark ? 'text-zinc-200' : 'text-zinc-600'
+						} text-xl py-4  leading-loose px-10`}
+					>
 						I am a self-taught developer and I am always looking to learn new
 						technologies and languages. I am always looking to improve my skills and
 						knowledge.
 					</p>
 				</motion.div>
-				<motion.div className='bg-clip-content bg-cover md:p-[15px] m-[45px]  border-gray-200 md:m-0 md:border-4 animate-wiggl ease-in-out duration-1000'>
+				<motion.div
+					className={`bg-clip-content bg-cover md:p-[15px] m-[45px]  ${
+						isDark ? 'border-zinc-700' : 'border-gray-200'
+					} md:m-0 md:border-4 ease-in-out duration-1000`}
+				>
 					<motion.div
 						className='relative  md:h-full w-full  h-96 '
 						initial={{opacity: 0, scale: 0.6}}

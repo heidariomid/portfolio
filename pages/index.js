@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import About from '../components/About/About';
-import Contact from '../components/Contact/Contact';
+import Form from '../components/Contact/Form';
 import Hero from '../components/Hero/Hero';
 import Projects from '../components/Projects/Projects';
 import Skills from '../components/Skills/Skills';
@@ -11,7 +11,7 @@ const Home = () => {
 	const {isDark} = state.theme;
 	return (
 		<div
-			className={`snap-y overflow-scroll scroll-smooth  snap-mandatory h-screen  ${
+			className={`lg:snap-y lg:overflow-scroll lg:scroll-smooth  lg:snap-mandatory h-screen  ${
 				isDark ? 'bg-black' : 'bg-white'
 			} `}
 		>
@@ -21,10 +21,10 @@ const Home = () => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Hero />
-			<About s />
+			<About />
 			<Skills />
 			<Projects />
-			<Contact />
+			<Form />
 		</div>
 	);
 };

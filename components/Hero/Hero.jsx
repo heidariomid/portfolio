@@ -4,10 +4,10 @@ import {BsFillPersonLinesFill} from 'react-icons/bs';
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa';
 import {motion} from 'framer-motion';
 import {useStateValue} from '../../store/Context';
-import MeImg from '../../public/assets/images/omid-heidari.jpeg';
+import ProfileImg from '../../public/assets/images/omid-heidari.jpeg';
 import Image from 'next/image';
 import Link from 'next/link';
-import {HiOutlineChevronDoubleDown, HiOutlineChevronDown} from 'react-icons/hi';
+import {HiOutlineChevronDown} from 'react-icons/hi';
 
 const Hero = () => {
 	const [state] = useStateValue();
@@ -33,23 +33,25 @@ const Hero = () => {
 			animate='animate'
 			exit='exit'
 			variants={variants}
-			id='hero'
+			id='home'
 			className='snap-start  w-full h-screen  mb-[200px] md:mb-[400px]  flex flex-col items-center text-center '
 		>
 			<div className='max-w-[1240px] w-full h-full mx-auto p-2 flex flex-col justify-center items-center '>
-				<div className='my-10 animate-borderWiggle border-2 bg-[#dfddd9] rounded-full px-2 pt-2 '>
+				<motion.div
+					className={`my-10 rounded-full  px-2 pt-2  animate-borderColor shadow-innerCenter  shadow-gray-400`}
+				>
 					<Image
-						className='absolute rounded-full '
-						src={MeImg}
+						className='absolute rounded-full border-2 animate-borderColor'
+						src={ProfileImg}
 						alt='Profile'
 						width={250}
 						height={250}
 					/>
-				</div>
+				</motion.div>
 				<div>
 					<h1 className={`text-5xl ${isDark ? 'text-white' : 'text-zinc-500'} `}>
 						Hi, I&apos;m{' '}
-						<span className={`${isDark ? 'text-white' : 'text-zinc-600'}`}>Omid</span>
+						<span className={`${isDark ? 'text-white' : ' text-zinc-600'}`}>Omid</span>
 					</h1>
 					<motion.h2
 						initial={{opacity: 0, y: -10}}
@@ -85,7 +87,7 @@ const Hero = () => {
 							} font-semibold `}
 						>
 							performant
-						</span>{' '}
+						</span>
 						, and{' '}
 						<span
 							className={`${
@@ -158,20 +160,24 @@ const Hero = () => {
 								},
 							}}
 							variants={item}
-							className={`rounded-full   hover:bg-zinc-300   p-3 md:p-4 cursor-pointer  mx-4 md:mx-8  ${
+							className={`rounded-full items-center justify-center hover:bg-zinc-300   p-3 md:p-4 cursor-pointer  mx-4 md:mx-8  ${
 								isDark
 									? 'text-white bg-gradient'
 									: 'bg-white text-zinc-600  shadow-gray-400 shadow-lg'
 							}  `}
 						>
-							<BsFillPersonLinesFill size={32} />
+							<span className='text-center  font-bold text-xl'>CV</span>
 						</motion.div>
 					</div>
 				</div>
 			</div>
-			<div className='flex justify-center animate-iconUpDown mb-10'>
+			<div className='flex justify-center animate-scrollDown mb-10'>
 				<Link href={'/#about'}>
-					<div className='rounded-full text-zinc-600 flex flex-col justify-center items-center   cursor-pointer '>
+					<div
+						className={`rounded-full ${
+							isDark ? 'text-white' : 'text-black'
+						} flex flex-col justify-center items-center   cursor-pointer `}
+					>
 						<span className='text-xs '>scroll down</span>
 						<HiOutlineChevronDown size={36} />
 					</div>

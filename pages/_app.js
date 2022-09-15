@@ -7,7 +7,7 @@ function MyApp({Component, pageProps}) {
 	const router = useRouter();
 	const variants = {
 		initial: {
-			opacity: 0.3,
+			opacity: 1,
 			transition: {
 				duration: 0.8,
 			},

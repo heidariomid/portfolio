@@ -16,7 +16,7 @@ const Navbar = () => {
 			<div
 				id='navbar'
 				className={` fixed w-full ${
-					isDark ? 'bg-black shadow-none' : 'shadow-md'
+					isDark ? 'bg-black shadow-none' : 'bg-white  shadow-md'
 				}  h-20  z-[100]`}
 			>
 				{/* Web Menu */}
@@ -26,7 +26,7 @@ const Navbar = () => {
 					}    `}
 				>
 					<div className='col-span-1'>
-						<Link href='/#hero'>
+						<Link href='/#home'>
 							<Image
 								className={` cursor-pointer ${isDark ? 'bg-black ' : 'bg-black'} `}
 								src='/../public/assets/images/logo.png'
@@ -43,22 +43,22 @@ const Navbar = () => {
 							} tracking-wider`}
 						>
 							<Link href='/#about'>
-								<li className=' text-xl font-light uppercase  hover:font-medium  ease-in duration-300'>
+								<li className='font-light uppercase  hover:font-bold hover:tracking-wider  ease-in duration-150'>
 									About
 								</li>
 							</Link>
 							<Link href='/#skills'>
-								<li className=' text-xl font-light uppercase  hover:font-medium  ease-in duration-300'>
+								<li className='font-light uppercase  hover:font-bold hover:tracking-wider  ease-in duration-150'>
 									Skills
 								</li>
 							</Link>
 							<Link href='/#projects'>
-								<li className=' text-xl font-light uppercase  hover:font-medium  ease-in duration-300'>
+								<li className='font-light uppercase  hover:font-bold hover:tracking-wider  ease-in duration-150'>
 									Projects
 								</li>
 							</Link>
 							<Link href='/#contact'>
-								<li className=' text-xl font-light uppercase  hover:font-medium  ease-in duration-300'>
+								<li className='font-light uppercase  hover:font-bold hover:tracking-wider  ease-in duration-150'>
 									Contact
 								</li>
 							</Link>
