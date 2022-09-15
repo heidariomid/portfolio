@@ -1,10 +1,14 @@
 {
+  "homepage": "https://omidheidari88.github.io/portfolio/",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint"
   },
@@ -13,6 +17,7 @@
     "@headlessui/react": "^1.7.0",
     "@tailwindcss/forms": "^0.5.3",
     "framer-motion": "^7.2.1",
+    "gh-pages": "^4.0.0",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
