@@ -1,6 +1,5 @@
 import React from 'react';
 import {AiOutlineMail} from 'react-icons/ai';
-import {BsFillPersonLinesFill} from 'react-icons/bs';
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa';
 import {motion} from 'framer-motion';
 import {useStateValue} from '../../store/Context';
@@ -8,7 +7,7 @@ import ProfileImg from '../../public/assets/images/omid-heidari.jpeg';
 import Image from 'next/image';
 import Link from 'next/link';
 import {HiOutlineChevronDown} from 'react-icons/hi';
-
+import resumeIcon from '../../public/assets/images/resume.svg';
 const Hero = () => {
 	const [state] = useStateValue();
 	const {isDark} = state.theme;
@@ -34,14 +33,14 @@ const Hero = () => {
 			exit='exit'
 			variants={variants}
 			id='home'
-			className='snap-start  w-full h-screen  mb-[200px] md:mb-[400px]  flex flex-col items-center text-center '
+			className='snap-start  w-full h-screen  mb-[200px] md:mb-[400px] mx-auto flex flex-col items-center text-center '
 		>
-			<div className='max-w-[1240px] w-full h-full mx-auto p-2 flex flex-col justify-center items-center '>
+			<div className='max-w-[1240px] w-full  h-full mx-auto p-2 flex flex-col justify-center items-center '>
 				<motion.div
-					className={`my-10 rounded-full  px-2 pt-2  animate-borderColor shadow-innerCenter  shadow-gray-400`}
+					className={`my-10 rounded-full mx-auto  px-2 pt-2  shadow-innerCenter  shadow-gray-400`}
 				>
 					<Image
-						className='absolute rounded-full border-2 animate-borderColor'
+						className='absolute rounded-full'
 						src={ProfileImg}
 						alt='Profile'
 						width={250}
@@ -51,7 +50,9 @@ const Hero = () => {
 				<div>
 					<h1 className={`text-5xl ${isDark ? 'text-white' : 'text-zinc-500'} `}>
 						Hi, I&apos;m{' '}
-						<span className={`${isDark ? 'text-white' : ' text-zinc-600'}`}>Omid</span>
+						<span className={` ${isDark ? 'text-white' : 'animate-textColor'}`}>
+							Omid
+						</span>
 					</h1>
 					<motion.h2
 						initial={{opacity: 0, y: -10}}
@@ -64,7 +65,7 @@ const Hero = () => {
 							isDark ? 'text-gradient' : 'text-zinc-500'
 						} tracking-wide`}
 					>
-						A <span className={`${!isDark && 'text-zinc-600'}`}>Front-End</span>{' '}
+						A <span className={`${!isDark && 'animate-textColor'}`}>Front-End</span>{' '}
 						Developer
 					</motion.h2>
 					<p
@@ -75,7 +76,7 @@ const Hero = () => {
 						I&apos;m a full-stack developer with a{' '}
 						<span
 							className={`${
-								isDark ? 'text-white  ' : 'text-zinc-600 '
+								isDark ? 'text-white  ' : 'animate-textColor '
 							} font-semibold `}
 						>
 							passion
@@ -83,7 +84,7 @@ const Hero = () => {
 						for building beautiful,{' '}
 						<span
 							className={`${
-								isDark ? 'text-white  ' : 'text-zinc-600 '
+								isDark ? 'text-white  ' : 'animate-textColor '
 							} font-semibold `}
 						>
 							performant
@@ -91,7 +92,7 @@ const Hero = () => {
 						, and{' '}
 						<span
 							className={`${
-								isDark ? 'text-white  ' : 'text-zinc-600 '
+								isDark ? 'text-white  ' : 'animate-textColor '
 							} font-semibold `}
 						>
 							accessible
@@ -160,7 +161,7 @@ const Hero = () => {
 								},
 							}}
 							variants={item}
-							className={`rounded-full items-center justify-center hover:bg-zinc-300   p-3 md:p-4 cursor-pointer  mx-4 md:mx-8  ${
+							className={`rounded-full items-center justify-center hover:bg-zinc-300    p-3 md:p-4 cursor-pointer  mx-4 md:mx-8  ${
 								isDark
 									? 'text-white bg-gradient'
 									: 'bg-white text-zinc-600  shadow-gray-400 shadow-lg'
@@ -171,10 +172,10 @@ const Hero = () => {
 					</div>
 				</div>
 			</div>
-			<div className='flex justify-center animate-scrollDown mb-10'>
+			<div className='hidden  sm:flex justify-center animate-scrollDown mb-10'>
 				<Link href={'/#about'}>
 					<div
-						className={`rounded-full ${
+						className={`rounded-full  ${
 							isDark ? 'text-white' : 'text-black'
 						} flex flex-col justify-center items-center   cursor-pointer `}
 					>
