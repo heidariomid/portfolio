@@ -12,6 +12,7 @@ module.exports = {
 			},
 			animation: {
 				borderColor: 'borderColor 4s ease-in infinite ',
+				textColor: 'textColor 4s ease-in infinite ',
 				borderWiggle: 'borderWiggle 12s ease-in-out infinite ',
 				textWiggle: 'textWiggle 5s ease-in-out infinite ',
 				iconDown: 'iconDown 4.5s ease-in-out infinite ',
@@ -34,6 +35,14 @@ module.exports = {
 					},
 					'75%': {
 						'border-color': 'rgb(67 56 202) rgb(126 34 206)',
+					},
+				},
+				textColor: {
+					'0%, 100%': {
+						color: '',
+					},
+					'50%': {
+						color: 'rgb(82 82 91)',
 					},
 				},
 				borderWiggle: {
