@@ -2,7 +2,7 @@ import {FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaTwitter} from 'react-icons/
 import Footer from '../Footer/Footer';
 import ContactForm from './FormInputs';
 import FormBackground from './FormBgAbstract';
-import {useStateValue} from '../../store/Context';
+import useStateValue from '../../store/useContext';
 import {motion} from 'framer-motion';
 
 // https://img.freepik.com/free-photo/textured-mulberry-paper_53876-92967.jpg?w=2000&t=st=1663094862~exp=1663095462~hmac=e8266a973302da4ce76f39c3970cd6105cd206559008d9730c32372e06243348

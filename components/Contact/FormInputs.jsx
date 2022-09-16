@@ -1,7 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
-import {useStateValue} from '../../store/Context';
-import {motion} from 'framer-motion';
+import useStateValue from '../../store/useContext';
 
 const ContactForm = () => {
 	const form = useRef();

@@ -6,7 +6,7 @@ import sampleImg from '../../public/assets/images/projects/uber-eats.jpeg';
 import instaImg from '../../public/assets/images/projects/Final_ReactJS_Masterclass.png';
 import prismaImg from '../../public/assets/images/projects/prisma2_9xLkR2U.png';
 import {motion} from 'framer-motion';
-import {useStateValue} from '../../store/Context';
+import useStateValue from '../../store/useContext';
 import Project from './Project';
 
 const Projects = () => {

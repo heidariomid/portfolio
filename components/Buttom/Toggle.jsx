@@ -2,7 +2,7 @@
 import {useState} from 'react';
 import {Switch} from '@headlessui/react';
 import {FaMoon} from 'react-icons/fa';
-import {useStateValue} from '../../store/Context';
+import useStateValue from '../../store/useContext';
 import {actions} from '../../store/actions';
 
 function classNames(...classes) {

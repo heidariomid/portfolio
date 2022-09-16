@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import {motion} from 'framer-motion';
 import uberEatsMockImg from '../../public/assets/images/projects/uber-eats/mockup-uber-eats.png';
-import {useStateValue} from '../../store/Context';
+import useStateValue from '../../store/useContext';
 
 const Project = () => {
 	const [state] = useStateValue();

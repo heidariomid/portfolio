@@ -1,4 +1,4 @@
-import {useStateValue} from '../../store/Context';
+import useStateValue from '../../store/useContext';
 
 /* This example requires Tailwind CSS v2.0+ */
 const navigation = {

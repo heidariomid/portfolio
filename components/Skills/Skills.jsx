@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import {motion} from 'framer-motion';
-import {useStateValue} from '../../store/Context';
+import useStateValue from '../../store/useContext';
 
 const Skills = () => {
 	const [state] = useStateValue();
