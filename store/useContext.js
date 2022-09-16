@@ -1,5 +1,5 @@
 import {useContext} from 'react';
-import {StateContext} from './Context';
+import {StateContext} from './context';
 
 const useStateValue = () => useContext(StateContext);
 
