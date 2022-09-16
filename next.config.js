@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
@@ -6,8 +7,7 @@ const nextConfig = {
 		loader: 'akamai',
 		path: '',
 	},
-	basePath: '/portfolio',
-	assetPrefix: 'portfolio',
+	assetPrefix: isProd ? '/portfolio' : undefined,
 };
 
 module.exports = nextConfig;
