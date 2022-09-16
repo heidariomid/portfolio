@@ -2,7 +2,7 @@ import Navbar from '../components/Navbar/Navbar';
 import '../styles/globals.css';
 import {motion} from 'framer-motion';
 import {useRouter} from 'next/router';
-import {StateProvider} from '../store/Context';
+import {StateProvider} from '../store/context';
 function MyApp({Component, pageProps}) {
 	const router = useRouter();
 	const variants = {
