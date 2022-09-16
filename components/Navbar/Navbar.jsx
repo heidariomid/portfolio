@@ -5,7 +5,7 @@ import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai';
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa';
 import {BsFillPersonLinesFill} from 'react-icons/bs';
 import Toggle from '../Buttom/Toggle';
-import {useStateValue} from '../../store/Context';
+import useStateValue from '../../store/useContext';
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
 	const [state] = useStateValue();

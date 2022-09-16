@@ -2,7 +2,7 @@ import React from 'react';
 import {AiOutlineMail} from 'react-icons/ai';
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa';
 import {motion} from 'framer-motion';
-import {useStateValue} from '../../store/Context';
+import useStateValue from '../../store/useContext';
 import ProfileImg from '../../public/assets/images/omid-heidari.jpeg';
 import Image from 'next/image';
 import Link from 'next/link';

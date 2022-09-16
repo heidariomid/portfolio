@@ -2,8 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import MeImg from '../../public/assets/images/omid-heidari.jpeg';
 import {motion} from 'framer-motion';
-import {useStateValue} from '../../store/Context';
-
+import useStateValue from '../../store/useContext';
 const About = () => {
 	const [state] = useStateValue();
 	const {isDark} = state.theme;
