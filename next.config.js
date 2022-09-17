@@ -5,9 +5,10 @@ const nextConfig = {
 	swcMinify: true,
 	images: {
 		loader: 'akamai',
-		path: '',
+		path: '/',
 	},
 	assetPrefix: isProd ? '/portfolio' : undefined,
+	basePath: isProd ? '/portfolio' : undefined,
 };
 
 module.exports = nextConfig;

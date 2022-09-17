@@ -131,7 +131,7 @@ const Project = () => {
 						<div className='flex py-10 pl-14 flex-col   '>
 							<div className='mb-6 animate-iconDown '>
 								<Image
-									src='/../public/assets/images/skills/graphql.png'
+									src={require('../../public/assets/images/skills/graphql.png')}
 									alt='GraphQl'
 									width={'64px'}
 									height={'64px'}
@@ -139,7 +139,7 @@ const Project = () => {
 							</div>
 							<div className='mb-6 animate-iconRight'>
 								<Image
-									src='/../public/assets/images/skills/react.png'
+									src={require('../../public/assets/images/skills/react.png')}
 									alt='GraphQl'
 									width={'64px'}
 									height={'64px'}
@@ -147,7 +147,7 @@ const Project = () => {
 							</div>
 							<div className='mb-6 animate-iconUp'>
 								<Image
-									src='/../public/assets/images/skills/nestjs.png'
+									src={require('../../public/assets/images/skills/nestjs.png')}
 									alt='GraphQl'
 									width={'64px'}
 									height={'64px'}
@@ -155,7 +155,7 @@ const Project = () => {
 							</div>
 							<div className='mb-6 animate-iconLeft '>
 								<Image
-									src='/../public/assets/images/skills/typescript.png'
+									src={require('../../public/assets/images/skills/typescript.png')}
 									alt='GraphQl'
 									width={'64px'}
 									height={'64px'}

@@ -58,7 +58,7 @@ const Skills = () => {
 						<div className='grid grid-cols-2 gap-4 justify-center items-center '>
 							<div className='pl-5 '>
 								<Image
-									src='/../public/assets/images/skills/react.png'
+									src={require('../../public/assets/images/skills/react.png')}
 									alt='ReactJs'
 									width={'64px'}
 									height={'64px'}
@@ -87,7 +87,7 @@ const Skills = () => {
 						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
 							<div className='m-auto'>
 								<Image
-									src='/../public/assets/images/skills/redux.png'
+									src={require('../../public/assets/images/skills/redux.png')}
 									alt='react-redux'
 									width={'64px'}
 									height={'64px'}
@@ -116,7 +116,7 @@ const Skills = () => {
 						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
 							<div className='m-auto'>
 								<Image
-									src='/../public/assets/images/skills/graphql.png'
+									src={require('../../public/assets/images/skills/graphql.png')}
 									alt='GraphQl'
 									width={'64px'}
 									height={'64px'}
@@ -145,7 +145,7 @@ const Skills = () => {
 						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
 							<div className='m-auto'>
 								<Image
-									src='/../public/assets/images/skills/tailwind.png'
+									src={require('../../public/assets/images/skills/tailwind.png')}
 									alt='tailwind'
 									width={'64px'}
 									height={'64px'}
@@ -175,7 +175,7 @@ const Skills = () => {
 						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
 							<div className='m-auto'>
 								<Image
-									src='/../public/assets/images/skills/react-native.png'
+									src={require('../../public/assets/images/skills/react-native.png')}
 									alt='React Native'
 									width={'94px'}
 									height={'64px'}
@@ -207,7 +207,7 @@ const Skills = () => {
 							<div className='ml-5'>
 								<Image
 									className='bg-white rounded-full'
-									src='/../public/assets/images/skills/next-js.png'
+									src={require('../../public/assets/images/skills/next-js.png')}
 									alt='NextJs'
 									width={'64px'}
 									height={'64px'}
@@ -237,7 +237,7 @@ const Skills = () => {
 						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
 							<div className='m-auto'>
 								<Image
-									src='/../public/assets/images/skills/typeScript.png'
+									src={require('../../public/assets/images/skills/typescript.png')}
 									alt='TypeScript'
 									width={'64px'}
 									height={'64px'}
@@ -268,7 +268,7 @@ const Skills = () => {
 						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
 							<div className='m-auto'>
 								<Image
-									src='/../public/assets/images/skills/node.png'
+									src={require('../../public/assets/images/skills/node.png')}
 									alt='NodeJs'
 									width={'64px'}
 									height={'64px'}
@@ -300,7 +300,7 @@ const Skills = () => {
 							<div className='m-auto'>
 								<Image
 									className='bg-white rounded-full'
-									src='/../public/assets/images/skills/wordPress.png'
+									src={require('../../public/assets/images/skills/wordPress.png')}
 									alt='WordPress'
 									width={'64px'}
 									height={'64px'}
@@ -392,7 +392,7 @@ const Skills = () => {
 						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
 							<div className='m-auto'>
 								<Image
-									src='/../public/assets/images/skills/adobe-photoshop.png'
+									src={require('../../public/assets/images/skills/adobe-photoshop.png')}
 									alt='adobe-photoshop'
 									width={'64px'}
 									height={'64px'}
@@ -422,7 +422,7 @@ const Skills = () => {
 						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
 							<div className='m-auto'>
 								<Image
-									src='/../public/assets/images/skills/adobe-ilustrator.png'
+									src={require('../../public/assets/images/skills/adobe-ilustrator.png')}
 									alt='adobe-illustrator'
 									width={'64px'}
 									height={'64px'}
@@ -453,7 +453,7 @@ const Skills = () => {
 						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
 							<div className='m-auto'>
 								<Image
-									src='/../public/assets/images/skills/nestjs.png'
+									src={require('../../public/assets/images/skills/nestjs.png')}
 									alt='nestjs'
 									width={'64px'}
 									height={'64px'}
