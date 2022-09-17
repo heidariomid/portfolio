@@ -29,7 +29,7 @@ const Navbar = () => {
 						<Link href='/#home'>
 							<Image
 								className={` cursor-pointer ${isDark ? 'bg-black ' : 'bg-black'} `}
-								src='/../public/assets/images/logo.png'
+								src={require('../../public/assets/images/logo.png')}
 								width={80}
 								height={80}
 								alt='logo'
