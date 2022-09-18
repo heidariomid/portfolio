@@ -33,22 +33,25 @@ const Hero = () => {
 			exit='exit'
 			variants={variants}
 			id='home'
-			className='snap-start  w-full h-screen  mb-[200px] md:mb-[400px] mx-auto flex flex-col items-center text-center '
+			className='snap-start  w-full h-screen  md:mb-[400px] mx-auto flex flex-col items-center text-center '
 		>
 			<div className='max-w-[1240px] w-full  h-full mx-auto p-2 flex flex-col justify-center items-center '>
 				<motion.div
-					className={`my-10 rounded-full mx-auto  px-2 pt-2  shadow-innerCenter  shadow-gray-400`}
+					className={`my-10 rounded-full mx-auto block  px-2 p-2 w-48 md:w-64  shadow-innerCenter  shadow-gray-400`}
 				>
 					<Image
 						className='absolute rounded-full'
 						src={ProfileImg}
 						alt='Profile'
-						width={250}
-						height={250}
+						layout='responsive'
 					/>
 				</motion.div>
 				<div>
-					<h1 className={`text-5xl ${isDark ? 'text-white' : 'text-zinc-500'} `}>
+					<h1
+						className={`text-3xl md:text-5xl ${
+							isDark ? 'text-white' : 'text-zinc-500'
+						} `}
+					>
 						Hi, I&apos;m{' '}
 						<span className={` ${isDark ? 'text-white' : 'animate-textColor'}`}>
 							Omid
@@ -69,7 +72,7 @@ const Hero = () => {
 						Developer
 					</motion.h2>
 					<p
-						className={`max-w-[70%] mx-auto text-center  text-xl py-4 ${
+						className={`max-w-[70%] mx-auto text-center  md:text-xl py-4 ${
 							isDark ? 'text-zinc-300' : 'text-zinc-500'
 						}`}
 					>
@@ -116,7 +119,17 @@ const Hero = () => {
 									: 'bg-white text-zinc-600  shadow-gray-400 shadow-lg'
 							}  `}
 						>
-							<FaLinkedinIn size={32} />
+							{/* <FaLinkedinIn size={32} /> */}
+							<svg
+								className='h-6 w-6 md:h-8 md:w-8'
+								stroke='currentColor'
+								fill='currentColor'
+								strokeWidth='0'
+								viewBox='0 0 448 512'
+								xmlns='http://www.w3.org/2000/svg'
+							>
+								<path d='M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z'></path>
+							</svg>
 						</motion.div>
 						<motion.div
 							whileHover={{
@@ -133,7 +146,7 @@ const Hero = () => {
 									: 'bg-white text-zinc-600  shadow-gray-400 shadow-lg'
 							}  `}
 						>
-							<FaGithub size={32} />
+							<FaGithub className='h-6 w-6 md:h-8 md:w-8' />
 						</motion.div>
 						<motion.div
 							variants={item}
@@ -150,7 +163,7 @@ const Hero = () => {
 									: 'bg-white text-zinc-600  shadow-gray-400 shadow-lg'
 							}  `}
 						>
-							<AiOutlineMail size={32} />
+							<AiOutlineMail className='h-6 w-6 md:h-8 md:w-8' />
 						</motion.div>
 						<motion.div
 							whileHover={{
@@ -167,7 +180,9 @@ const Hero = () => {
 									: 'bg-white text-zinc-600  shadow-gray-400 shadow-lg'
 							}  `}
 						>
-							<span className='text-center  font-bold text-xl'>CV</span>
+							<span className='text-center h-6 w-6 md:h-8 md:w-8 font-bold md:text-xl'>
+								CV
+							</span>
 						</motion.div>
 					</div>
 				</div>

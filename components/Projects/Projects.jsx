@@ -25,16 +25,16 @@ const Projects = () => {
 						duration: 1.2,
 						ease: 'easeInOut',
 					}}
-					className={`tracking-widest ${
+					className={`tracking-widest 	${
 						isDark ? 'text-white' : 'text-zinc-700'
-					}  pb-12 uppercase`}
+					} px-10 md:px-0 md:pb-12 uppercase `}
 				>
 					Projects
 				</motion.h2>
-				<div className=' grid md:grid-cols-3  gap-x-8 gap-y-10'>
+				<div className=' grid md:grid-cols-3 grid-cols-1  md:gap-x-8 md:gap-y-10'>
 					<Project />
 
-					<div className='relative flex justify-center items-center h-auto w-full  group hover:bg-zinc-800 hover:ease-in hover:duration-200 '>
+					<div className='relative flex justify-center items-center h-full w-full  group hover:bg-zinc-800 hover:ease-in hover:duration-200 '>
 						<div className='bg-purple-800 text-white absolute top-0 h-full left-0  w-9 justify-center items-center flex flex-col  text-center'>
 							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
 								Advanced

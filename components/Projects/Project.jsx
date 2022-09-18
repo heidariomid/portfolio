@@ -37,27 +37,30 @@ const Project = () => {
 				isDark && 'shadow-center shadow-purple-400'
 			} bg-black `}
 		>
-			<div className='bg-purple-800 text-white absolute top-0 h-full left-0  w-9 justify-center items-center flex flex-col  text-center'>
-				<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
-					Advanced
-				</span>
-			</div>
-			<div className='grid grid-cols-2'>
-				<div className='my-6  flex flex-col justify-between items-center'>
-					<h1 className='text-[70px] tracking-wider text-white'>
+			<div className='grid md:grid-cols-2 '>
+				{/* <div className='bg-purple-800 text-white absolute top-0 h-full md:text-2xl left-0  w-9 justify-center items-center flex flex-col  text-center'>
+					<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+						Advanced
+					</span>
+				</div> */}
+				<div className='md:mb-6 mt-6   flex flex-col justify-between  items-center'>
+					<h1 className='md:text-[70px]  tracking-wider text-white'>
 						Uber <span className='text-green-500'>Eats</span>
 					</h1>
 					<div className=''>
 						<div
-							className=' m-4 ml-20 leading-10 flex flex-col  w-full '
+							className=' p-4 md:ml-20 md:leading-10 flex flex-col  w-full '
 							style={{fontFamily: 'Raleway'}}
 						>
-							<div>
-								<motion.span className='text-2xl mr-2 mb-4 ' variants={title}>
+							<div className=''>
+								<motion.span
+									className='md:text-2xl text-lg md:mr-2 mb-4 '
+									variants={title}
+								>
 									This was a project from
 								</motion.span>
 								<motion.span
-									className='text-2xl mr-2 mb-4 text-center text-red-700'
+									className='md:text-2xl text-lg mr-2 mb-4 text-center text-red-700'
 									variants={title}
 								>
 									<a className='text-green-500' href=''>
@@ -66,59 +69,120 @@ const Project = () => {
 									and
 								</motion.span>
 								<motion.span
-									className='text-2xl mr-2 mb-4 text-center'
+									className='md:text-2xl text-lg mr-2 mb-4 text-center'
 									variants={title}
 								>
 									i added some extra features and took almost{' '}
 									<span className='text-green-500'>two months </span> to finish.
 								</motion.span>
-								<motion.span className='text-2xl mt-4' variants={title}>
+								<motion.span className='md:text-2xl text-lg mt-4' variants={title}>
 									features that i added <span className='text-xl'>:</span>
 								</motion.span>
 							</div>
 						</div>
-						<div className='w-full ml-8' style={{fontFamily: 'Raleway'}}>
-							<motion.li variants={item} className='text-white text-lg my-2 ml-12'>
-								improve UI/UX for each profile (user, driver, restaurant)
-							</motion.li>
+						<div className='grid grid-cols-3'>
+							<div className=' col-span-2 w-full '>
+								<div className='w-full md:ml-8 ' style={{fontFamily: 'Raleway'}}>
+									<motion.li
+										variants={item}
+										className='text-white md:text-lg my-2 md:ml-12 ml-5'
+									>
+										improve UI/UX{' '}
+										<span className='hidden md:flex'>
+											for each profile (user, driver, restaurant)
+										</span>
+									</motion.li>
+								</div>
+								<div
+									className='grid md:grid-cols-2 w-full md:ml-8 md:text-lg'
+									style={{fontFamily: 'Raleway'}}
+								>
+									<motion.li
+										variants={item}
+										className='text-white my-2 md:ml-12 ml-5 '
+									>
+										payment gateway
+									</motion.li>
+									<motion.li
+										variants={item}
+										className='text-white md:text-md my-2 md:ml-12 ml-5'
+									>
+										local storage persistence
+									</motion.li>
+									<motion.li
+										variants={item}
+										className='text-white md:text-md my-2 md:ml-12 ml-5'
+									>
+										checkout page
+									</motion.li>
+									<motion.li
+										variants={item}
+										className='text-white my-2 md:ml-12 ml-5'
+									>
+										light/dark Mode
+									</motion.li>
+									<motion.li
+										variants={item}
+										className='text-white my-2 md:ml-12 ml-5'
+									>
+										order history
+									</motion.li>
+									<motion.li
+										variants={item}
+										className='text-white my-2 md:ml-12 ml-5'
+									>
+										cart system
+									</motion.li>
+									<motion.li
+										variants={item}
+										className='text-white my-2 md:ml-12 ml-5'
+									>
+										protected pages
+									</motion.li>
+									<motion.li
+										variants={item}
+										className='text-white my-2 md:ml-12 ml-5'
+									>
+										etc...
+									</motion.li>
+								</div>
+							</div>
+
+							<div className='flex py-10 pl-8 flex-col   '>
+								<div className='mb-6 w-[54px] h-[54px] md:w-[64px] md:h-[64px]  animate-iconDown '>
+									<Image
+										src={require('../../public/assets/images/skills/graphql.png')}
+										alt='GraphQl'
+										layout='responsive'
+									/>
+								</div>
+								<div className='mb-6 w-[54px] h-[54px] md:w-[64px] md:h-[64px] animate-iconRight'>
+									<Image
+										src={require('../../public/assets/images/skills/react.png')}
+										alt='GraphQl'
+										layout='responsive'
+									/>
+								</div>
+								<div className='mb-6 w-[54px] h-[54px] md:w-[64px] md:h-[64px] animate-iconUp'>
+									<Image
+										src={require('../../public/assets/images/skills/nestjs.png')}
+										alt='GraphQl'
+										layout='responsive'
+									/>
+								</div>
+								<div className='mb-6 w-[54px] h-[54px] md:w-[64px] md:h-[64px] animate-iconLeft '>
+									<Image
+										src={require('../../public/assets/images/skills/typescript.png')}
+										alt='GraphQl'
+										layout='responsive'
+									/>
+								</div>
+							</div>
 						</div>
-						<div
-							className='grid grid-cols-2 w-full ml-8 text-lg'
-							style={{fontFamily: 'Raleway'}}
-						>
-							<motion.li variants={item} className='text-white my-2 ml-12 '>
-								payment gateway
-							</motion.li>
-							<motion.li variants={item} className='text-white text-md my-2 ml-12'>
-								local storage persistence
-							</motion.li>
-							<motion.li variants={item} className='text-white text-md my-2 ml-12'>
-								checkout page
-							</motion.li>
-							<motion.li variants={item} className='text-white my-2 ml-12'>
-								light/dark Mode
-							</motion.li>
-							<motion.li variants={item} className='text-white my-2 ml-12'>
-								order history
-							</motion.li>
-							<motion.li variants={item} className='text-white my-2 ml-12'>
-								cart system
-							</motion.li>
-							<motion.li variants={item} className='text-white my-2 ml-12'>
-								protected pages
-							</motion.li>
-							<motion.li variants={item} className='text-white my-2 ml-12'>
-								etc...
-							</motion.li>
-						</div>
-					</div>
-					<div className='mt-2'>
-						<button className='btn px-10 py-2 mt-4 '>Demo</button>
-						<button className='btn px-10 py-2 mt-4 ml-6'>Code</button>
 					</div>
 				</div>
 				<div className='relative'>
-					<div className='absolute -top-16 left-16 '>
+					<div className='md:absolute md:-top-16 md:left-16 -mt-16 md:-mt-0'>
 						<Image
 							className=' group-hover:opacity-10'
 							height={800}
@@ -127,42 +191,42 @@ const Project = () => {
 							alt='ReactJs'
 						/>
 					</div>
-					<div className='absolute top-8 left-9 '>
+					{/* <div className='absolute md:top-8 -top-[380px] left-56 md:left-9 '>
 						<div className='flex py-10 pl-14 flex-col   '>
-							<div className='mb-6 animate-iconDown '>
+							<div className='mb-6 w-[54px] h-[54px] md:w-[64px] md:h-[64px]  animate-iconDown '>
 								<Image
 									src={require('../../public/assets/images/skills/graphql.png')}
 									alt='GraphQl'
-									width={'64px'}
-									height={'64px'}
+									layout='responsive'
 								/>
 							</div>
-							<div className='mb-6 animate-iconRight'>
+							<div className='mb-6 w-[54px] h-[54px] md:w-[64px] md:h-[64px] animate-iconRight'>
 								<Image
 									src={require('../../public/assets/images/skills/react.png')}
 									alt='GraphQl'
-									width={'64px'}
-									height={'64px'}
+									layout='responsive'
 								/>
 							</div>
-							<div className='mb-6 animate-iconUp'>
+							<div className='mb-6 w-[54px] h-[54px] md:w-[64px] md:h-[64px] animate-iconUp'>
 								<Image
 									src={require('../../public/assets/images/skills/nestjs.png')}
 									alt='GraphQl'
-									width={'64px'}
-									height={'64px'}
+									layout='responsive'
 								/>
 							</div>
-							<div className='mb-6 animate-iconLeft '>
+							<div className='mb-6 w-[54px] h-[54px] md:w-[64px] md:h-[64px] animate-iconLeft '>
 								<Image
 									src={require('../../public/assets/images/skills/typescript.png')}
 									alt='GraphQl'
-									width={'64px'}
-									height={'64px'}
+									layout='responsive'
 								/>
 							</div>
 						</div>
-					</div>
+					</div> */}
+				</div>
+				<div className='mt-8 mb-14 text-center mx-auto'>
+					<button className='btn px-10 py-2 mt-4 '>Demo</button>
+					<button className='btn px-10 py-2 mt-4 ml-6'>Code</button>
 				</div>
 			</div>
 			{/* <div className='hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]  '>

@@ -26,7 +26,7 @@ const Skills = () => {
 			initial='initial'
 			whileInView='whileInView'
 			variants={variants}
-			className='snap-start  w-full h-screen p-2 mb-[200px] md:mb-[400px]  flex items-center justify-center'
+			className='snap-start  w-full h-screen mx-auto p-2 mb-[250px] md:mb-[400px]  flex items-center justify-center'
 		>
 			<motion.div className='max-w-[1240px] mx-auto flex flex-col h-full  justify-center '>
 				<motion.h2
@@ -36,38 +36,38 @@ const Skills = () => {
 						duration: 1.2,
 						ease: 'easeInOut',
 					}}
-					className={`tracking-widest ${
+					className={`tracking-widest pb-6 	${
 						isDark ? 'text-white' : 'text-zinc-700'
-					}  pb-24 uppercase`}
+					} px-10 md:px-0 md:pb-12 uppercase `}
 				>
 					Skills
 				</motion.h2>
 				{/* PROJECTS */}
-				<motion.div className='max-w-[1240px] mx-auto grid md:grid-cols-2 md:gap-x-8 lg:grid-cols-4  lg:gap-14 '>
+				<motion.div className='max-w-[1240px] mb-[300px] m-4 grid grid-cols-2 px-4 gap-x-2 gap-y-4  lg:grid-cols-4  lg:gap-14 '>
 					{/* ---------------------------ReactJs-------------------------- */}
 					<motion.div
-						className={`p-6 rounded-lg ${
-							isDark ? ' shadow-down shadow-purple-500' : 'shadow-md'
-						} hover:scale-105 ease-in duration-300 relative`}
+						className={`p-6 ${
+							isDark ? 'shadow-down shadow-purple-500' : 'shadow-md'
+						}  rounded-md hover:scale-105 ease-in duration-300 relative`}
 					>
-						<div className='bg-purple-800 text-white absolute top-0 h-full left-0 text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+						<div className='bg-purple-800 text-white absolute top-0 h-full left-0    text-center'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full  flex'>
 								Advanced
 							</span>
 						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center '>
-							<div className='pl-5 '>
+						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
+							<div className='mx-auto '>
 								<Image
 									src={require('../../public/assets/images/skills/react.png')}
-									alt='ReactJs'
+									alt='react-js'
 									width={'64px'}
 									height={'64px'}
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
-								} `}
+								}`}
 							>
 								<h3>ReactJS</h3>
 							</div>
@@ -80,7 +80,7 @@ const Skills = () => {
 						}  rounded-md hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-purple-800 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Advanced
 							</span>
 						</div>
@@ -94,7 +94,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								}`}
 							>
@@ -109,7 +109,7 @@ const Skills = () => {
 						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-purple-800 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Advanced
 							</span>
 						</div>
@@ -123,7 +123,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								} `}
 							>
@@ -138,7 +138,7 @@ const Skills = () => {
 						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-purple-800 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base  md:w-6 w-5 justify-center items-center h-full flex'>
 								Advanced
 							</span>
 						</div>
@@ -152,7 +152,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base  items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								} `}
 							>
@@ -168,7 +168,7 @@ const Skills = () => {
 						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Intermediate
 							</span>
 						</div>
@@ -182,7 +182,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								} `}
 							>
@@ -199,7 +199,7 @@ const Skills = () => {
 						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Intermediate
 							</span>
 						</div>
@@ -214,7 +214,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								} `}
 							>
@@ -230,7 +230,7 @@ const Skills = () => {
 						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Intermediate
 							</span>
 						</div>
@@ -244,7 +244,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								} `}
 							>
@@ -261,7 +261,7 @@ const Skills = () => {
 						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Intermediate
 							</span>
 						</div>
@@ -275,7 +275,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								} `}
 							>
@@ -292,7 +292,7 @@ const Skills = () => {
 						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Intermediate
 							</span>
 						</div>
@@ -307,7 +307,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								} `}
 							>
@@ -323,7 +323,7 @@ const Skills = () => {
 						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Intermediate
 							</span>
 						</div>
@@ -338,7 +338,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								} `}
 							>
@@ -354,7 +354,7 @@ const Skills = () => {
 						}  rounded-md hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Intermediate
 							</span>
 						</div>
@@ -369,7 +369,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								}`}
 							>
@@ -385,7 +385,7 @@ const Skills = () => {
 						}  rounded-md hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Intermediate
 							</span>
 						</div>
@@ -399,7 +399,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								}`}
 							>
@@ -415,7 +415,7 @@ const Skills = () => {
 						}  rounded-md hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Intermediate
 							</span>
 						</div>
@@ -429,7 +429,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								}`}
 							>
@@ -445,7 +445,7 @@ const Skills = () => {
 						} hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-purple-400 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Beginner
 							</span>
 						</div>
@@ -460,7 +460,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								} `}
 							>
@@ -476,7 +476,7 @@ const Skills = () => {
 						}  rounded-md hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Intermediate
 							</span>
 						</div>
@@ -490,7 +490,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								}`}
 							>
@@ -506,7 +506,7 @@ const Skills = () => {
 						}  rounded-md hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Intermediate
 							</span>
 						</div>
@@ -520,7 +520,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								}`}
 							>
@@ -537,7 +537,7 @@ const Skills = () => {
 						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-purple-400 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Beginner
 							</span>
 						</div>
@@ -551,7 +551,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								} `}
 							>
@@ -567,7 +567,7 @@ const Skills = () => {
 						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-purple-400 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Beginner
 							</span>
 						</div>
@@ -581,7 +581,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								} `}
 							>
@@ -598,7 +598,7 @@ const Skills = () => {
 						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-purple-400 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Beginner
 							</span>
 						</div>
@@ -612,7 +612,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								} `}
 							>
@@ -628,7 +628,7 @@ const Skills = () => {
 						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-purple-400 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Beginner
 							</span>
 						</div>
@@ -642,7 +642,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								} `}
 							>
@@ -658,7 +658,7 @@ const Skills = () => {
 						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
 					>
 						<div className='bg-purple-400 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
+							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
 								Beginner
 							</span>
 						</div>
@@ -672,7 +672,7 @@ const Skills = () => {
 								/>
 							</div>
 							<div
-								className={`flex flex-col items-center justify-center ${
+								className={`flex flex-col text-sm md:text-base items-center justify-center ${
 									isDark ? 'text-white' : 'text-zinc-700'
 								} `}
 							>
