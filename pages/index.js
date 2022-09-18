@@ -24,7 +24,7 @@ const Home = () => {
 			<About />
 			<Skills />
 			<Projects />
-			{/* <Form /> */}
+			<Form />
 		</div>
 	);
 };
