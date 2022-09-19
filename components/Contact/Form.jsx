@@ -36,7 +36,7 @@ const Form = () => {
 	return (
 		<div
 			id='contact'
-			className='snap-start w-full md:h-full h-fit mx-auto flex flex-col items-center justify-center '
+			className='snap-start w-full md:h-full h-screen mx-auto flex flex-col items-center justify-center '
 		>
 			<motion.div className='max-w-[1240px] mx-auto flex flex-col h-full  justify-center  '>
 				<motion.h2

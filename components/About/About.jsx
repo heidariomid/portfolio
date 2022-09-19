@@ -10,7 +10,7 @@ const About = () => {
 	return (
 		<div
 			id='about'
-			className='snap-start w-full h-screen mx-auto flex flex-col items-center justify-center '
+			className='snap-start w-full md:h-full h-screen mx-auto flex flex-col items-center justify-center '
 		>
 			<motion.div className=' max-w-[1240px] mx-auto md:grid grid-cols-3 gap-8  '>
 				<motion.div className='col-span-2 '>
