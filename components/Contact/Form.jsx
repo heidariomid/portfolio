@@ -36,7 +36,7 @@ const Form = () => {
 	return (
 		<div
 			id='contact'
-			className='snap-start w-full md:h-full h-screen mx-auto flex flex-col items-center justify-center '
+			className='snap-start mt-20 w-full md:h-full h-fit mx-auto flex flex-col items-center justify-center '
 		>
 			<motion.div className='max-w-[1240px] mx-auto flex flex-col h-full  justify-center  '>
 				<motion.h2
@@ -79,7 +79,7 @@ const Form = () => {
 								</h2>
 
 								<div
-									className={`grid grid-cols-1 bg-center lg:grid-cols-3   ${
+									className={`grid grid-cols-1  bg-center lg:grid-cols-3 m-6 md:m-0  ${
 										isDark
 											? 'bg-transparent'
 											: 'bg-white shadow-innerCenter shadow-gray-700'
@@ -87,7 +87,7 @@ const Form = () => {
 								>
 									{/* Contact information */}
 									<div
-										className={`relative overflow-hidden py-10 px-6 ${
+										className={`relative  overflow-hidden py-10 px-6  ${
 											isDark ? 'bg-black' : 'bg-gradient'
 										} sm:px-10 xl:p-12 `}
 									>

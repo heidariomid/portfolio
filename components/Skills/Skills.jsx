@@ -26,7 +26,7 @@ const Skills = () => {
 			initial='initial'
 			whileInView='whileInView'
 			variants={variants}
-			className='snap-start w-full md:h-full h-screen mx-auto flex flex-col items-center justify-center '
+			className='snap-start mt-20 w-full md:h-full h-fit mx-auto flex flex-col items-center justify-center '
 		>
 			<motion.div className='max-w-[1240px] mx-auto flex flex-col h-full  justify-center '>
 				<motion.h2
@@ -42,8 +42,8 @@ const Skills = () => {
 				>
 					Skills
 				</motion.h2>
-				{/* PROJECTS */}
-				<motion.div className='max-w-[1240px]   grid grid-cols-2 px-2 gap-x-2 gap-y-4  lg:grid-cols-4  lg:gap-14 '>
+
+				<motion.div className='max-w-[1240px]  m-4 md:m-0 grid grid-cols-2 px-2 gap-x-2 gap-y-4  lg:grid-cols-4  lg:gap-14 '>
 					{/* ---------------------------ReactJs-------------------------- */}
 					<motion.div
 						className={`p-6 ${

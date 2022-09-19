@@ -230,10 +230,8 @@ const ContactForm = () => {
 				</div>
 			</div>
 
-			<div className='sm:col-span-2 sm:flex sm:justify-end'>
-				<div className='w-full h-full mx-auto justify-center  items-center flex'>
-					{isMessageSent && formMessageHandler()}
-				</div>
+			<div className='sm:col-span-2 sm:flex sm:justify-end '>
+				<div className=''>{isMessageSent && formMessageHandler()}</div>
 				<div></div>
 				<button
 					type='submit'

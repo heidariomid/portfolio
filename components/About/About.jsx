@@ -10,7 +10,7 @@ const About = () => {
 	return (
 		<div
 			id='about'
-			className='snap-start w-full md:h-full h-screen mx-auto flex flex-col items-center justify-center '
+			className='snap-start w-full md:h-screen h-fit mx-auto flex flex-col items-center justify-center bg-transparent'
 		>
 			<motion.div className=' max-w-[1240px] mx-auto md:grid grid-cols-3 gap-8  '>
 				<motion.div className='col-span-2 '>
@@ -30,7 +30,7 @@ const About = () => {
 					<p
 						className={` ${
 							isDark ? 'text-zinc-200' : 'text-zinc-600'
-						} md:text-2xl py-4 text-justify  md:leading-loose  pr-4 `}
+						} md:text-2xl md:py-4  text-justify m-8 md:m-0  md:leading-loose  pr-4 `}
 					>
 						I am a software engineer with a passion for building web applications. I
 						have a background in computer science and have been working in the industry
@@ -43,7 +43,7 @@ const About = () => {
 							target='_blank'
 							rel='noopener noreferrer'
 						>
-							The Score
+							The Score .{' '}
 						</a>
 						I am a self-taught developer and I am always looking to learn new
 						technologies and languages. I am always looking to improve my skills and
@@ -57,7 +57,7 @@ const About = () => {
 					} md:m-0 md:border-4 ease-in-out duration-1000`}
 				>
 					<motion.div
-						className='relative hidden md:flex md:h-full w-full  h-96 '
+						className='relative  md:flex md:h-full w-full  h-96 '
 						initial={{opacity: 0, scale: 0.6}}
 						whileInView={{opacity: 1, scale: 1}}
 						transition={{
