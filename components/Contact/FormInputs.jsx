@@ -89,9 +89,9 @@ const ContactForm = () => {
 			ref={form}
 			onSubmit={sendEmail}
 			method='POST'
-			className='mt-6 grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-8 '
+			className='mt-6  grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-8 '
 		>
-			<div className='relative'>
+			<div className='relative '>
 				<input
 					type='text'
 					name='first-name'
