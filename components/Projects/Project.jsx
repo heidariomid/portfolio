@@ -33,23 +33,23 @@ const Project = () => {
 			initial='initial'
 			whileInView='whileInView'
 			variants={variants}
-			className={`mb-16  relative col-span-3 flex justify-center items-center  w-full ${
+			className={`flex relative col-span-3  justify-center items-center  w-full ${
 				isDark && 'shadow-center shadow-purple-400'
 			} bg-black `}
 		>
 			<div className='grid md:grid-cols-2 '>
-				{/* <div className='bg-purple-800 text-white absolute top-0 h-full md:text-2xl left-0  w-9 justify-center items-center flex flex-col  text-center'>
+				<div className='bg-purple-800 text-white absolute top-0 h-full md:text-2xl left-0  w-9 justify-center items-center md:flex flex-col  text-center hidden'>
 					<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
 						Advanced
 					</span>
-				</div> */}
-				<div className='md:mb-6 mt-6   flex flex-col justify-between  items-center'>
+				</div>
+				<div className='md:mb-6 mt-6  flex flex-col justify-between  items-center'>
 					<h1 className='md:text-[70px]  tracking-wider text-white'>
 						Uber <span className='text-green-500'>Eats</span>
 					</h1>
 					<div className=''>
 						<div
-							className=' p-4 md:ml-20 md:leading-10 flex flex-col  w-full '
+							className=' p-4 md:ml-12 md:leading-[45px] flex flex-col  w-full '
 							style={{fontFamily: 'Raleway'}}
 						>
 							<div className=''>
@@ -80,75 +80,79 @@ const Project = () => {
 								</motion.span>
 							</div>
 						</div>
-						<div className='grid grid-cols-3'>
-							<div className=' col-span-2 w-full '>
-								<div className='w-full md:ml-8 ' style={{fontFamily: 'Raleway'}}>
+						<div className='grid grid-cols-3 md:grid-cols-6 w-full '>
+							<div className=' col-span-2 md:col-span-6 w-full '>
+								<div className='w-full  ' style={{fontFamily: 'Raleway'}}>
 									<motion.li
 										variants={item}
-										className='text-white md:text-lg my-2 md:ml-12 ml-5'
+										className='text-white md:text-lg my-2 md:ml-16 ml-5 '
 									>
 										improve UI/UX{' '}
-										<span className='hidden md:flex'>
+										<span className='hidden md:inline-flex'>
 											for each profile (user, driver, restaurant)
 										</span>
 									</motion.li>
 								</div>
 								<div
-									className='grid md:grid-cols-2 w-full md:ml-8 md:text-lg'
+									className='grid md:grid-cols-2 w-full  md:text-lg'
 									style={{fontFamily: 'Raleway'}}
 								>
 									<motion.li
 										variants={item}
-										className='text-white my-2 md:ml-12 ml-5 '
+										className='text-white my-2 md:ml-16 ml-5 '
 									>
 										payment gateway
 									</motion.li>
 									<motion.li
 										variants={item}
-										className='text-white md:text-md my-2 md:ml-12 ml-5'
+										className='text-white md:text-md my-2 md:ml-16 ml-5'
 									>
 										local storage persistence
 									</motion.li>
 									<motion.li
 										variants={item}
-										className='text-white md:text-md my-2 md:ml-12 ml-5'
+										className='text-white md:text-md my-2 md:ml-16 ml-5'
 									>
 										checkout page
 									</motion.li>
 									<motion.li
 										variants={item}
-										className='text-white my-2 md:ml-12 ml-5'
+										className='text-white my-2 md:ml-16 ml-5'
 									>
 										light/dark Mode
 									</motion.li>
 									<motion.li
 										variants={item}
-										className='text-white my-2 md:ml-12 ml-5'
+										className='text-white my-2 md:ml-16 ml-5'
 									>
 										order history
 									</motion.li>
 									<motion.li
 										variants={item}
-										className='text-white my-2 md:ml-12 ml-5'
+										className='text-white my-2 md:ml-16 ml-5'
 									>
 										cart system
 									</motion.li>
 									<motion.li
 										variants={item}
-										className='text-white my-2 md:ml-12 ml-5'
+										className='text-white my-2 md:ml-16 ml-5'
 									>
 										protected pages
 									</motion.li>
 									<motion.li
 										variants={item}
-										className='text-white my-2 md:ml-12 ml-5'
+										className='text-white my-2 md:ml-16 ml-5'
 									>
 										etc...
 									</motion.li>
 								</div>
+								<div className='mt-8 mb-4 text-center mx-auto hidden md:block'>
+									<button className='btn px-10 py-2  '>Demo</button>
+									<button className='btn px-10 py-2  ml-6'>Code</button>
+								</div>
 							</div>
 
-							<div className='flex py-10 pl-8 flex-col   '>
+							<div className='flex py-10 pl-8 flex-col  md:hidden '>
 								<div className='mb-6 w-[54px] h-[54px] md:w-[64px] md:h-[64px]  animate-iconDown '>
 									<Image
 										src={require('../../public/assets/images/skills/graphql.png')}
@@ -191,7 +195,7 @@ const Project = () => {
 							alt='ReactJs'
 						/>
 					</div>
-					{/* <div className='absolute md:top-8 -top-[380px] left-56 md:left-9 '>
+					<div className='absolute md:top-8 -top-[380px] left-56 md:left-9 hidden md:flex '>
 						<div className='flex py-10 pl-14 flex-col   '>
 							<div className='mb-6 w-[54px] h-[54px] md:w-[64px] md:h-[64px]  animate-iconDown '>
 								<Image
@@ -222,9 +226,9 @@ const Project = () => {
 								/>
 							</div>
 						</div>
-					</div> */}
+					</div>
 				</div>
-				<div className='mt-8 mb-14 text-center mx-auto'>
+				<div className='mt-8 mb-14 text-center mx-auto flex md:hidden'>
 					<button className='btn px-10 py-2 mt-4 '>Demo</button>
 					<button className='btn px-10 py-2 mt-4 ml-6'>Code</button>
 				</div>

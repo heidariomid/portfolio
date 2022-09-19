@@ -36,9 +36,9 @@ const Form = () => {
 	return (
 		<div
 			id='contact'
-			className='snap-start  w-full h-screen mx-auto p-2  md:mb-[400px]  flex items-center justify-center '
+			className='snap-start w-full md:h-full h-fit mx-auto flex flex-col items-center justify-center '
 		>
-			<motion.div className='max-w-[1240px] mx-auto h-full flex flex-col '>
+			<motion.div className='max-w-[1240px] mx-auto flex flex-col h-full  justify-center  '>
 				<motion.h2
 					initial={{opacity: 0, x: -400}}
 					whileInView={{opacity: 1, x: 0}}
@@ -46,14 +46,14 @@ const Form = () => {
 						duration: 1.2,
 						ease: 'easeInOut',
 					}}
-					className={`tracking-widest ${
+					className={`tracking-widest pb-6 	${
 						isDark ? 'text-white' : 'text-zinc-700'
-					}  pb-24 uppercase`}
+					} px-10  md:px-0 md:pb-12 uppercase `}
 				>
 					Contacts
 				</motion.h2>
 
-				<main className={`overflow-hidden  ${isDark && 'border-2 animate-borderColor'}`}>
+				<main className={`overflow-hidden   ${isDark && 'border-2 animate-borderColor'}`}>
 					{/* Contact section */}
 					<section className='relative  ' aria-labelledby='contact-heading'>
 						<div className='absolute w-full h-1/2  ' aria-hidden='true' />
@@ -71,7 +71,7 @@ const Form = () => {
 									'https://img.freepik.com/free-vector/monochrome-abstract-contour-line-illustration_53876-80536.jpg?w=2000&t=st=1663099843~exp=1663100443~hmac=55f5ddc29e8be6372015f6c5b0f314b66d91836d472c5477a8550b3a503ab784'
 								})`,
 							}}
-							className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 '
+							className='max-w-[1240px] mx-auto  '
 						>
 							<div className='relative '>
 								<h2 id='contact-heading' className='sr-only'>
@@ -176,17 +176,16 @@ const Form = () => {
 								</div>
 							</div>
 						</motion.div>
+						<footer aria-labelledby='footer-heading'>
+							<h2 id='footer-heading' className='sr-only'>
+								Footer
+							</h2>
+							<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+								<Footer />
+							</div>
+						</footer>
 					</section>
 				</main>
-
-				<footer className='bg-warm-gray-900 ' aria-labelledby='footer-heading'>
-					<h2 id='footer-heading' className='sr-only'>
-						Footer
-					</h2>
-					<div className='max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8'>
-						<Footer />
-					</div>
-				</footer>
 			</motion.div>
 		</div>
 	);

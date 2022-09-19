@@ -16,9 +16,9 @@ const Projects = () => {
 	return (
 		<motion.div
 			id='projects'
-			className='snap-start  w-full h-screen mx-auto p-2  md:mb-[400px]  flex items-center justify-center '
+			className='snap-start w-full md:h-full h-fit mx-auto flex flex-col items-center justify-center '
 		>
-			<motion.div className='max-w-[1240px] mx-auto h-full flex flex-col '>
+			<motion.div className='max-w-[1240px] mx-auto flex flex-col h-full  justify-center '>
 				<motion.h2
 					initial={{opacity: 0, x: -400}}
 					whileInView={{opacity: 1, x: 0}}
@@ -28,15 +28,17 @@ const Projects = () => {
 					}}
 					className={`tracking-widest pb-6 	${
 						isDark ? 'text-white' : 'text-zinc-700'
-					} px-10 md:px-0 md:pb-12 uppercase `}
+					} px-10 md:px-0 uppercase `}
 				>
 					Projects
 				</motion.h2>
-				<div className='max-w-[1240px] mx-auto   flex flex-col px-2 py-16 '>
-					<Project />
-					<div className=' grid md:grid-cols-3 grid-cols-1 gap-8  md:gap-x-8 md:gap-y-10'>
+				<div className='max-w-[1240px] mx-auto h-full  md:h-fit  flex flex-col px-2 '>
+					<div className='grid md:grid-cols-3 grid-cols-1 gap-8 h-full  md:gap-x-8 md:gap-y-16'>
+						<div className='relative md:col-span-3 h-full w-full flex'>
+							<Project />
+						</div>
 						<div className='relative flex justify-center items-center h-full w-full  group hover:bg-zinc-800 hover:ease-in hover:duration-200 '>
-							<div className='bg-purple-800 text-white absolute top-0 h-full left-0  w-9 justify-center items-center flex flex-col  text-center'>
+							<div className='bg-purple-800 text-white absolute top-0 h-full left-0 z-50  w-9 justify-center items-center flex flex-col  text-center'>
 								<span className='-rotate-90 w-6 justify-center items-center h-full flex'>
 									Advanced
 								</span>
