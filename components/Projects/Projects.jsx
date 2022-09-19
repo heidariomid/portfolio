@@ -16,7 +16,7 @@ const Projects = () => {
 	return (
 		<motion.div
 			id='projects'
-			className='snap-start w-full md:h-full h-fit mx-auto flex flex-col items-center justify-center '
+			className='snap-start mt-20  w-full md:h-full h-fit mx-auto flex flex-col items-center justify-center '
 		>
 			<motion.div className='max-w-[1240px] mx-auto flex flex-col h-full  justify-center '>
 				<motion.h2
