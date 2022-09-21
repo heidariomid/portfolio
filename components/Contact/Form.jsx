@@ -53,7 +53,7 @@ const Form = () => {
 					Contacts
 				</motion.h2>
 
-				<main className={`overflow-hidden   ${isDark && 'border-2 animate-borderColor'}`}>
+				<main className={`overflow-hidden `}>
 					{/* Contact section */}
 					<section className='relative  ' aria-labelledby='contact-heading'>
 						<div className='absolute w-full h-1/2  ' aria-hidden='true' />
@@ -71,7 +71,9 @@ const Form = () => {
 									'https://img.freepik.com/free-vector/monochrome-abstract-contour-line-illustration_53876-80536.jpg?w=2000&t=st=1663099843~exp=1663100443~hmac=55f5ddc29e8be6372015f6c5b0f314b66d91836d472c5477a8550b3a503ab784'
 								})`,
 							}}
-							className='max-w-[1240px] mx-auto  '
+							className={`max-w-[1240px] m-5 md:mx-auto ${
+								isDark && 'border-2 animate-borderColor'
+							} `}
 						>
 							<div className='relative '>
 								<h2 id='contact-heading' className='sr-only'>

@@ -119,7 +119,7 @@ const ContactForm = () => {
 					name='last-name'
 					id='last-name'
 					autoComplete='family-name'
-					className='peer focus:ring-0 py-3 px-4 block w-full shadow-sm  focus:ring-purple-400 focus:border-violet-500 border-gray-300 rounded-md'
+					className='peer  focus:ring-0  py-3 px-4 block w-full  shadow-sm  focus:ring-indigo-800 focus:border-fuchsia-700 border-gray-300 rounded-md'
 				/>
 				<label
 					htmlFor='last-name'
@@ -140,7 +140,7 @@ const ContactForm = () => {
 					name='email'
 					type='email'
 					autoComplete='email'
-					className='peer focus:ring-0 py-3 px-4 block w-full shadow-sm  focus:ring-purple-400 focus:border-violet-500 border-gray-300 rounded-md'
+					className='peer  focus:ring-0  py-3 px-4 block w-full  shadow-sm  focus:ring-indigo-800 focus:border-fuchsia-700 border-gray-300 rounded-md'
 				/>
 				<label
 					htmlFor='email'
@@ -166,7 +166,7 @@ const ContactForm = () => {
 						name='phone'
 						id='phone'
 						autoComplete='tel'
-						className='peer focus:ring-0 py-3 px-4 block w-full shadow-sm  focus:ring-purple-400 focus:border-violet-500 border-gray-300 rounded-md'
+						className='peer  focus:ring-0  py-3 px-4 block w-full  shadow-sm  focus:ring-indigo-800 focus:border-fuchsia-700 border-gray-300 rounded-md'
 						aria-describedby='phone-optional'
 					/>
 					<label
@@ -187,7 +187,7 @@ const ContactForm = () => {
 					type='text'
 					name='subject'
 					id='subject'
-					className='peer focus:ring-0 py-3 px-4 block w-full shadow-sm  focus:ring-purple-400 focus:border-violet-500 border-gray-300 rounded-md'
+					className='peer  focus:ring-0  py-3 px-4 block w-full  shadow-sm  focus:ring-indigo-800 focus:border-fuchsia-700 border-gray-300 rounded-md'
 				/>
 
 				<label
@@ -213,7 +213,7 @@ const ContactForm = () => {
 						id='message'
 						name='message'
 						rows={4}
-						className='peer focus:ring-0 py-3 px-4 block w-full shadow-sm  focus:ring-purple-400 focus:border-violet-500 border-gray-300 rounded-md'
+						className='peer  focus:ring-0  py-3 px-4 block w-full  shadow-sm  focus:ring-indigo-800 focus:border-fuchsia-700 border-gray-300 rounded-md'
 						aria-describedby='message-max'
 						defaultValue={''}
 					/>

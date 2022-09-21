@@ -32,8 +32,8 @@ const Projects = () => {
 				>
 					Projects
 				</motion.h2>
-				<div className='max-w-[1240px] mx-auto h-full  md:h-fit  flex flex-col px-2 '>
-					<div className='grid md:grid-cols-3 grid-cols-1 gap-8 h-full  md:gap-x-8 md:gap-y-16'>
+				<div className='max-w-[1240px]  mx-auto h-full  md:h-fit  flex flex-col px-2 '>
+					<div className='grid md:grid-cols-3 grid-cols-1 gap-8 h-full m-5 md:gap-x-8 md:gap-y-16'>
 						<div className='relative md:col-span-3 h-full w-full flex'>
 							<Project />
 						</div>

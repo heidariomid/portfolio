@@ -17,7 +17,7 @@ const Navbar = () => {
 				id='navbar'
 				className={` fixed w-full ${
 					isDark ? 'bg-black shadow-none' : 'bg-white  shadow-md'
-				}  h-20  z-[100]`}
+				}  md:h-20 h-[50px]  z-[100]`}
 			>
 				{/* Web Menu */}
 				<div
@@ -68,7 +68,7 @@ const Navbar = () => {
 						<Toggle />
 					</div>
 					<div
-						className='md:hidden cursor-pointer w-full   flex justify-end items-center'
+						className='md:hidden cursor-pointer  flex justify-center h-[50px] md:h-full m-0 p-0 items-center'
 						onClick={() => setNav(!nav)}
 					>
 						<AiOutlineMenu size={32} color={`${isDark ? 'white' : 'black'} `} />

@@ -26,7 +26,7 @@ const Toggle = () => {
 			checked={enabled}
 			onChange={themeHandler}
 			className={classNames(
-				enabled ? 'shadow-inner shadow-gray-500 bg-white ' : 'bg-purple-300',
+				enabled ? 'shadow-inner shadow-gray-500 bg-white ' : ' bg-purple-300',
 				'relative inline-flex items-center  flex-shrink-0 h-5 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none ',
 			)}
 		>

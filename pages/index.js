@@ -11,7 +11,7 @@ const Home = () => {
 	const {isDark} = state.theme;
 	return (
 		<div
-			className={`md:snap-y md:overflow-scroll md:scroll-smooth  md:snap-mandatory h-screen  ${
+			className={`md:snap-y md:overflow-scroll md:scroll-smooth  md:snap-mandatory h-full  ${
 				isDark ? 'bg-black' : 'bg-white'
 			} `}
 		>
