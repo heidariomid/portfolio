@@ -30,7 +30,7 @@ const About = () => {
 					<p
 						className={` ${
 							isDark ? 'text-zinc-200' : 'text-zinc-600'
-						} md:text-2xl md:py-4  text-justify m-8 md:m-0  md:leading-loose  pr-4 `}
+						} md:text-2xl md:py-4  text-justify m-10 md:m-0  md:leading-loose  pr-4 `}
 					>
 						I am a software engineer with a passion for building web applications. I
 						have a background in computer science and have been working in the industry

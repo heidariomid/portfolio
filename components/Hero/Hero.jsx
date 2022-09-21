@@ -35,12 +35,12 @@ const Hero = () => {
 			id='home'
 			className='snap-start w-full h-screen mx-auto flex flex-col items-center justify-center text-center'
 		>
-			<div className='max-w-[1240px] w-full  h-full mx-auto p-2 flex flex-col justify-center items-center '>
+			<div className=' max-w-[1240px] w-full  h-full mx-auto p-2 flex flex-col justify-center items-center '>
 				<motion.div
-					className={`my-10 rounded-full mx-auto block  px-2 p-2 w-48 md:w-64  shadow-innerCenter  shadow-gray-400`}
+					className={` mb-10 rounded-full mx-auto block  px-2 p-2 w-48 md:w-64 shadow-innerCenter  shadow-gray-400`}
 				>
 					<Image
-						className='absolute rounded-full'
+						className='absolute rounded-full '
 						src={ProfileImg}
 						alt='Profile'
 						layout='responsive'

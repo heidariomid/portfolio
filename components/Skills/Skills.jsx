@@ -43,7 +43,7 @@ const Skills = () => {
 					Skills
 				</motion.h2>
 
-				<motion.div className='max-w-[1240px]  m-4 md:m-0 grid grid-cols-2 px-2 gap-x-2 gap-y-4  lg:grid-cols-4  lg:gap-14 '>
+				<motion.div className='max-w-[1240px]  m-5 md:m-0 grid grid-cols-2 px-2 gap-x-2 gap-y-4  lg:grid-cols-4  lg:gap-14 '>
 					{/* ---------------------------ReactJs-------------------------- */}
 					<motion.div
 						className={`p-6 ${
