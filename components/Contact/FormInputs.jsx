@@ -25,7 +25,7 @@ const ContactForm = () => {
 			return (
 				<div>
 					<p
-						className={`text-sm    p-4 ${
+						className={`text-sm  p-4 ${
 							isDark
 								? 'bg-green-500 text-white'
 								: 'border-2  border-spacing-4 border-green-600 text-green-600'
@@ -230,8 +230,10 @@ const ContactForm = () => {
 				</div>
 			</div>
 
-			<div className='sm:col-span-2 sm:flex sm:justify-end '>
-				<div className=''>{isMessageSent && formMessageHandler()}</div>
+			<div className='sm:col-span-2 sm:flex sm:justify-end w-full'>
+				<div className='mx-auto justify-center items-center'>
+					{isMessageSent && formMessageHandler()}
+				</div>
 				<div></div>
 				<button
 					type='submit'

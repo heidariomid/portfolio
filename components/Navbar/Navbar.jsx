@@ -28,8 +28,8 @@ const Navbar = () => {
 					<div className='col-span-1'>
 						<Link href='/#home'>
 							<Image
-								className={` cursor-pointer ${isDark ? 'bg-black ' : 'bg-black'} `}
-								src={require('../../public/assets/images/logo.png')}
+								className={` cursor-pointer  `}
+								src={require('../../public/assets/images/logo.svg')}
 								width={80}
 								height={80}
 								alt='logo'
