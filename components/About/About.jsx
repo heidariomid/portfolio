@@ -57,7 +57,7 @@ const About = () => {
 					} md:m-0 md:border-4 ease-in-out duration-1000`}
 				>
 					<motion.div
-						className='relative  md:flex md:h-full w-full  h-96 '
+						className='relative  md:flex md:h-full w-full h-96 '
 						initial={{opacity: 0, scale: 0.6}}
 						whileInView={{opacity: 1, scale: 1}}
 						transition={{
@@ -72,6 +72,15 @@ const About = () => {
 							layout='fill'
 							objectFit='cover'
 						/>
+
+						{/* <video
+							className='absolute '
+							src={require('../../public/assets/human.mp4')}
+							alt='Profile'
+							autoPlay
+							loop
+							muted
+						/> */}
 					</motion.div>
 				</motion.div>
 			</motion.div>

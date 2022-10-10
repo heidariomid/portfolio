@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
+const withVideos = require('next-videos');
+
 const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
@@ -7,8 +9,9 @@ const nextConfig = {
 		loader: 'akamai',
 		path: '/',
 	},
-	assetPrefix: isProd ? '/portfolio' : undefined,
-	basePath: isProd ? '/portfolio' : undefined,
+	assetPrefix: isProd ? '/' : undefined,
+	basePath: isProd ? '/' : undefined,
 };
 
 module.exports = nextConfig;
+module.exports = withVideos();

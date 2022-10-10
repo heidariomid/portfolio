@@ -1,8 +1,8 @@
 {
-  "homepage": "https://omidheidari88.github.io/portfolio/",
+  "homepage": "https://heidariomid.github.io/",
   "name": "portfolio",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d out",
@@ -20,6 +20,7 @@
     "framer-motion": "^7.2.1",
     "gh-pages": "^4.0.0",
     "next": "12.2.5",
+    "next-videos": "^1.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0"
