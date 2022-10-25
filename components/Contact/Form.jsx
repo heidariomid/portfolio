@@ -5,10 +5,6 @@ import FormBackground from './FormBgAbstract';
 import useStateValue from '../../store/useContext';
 import {motion} from 'framer-motion';
 
-// https://img.freepik.com/free-photo/textured-mulberry-paper_53876-92967.jpg?w=2000&t=st=1663094862~exp=1663095462~hmac=e8266a973302da4ce76f39c3970cd6105cd206559008d9730c32372e06243348
-// https://img.freepik.com/free-vector/gradient-geometric-shapes-dark-background-design_23-2148433740.jpg?w=2000&t=st=1663099207~exp=1663099807~hmac=19b85df9d8d4e091d2ea36e6be84a8603d5fb3e4ef92c86b67cb13f0c1b6d29f
-// https://img.freepik.com/free-vector/topographic-purple-lines-background_23-2148271288.jpg?w=2000&t=st=1663099634~exp=1663100234~hmac=2252bea183aa7dce500a660cce5f7dbbf2cbbf74dfd53dadcedcd1a89e41104a
-// https://img.freepik.com/free-vector/monochrome-abstract-contour-line-illustration_53876-80536.jpg?w=2000&t=st=1663099843~exp=1663100443~hmac=55f5ddc29e8be6372015f6c5b0f314b66d91836d472c5477a8550b3a503ab784
 const Form = () => {
 	const variants = {
 		whileInView: {
@@ -149,7 +145,7 @@ const Form = () => {
 												<span className='ml-3'>support@workcation.com</span>
 											</motion.dd>
 											<dt>
-												<span className='sr-only'>Email</span>
+												<span className='sr-only'>LinkedIn</span>
 											</dt>
 											<motion.dd
 												variants={item}
@@ -166,7 +162,9 @@ const Form = () => {
 												className='flex text-base text-teal-50'
 											>
 												<FaEnvelope size={24} />
-												<span className='ml-3'>support@workcation.com</span>
+												<span className='ml-3'>
+													heidariomid.dev@gmail.com
+												</span>
 											</motion.dd>
 										</dl>
 									</div>

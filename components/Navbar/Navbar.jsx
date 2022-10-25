@@ -6,6 +6,8 @@ import {FaGithub, FaLinkedinIn} from 'react-icons/fa';
 import {BsFillPersonLinesFill} from 'react-icons/bs';
 import Toggle from '../Buttom/Toggle';
 import useStateValue from '../../store/useContext';
+import logoWhite from '../../public/assets/images/logo-white.svg';
+import logo from '../../public/assets/images/logo.svg';
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
 	const [state] = useStateValue();
@@ -29,7 +31,7 @@ const Navbar = () => {
 						<Link href='/#home'>
 							<Image
 								className={` cursor-pointer  `}
-								src={require('../../public/assets/images/logo.svg')}
+								src={isDark ? logoWhite : logo}
 								width={80}
 								height={80}
 								alt='logo'
