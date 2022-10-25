@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import MeImg from '../../public/assets/images/omid-heidari.jpeg';
+import MeImg from '../../public/assets/images/omid-heidari.png';
+import Me from '../../public/assets/images/coder.gif';
 import {motion} from 'framer-motion';
 import useStateValue from '../../store/useContext';
 const About = () => {
@@ -57,7 +58,7 @@ const About = () => {
 					} md:m-0 md:border-4 ease-in-out duration-1000`}
 				>
 					<motion.div
-						className='relative  md:flex md:h-full w-full h-96 '
+						className='relative md:flex md:h-full w-full h-96 '
 						initial={{opacity: 0, scale: 0.6}}
 						whileInView={{opacity: 1, scale: 1}}
 						transition={{
@@ -67,20 +68,13 @@ const About = () => {
 					>
 						<Image
 							className='absolute '
-							src={MeImg}
+							src={Me}
 							alt='Profile'
 							layout='fill'
 							objectFit='cover'
 						/>
 
-						{/* <video
-							className='absolute '
-							src={require('../../public/assets/human.mp4')}
-							alt='Profile'
-							autoPlay
-							loop
-							muted
-						/> */}
+						{/* <video className='absolute ' src={Me} alt='Profile' autoPlay loop muted /> */}
 					</motion.div>
 				</motion.div>
 			</motion.div>
