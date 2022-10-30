@@ -33,23 +33,41 @@ const About = () => {
 							isDark ? 'text-zinc-200' : 'text-zinc-600'
 						} md:text-2xl md:py-4  text-justify m-10 md:m-0  md:leading-loose  pr-4 `}
 					>
-						I am a software engineer with a passion for building web applications. I
-						have a background in computer science and have been working in the industry
-						for over 5 years. I have experience working with a variety of technologies
-						and languages, but I am most passionate about JavaScript and React. I am
-						currently working as a software engineer at{' '}
+						For years I have searched for a career that would provide me happiness and
+						the freedom I crave. Ever since I struggled to find something that fulfilled
+						my professional life. Eventually I began studying and educating myself on
+						web development academies like{' '}
 						<a
-							className='font-bold underline'
-							href='https://www.thescore.com/'
-							target='_blank'
-							rel='noopener noreferrer'
+							className='text-zinc-800 font-semibold underline'
+							href='https://7learn.com/'
+							target={'_blank'}
+							rel='noreferrer'
 						>
-							The Score .{' '}
+							7Learn
 						</a>
-						I am a self-taught developer and I am always looking to learn new
-						technologies and languages. I am always looking to improve my skills and
-						knowledge. I am a self-taught developer and I am always looking to learn new
-						technologies and languages.
+						,{' '}
+						<a
+							className='text-zinc-800 font-semibold underline'
+							href='https://www.udemy.com/'
+							target={'_blank'}
+							rel='noreferrer'
+						>
+							Udemy
+						</a>
+						,{' '}
+						<a
+							className='text-zinc-800 font-semibold underline'
+							href='https://frontendmasters.com/'
+							target={'_blank'}
+							rel='noreferrer'
+						>
+							Frontend Masters
+						</a>
+						, etc ... . Now, I seek to become a web developer and cannot wait to provide
+						my services and skills to the world. I am always seeking to learn new things
+						and strive for success. I have experience working with a variety of
+						technologies and languages, but I am most passionate about JavaScript and
+						React.
 					</p>
 				</motion.div>
 				<motion.div

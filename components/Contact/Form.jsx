@@ -1,4 +1,5 @@
-import {FaEnvelope, FaGithub, FaLinkedin, FaPhone, FaTwitter} from 'react-icons/fa';
+import {FaEnvelope, FaGithub, FaLinkedin, FaPhone} from 'react-icons/fa';
+import {GiEarthAmerica} from 'react-icons/gi';
 import Footer from '../Footer/Footer';
 import ContactForm from './FormInputs';
 import FormBackground from './FormBgAbstract';
@@ -108,12 +109,35 @@ const Form = () => {
 											</motion.p>
 
 											<motion.p variants={title} className='py-2'>
-												I am available for freelance work.think you need my
-												help with something or just fancy saying hello, then
-												get in touch.
+												I am available for full time, part time, or remote
+												work. think you need my help with something then get
+												in touch.
 											</motion.p>
 										</div>
 										<dl className='mt-8 space-y-8'>
+											<dt>
+												<span className='sr-only'>WebSite</span>
+											</dt>
+											<motion.dd
+												variants={item}
+												className='flex text-base text-teal-50'
+											>
+												<a
+													href='https://heidariomid.com/'
+													target={'_blank'}
+													rel='noreferrer'
+												>
+													<GiEarthAmerica size={24} />
+												</a>
+												<a
+													className='ml-3 '
+													href='https://heidariomid.com/'
+													target={'_blank'}
+													rel='noreferrer'
+												>
+													heidariomid.com
+												</a>
+											</motion.dd>
 											<motion.dt variants={item}>
 												<span className='sr-only'>Phone number</span>
 											</motion.dt>
@@ -121,29 +145,47 @@ const Form = () => {
 												variants={item}
 												className='flex text-base text-teal-50'
 											>
-												<FaPhone size={24} />
-												<span className='ml-3'>+98 (937) 379-8553</span>
+												<a
+													href='tel:+98 937 379 8553'
+													target={'_blank'}
+													rel='noreferrer'
+												>
+													<FaPhone size={24} />
+												</a>
+												<a
+													href='tel:+98 937 379 8553'
+													target={'_blank'}
+													rel='noreferrer'
+												>
+													<span className='ml-3'>(+98) 937 379 8553</span>
+												</a>
 											</motion.dd>
 											<dt>
-												<span className='sr-only'>Email</span>
+												<span className='sr-only'>Github</span>
 											</dt>
+
 											<motion.dd
 												variants={item}
 												className='flex text-base text-teal-50'
 											>
-												<FaGithub size={24} />
-												<span className='ml-3'>support@workcation.com</span>
+												<a
+													href='https://github.com/heidariomid'
+													target={'_blank'}
+													rel='noreferrer'
+												>
+													<FaGithub size={24} />
+												</a>
+												<a
+													href='https://github.com/heidariomid'
+													target={'_blank'}
+													rel='noreferrer'
+												>
+													<span className='ml-3'>
+														github.com/heidariomid
+													</span>
+												</a>
 											</motion.dd>
-											<dt>
-												<span className='sr-only'>Email</span>
-											</dt>
-											<motion.dd
-												variants={item}
-												className='flex text-base text-teal-50'
-											>
-												<FaTwitter size={24} />
-												<span className='ml-3'>support@workcation.com</span>
-											</motion.dd>
+
 											<dt>
 												<span className='sr-only'>LinkedIn</span>
 											</dt>
@@ -151,8 +193,22 @@ const Form = () => {
 												variants={item}
 												className='flex text-base text-teal-50'
 											>
-												<FaLinkedin size={24} />
-												<span className='ml-3'>support@workcation.com</span>
+												<a
+													href='https://www.linkedin.com/in/heidariomid/'
+													target={'_blank'}
+													rel='noreferrer'
+												>
+													<FaLinkedin size={24} />
+												</a>
+												<a
+													href='https://www.linkedin.com/in/heidariomid/'
+													target={'_blank'}
+													rel='noreferrer'
+												>
+													<span className='ml-3'>
+														linkedin.com/in/heidariomid
+													</span>
+												</a>
 											</motion.dd>
 											<dt>
 												<span className='sr-only'>Email</span>
@@ -161,10 +217,22 @@ const Form = () => {
 												variants={item}
 												className='flex text-base text-teal-50'
 											>
-												<FaEnvelope size={24} />
-												<span className='ml-3'>
-													heidariomid.dev@gmail.com
-												</span>
+												<a
+													href='mailto:heidariomid.dev@gmail.com'
+													target={'_blank'}
+													rel='noreferrer'
+												>
+													<FaEnvelope size={24} />
+												</a>
+												<a
+													href='mailto:heidariomid.dev@gmail.com'
+													target={'_blank'}
+													rel='noreferrer'
+												>
+													<span className='ml-3'>
+														heidariomid.dev@gmail.com
+													</span>
+												</a>
 											</motion.dd>
 										</dl>
 									</div>
