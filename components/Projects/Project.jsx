@@ -103,17 +103,18 @@ const Project = () => {
 									>
 										payment gateway
 									</motion.li>
-									<motion.li
-										variants={item}
-										className='text-white md:text-md my-2 md:ml-16 ml-5'
-									>
-										local storage persistence
-									</motion.li>
+
 									<motion.li
 										variants={item}
 										className='text-white md:text-md my-2 md:ml-16 ml-5'
 									>
 										checkout page
+									</motion.li>
+									<motion.li
+										variants={item}
+										className='text-white md:text-md my-2 md:ml-16 ml-5'
+									>
+										local storage
 									</motion.li>
 									<motion.li
 										variants={item}

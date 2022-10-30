@@ -1,13 +1,14 @@
 import React from 'react';
 import {AiOutlineMail} from 'react-icons/ai';
-import {FaGithub, FaLinkedinIn, FaResearchgate} from 'react-icons/fa';
+import {FaGithub} from 'react-icons/fa';
 import {motion} from 'framer-motion';
 import useStateValue from '../../store/useContext';
 import ProfileImg from '../../public/assets/images/omid-heidari.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import {HiOutlineChevronDown} from 'react-icons/hi';
-import {GrDocumentPdf, GrDocumentUser} from 'react-icons/gr';
+import resumeImg from '../../public/assets/images/resume.svg';
+import resumeWhiteImg from '../../public/assets/images/resume-white.svg';
 const Hero = () => {
 	const [state] = useStateValue();
 	const {isDark} = state.theme;
@@ -100,7 +101,7 @@ const Hero = () => {
 						>
 							accessible
 						</span>{' '}
-						websites.
+						web applications.
 					</p>
 
 					<div className='flex mx-auto items-center justify-center py-5 w-full '>
@@ -166,7 +167,7 @@ const Hero = () => {
 											ease: 'easeInOut',
 										},
 									}}
-									className={`rounded-full   hover:bg-zinc-300   p-3 md:p-4 cursor-pointer  mx-4 md:mx-8  ${
+									className={`rounded-full  hover:bg-zinc-300   p-3 md:p-4 cursor-pointer  mx-4 md:mx-8  ${
 										isDark
 											? 'text-white bg-gradient '
 											: 'bg-white text-zinc-600  shadow-gray-400 shadow-lg'
@@ -187,13 +188,19 @@ const Hero = () => {
 										},
 									}}
 									variants={item}
-									className={`rounded-full items-center justify-center hover:bg-zinc-300    p-3 md:p-4 cursor-pointer  mx-4 md:mx-8  ${
+									className={`flex rounded-full   hover:bg-zinc-300   p-[10px] md:p-4 cursor-pointer  mx-4 md:mx-8  ${
 										isDark
-											? 'text-white bg-gradient'
+											? 'text-white bg-gradient '
 											: 'bg-white text-zinc-600  shadow-gray-400 shadow-lg'
 									}  `}
 								>
-									<GrDocumentPdf className='h-6 w-6 md:h-8 md:w-8 ' />
+									<Image
+										className='justify-center  items-center text-center '
+										src={isDark ? resumeWhiteImg : resumeImg}
+										alt='resume'
+										width={32}
+										height={32}
+									/>
 								</motion.div>
 							</a>
 						</Link>
