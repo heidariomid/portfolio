@@ -3,6 +3,7 @@ import React from 'react';
 import {motion} from 'framer-motion';
 import uberEatsMockImg from '../../public/assets/images/projects/uber-eats/mockup-uber-eats.png';
 import useStateValue from '../../store/useContext';
+import Link from 'next/link';
 
 const Project = () => {
 	const [state] = useStateValue();
@@ -148,8 +149,20 @@ const Project = () => {
 									</motion.li>
 								</div>
 								<div className='mt-8 mb-4 text-center mx-auto hidden md:block'>
-									<button className='btn px-10 py-2  '>Demo</button>
-									<button className='btn px-10 py-2  ml-6'>Code</button>
+									<Link href='https://ubereats.heidariomid.com/' passHref>
+										<a title='demo' target='_blank' rel='noopener noreferrer'>
+											<button className='btn px-10 py-2 '>Demo</button>
+										</a>
+									</Link>
+
+									<Link
+										href='https://github.com/heidariomid/uber-eats-backend'
+										passHref
+									>
+										<a title='code' target='_blank' rel='noopener noreferrer'>
+											<button className='btn px-10 py-2  ml-6'>Code</button>
+										</a>
+									</Link>
 								</div>
 							</div>
 
