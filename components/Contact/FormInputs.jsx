@@ -26,9 +26,7 @@ const ContactForm = () => {
 				<div>
 					<p
 						className={`text-sm  p-4 ${
-							isDark
-								? 'bg-green-500 text-white'
-								: 'border-2  border-spacing-4 border-green-600 text-green-600'
+							isDark ? 'bg-green-500 text-white' : 'border-2  border-spacing-4 border-green-600 text-green-600'
 						} flex justify-center items-center`}
 					>
 						your message has been sent successfully
@@ -44,13 +42,7 @@ const ContactForm = () => {
 		} else if (isMessageSent === 'failed') {
 			return (
 				<div>
-					<p
-						className={`text-sm p-4   ${
-							isDark
-								? 'bg-red-500 text-white'
-								: 'border-2  border-spacing-4 border-red-600 text-red-600'
-						} flex justify-center items-center`}
-					>
+					<p className={`text-sm p-4   ${isDark ? 'bg-red-500 text-white' : 'border-2  border-spacing-4 border-red-600 text-red-600'} flex justify-center items-center`}>
 						there was an error sending your message
 						<div className='pl-2'>
 							<svg width='20' height='20' fill='currentColor' viewBox='0 0 24 24'>
@@ -68,29 +60,22 @@ const ContactForm = () => {
 	const sendEmail = (e) => {
 		e.preventDefault();
 		setIsLoading(true);
-		emailjs
-			.sendForm('service_v7hm19x', 'template_o5gyj0r', form.current, 'G5vSgjaUNRtKTjF4Z')
-			.then(
-				(result) => {
-					if (result.text === 'OK') {
-						setIsMessageSent('success');
-						setIsLoading(false);
-					}
-				},
-				(error) => {
-					console.log(error.text);
-					setIsMessageSent('failed');
+		emailjs.sendForm('service_v7hm19x', 'template_o5gyj0r', form.current, 'G5vSgjaUNRtKTjF4Z').then(
+			(result) => {
+				if (result.text === 'OK') {
+					setIsMessageSent('success');
 					setIsLoading(false);
-				},
-			);
+				}
+			},
+			(error) => {
+				console.log(error.text);
+				setIsMessageSent('failed');
+				setIsLoading(false);
+			},
+		);
 	};
 	return (
-		<form
-			ref={form}
-			onSubmit={sendEmail}
-			method='POST'
-			className='mt-6  grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-8 '
-		>
+		<form ref={form} onSubmit={sendEmail} method='POST' className='mt-6  grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-8 '>
 			<div className='relative '>
 				<input
 					type='text'
@@ -103,9 +88,7 @@ const ContactForm = () => {
 				<label
 					htmlFor='first-name'
 					className={`absolute -top-6 left-3 text-sm font-medium  transition-all duration-200   peer-placeholder-shown:top-4  peer-placeholder-shown:text-gray-500 peer-focus:-top-6 peer-focus:left-3 peer-focus:text-sm ${
-						isDark
-							? 'peer-focus:text-white text-white'
-							: ' peer-focus:text-purple-700 text-gray-700'
+						isDark ? 'peer-focus:text-white text-white' : ' peer-focus:text-purple-700 text-gray-700'
 					}  `}
 				>
 					First name
@@ -124,9 +107,7 @@ const ContactForm = () => {
 				<label
 					htmlFor='last-name'
 					className={`absolute -top-6 left-3 text-sm font-medium  transition-all duration-200   peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-500 peer-focus:-top-6 peer-focus:left-3 peer-focus:text-sm ${
-						isDark
-							? 'peer-focus:text-white text-white'
-							: ' peer-focus:text-purple-700 text-gray-700'
+						isDark ? 'peer-focus:text-white text-white' : ' peer-focus:text-purple-700 text-gray-700'
 					}  `}
 				>
 					Last name
@@ -145,9 +126,7 @@ const ContactForm = () => {
 				<label
 					htmlFor='email'
 					className={`absolute -top-1 left-3 text-sm font-medium  transition-all duration-200   peer-placeholder-shown:top-9 peer-placeholder-shown:text-gray-500 peer-focus:-top-1 peer-focus:left-3 peer-focus:text-sm ${
-						isDark
-							? 'peer-focus:text-white text-white'
-							: ' peer-focus:text-purple-700 text-gray-700'
+						isDark ? 'peer-focus:text-white text-white' : ' peer-focus:text-purple-700 text-gray-700'
 					}  `}
 				>
 					Email
@@ -172,9 +151,7 @@ const ContactForm = () => {
 					<label
 						htmlFor='phone'
 						className={`absolute -top-1 left-3 text-sm font-medium  transition-all duration-200   peer-placeholder-shown:top-9 peer-placeholder-shown:text-gray-500 peer-focus:-top-1 peer-focus:left-3 peer-focus:text-sm ${
-							isDark
-								? 'peer-focus:text-white text-white'
-								: ' peer-focus:text-purple-700 text-gray-700'
+							isDark ? 'peer-focus:text-white text-white' : ' peer-focus:text-purple-700 text-gray-700'
 						}  `}
 					>
 						Phone
@@ -193,9 +170,7 @@ const ContactForm = () => {
 				<label
 					htmlFor='subject'
 					className={`absolute -top-6 left-3 text-sm font-medium  transition-all duration-200   peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-500 peer-focus:-top-6 peer-focus:left-3 peer-focus:text-sm ${
-						isDark
-							? 'peer-focus:text-white text-white'
-							: ' peer-focus:text-purple-700 text-gray-700'
+						isDark ? 'peer-focus:text-white text-white' : ' peer-focus:text-purple-700 text-gray-700'
 					}  `}
 				>
 					Subject
@@ -220,9 +195,7 @@ const ContactForm = () => {
 					<label
 						htmlFor='message'
 						className={`absolute -top-1 left-3 text-sm  font-medium  transition-all duration-200    peer-placeholder-shown:top-9 peer-placeholder-shown:text-gray-500 peer-focus:-top-1 peer-focus:left-3 peer-focus:text-sm ${
-							isDark
-								? 'peer-focus:text-white text-white'
-								: ' peer-focus:text-purple-700 text-gray-500'
+							isDark ? 'peer-focus:text-white text-white' : ' peer-focus:text-purple-700 text-gray-500'
 						}   `}
 					>
 						Message
@@ -231,28 +204,17 @@ const ContactForm = () => {
 			</div>
 
 			<div className='sm:col-span-2 sm:flex sm:justify-end w-full'>
-				<div className='mx-auto justify-center items-center'>
-					{isMessageSent && formMessageHandler()}
-				</div>
+				<div className='mx-auto justify-center items-center'>{isMessageSent && formMessageHandler()}</div>
 				<div></div>
 				<button
 					type='submit'
 					className={`mt-2 ${
-						isDark
-							? 'bg-black text-white shadow-purple-400 shadow-light hover:shadow-purple-400 hover:shadow-lighter'
-							: 'bg-gradient'
+						isDark ? 'bg-black text-white shadow-purple-400 shadow-light hover:shadow-purple-400 hover:shadow-lighter' : 'bg-gradient'
 					} w-full inline-flex items-center  justify-center px-10  py-3 border border-transparent rounded-md  text-base font-medium text-white   hover:bg-gradient  focus:outline-none  sm:w-auto ease-in transition-all duration-300`}
 				>
 					{isLoading ? (
 						<div className='px-[14px]'>
-							<svg
-								className='animate-spin'
-								width='24'
-								height='24'
-								viewBox='0 0 48 48'
-								fill='none'
-								xmlns='http://www.w3.org/2000/svg'
-							>
+							<svg className='animate-spin' width='24' height='24' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'>
 								<path
 									d='M4 24C4 35.0457 12.9543 44 24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4'
 									stroke='#ffffff'
