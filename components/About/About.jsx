@@ -54,6 +54,7 @@ const About = () => {
 						}}
 					>
 						<Image className='absolute ' src={Me} alt='Profile' layout='fill' objectFit='cover' unoptimized={true} />
+
 						{/* <video className='absolute ' src={Me} alt='Profile' autoPlay loop muted /> */}
 					</motion.div>
 				</motion.div>
