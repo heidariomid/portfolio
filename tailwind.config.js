@@ -42,7 +42,7 @@ module.exports = {
 						color: '',
 					},
 					'50%': {
-						color: 'rgb(72 62 81)',
+						color: '#a59d9c',
 					},
 				},
 				borderWiggle: {
