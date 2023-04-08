@@ -18,7 +18,7 @@ const Projects = () => {
 						duration: 1.2,
 						ease: 'easeInOut',
 					}}
-					className={`tracking-widest pb-6 	${isDark ? 'text-white' : 'text-zinc-700'} px-10 md:px-0 uppercase `}
+					className={`tracking-widest pb-6 	${isDark ? 'text-white' : 'text-zinc-700'} px-10 md:px-6 uppercase `}
 				>
 					Projects
 				</motion.h2>

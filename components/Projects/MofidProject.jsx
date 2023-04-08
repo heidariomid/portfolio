@@ -34,24 +34,25 @@ const MofidProject = () => {
 			initial='initial'
 			whileInView='whileInView'
 			variants={variants}
-			className={`flex relative col-span-3  justify-center items-center  w-full ${isDark && 'shadow-center shadow-purple-400'} bg-black  `}
+			className={`flex relative col-span-3 mt-5 justify-center items-center  w-full ${isDark && 'shadow-center shadow-purple-400'} bg-black  `}
 		>
 			<div className='grid md:grid-cols-2 '>
 				<div className='bg-violet-500 text-white absolute top-0 h-full md:text-2xl left-0  w-9 justify-center items-center md:flex flex-col  text-center hidden'>
 					<span className='-rotate-90 w-6 justify-center items-center h-full flex'>Intermediate</span>
 				</div>
 				<div className='md:mb-6 mt-6  flex flex-col justify-between  items-center'>
-					<h1 className='md:text-[70px] ml-16 tracking-wider text-white '>
+					<h1 className='md:text-[70px] md:ml-24 ml-10 tracking-wider text-white '>
 						Crypto <span className='text-orange-500'>Currency</span>
 					</h1>
 					<div className=''>
 						<div className=' p-4 md:ml-12 md:leading-[45px] flex flex-col  w-full ' style={{fontFamily: 'Raleway'}}>
-							<div className=''>
+							{/* <div className=''>
 								<motion.span className='md:text-2xl text-lg md:mr-2 mb-4 ' variants={title}>
-									built a high-performance Next.js application that integrates the <span className='text-orange-500'> React Query</span> library to fetch and
-									exhibit live <span className='text-orange-500'>cryptocurrency</span> data seamlessly.
+									built a high-performance <span className='text-orange-500'>Next.js</span> application that integrates the{' '}
+									<span className='text-orange-500'> react query</span> library to fetch and exhibit live <span className='text-orange-500'>crypto currency</span>{' '}
+									data seamlessly.
 								</motion.span>
-							</div>
+							</div> */}
 						</div>
 						<div className='grid grid-cols-3 md:grid-cols-6 w-full '>
 							<div className=' col-span-2 md:col-span-6 w-full '>
@@ -94,7 +95,7 @@ const MofidProject = () => {
 										</a>
 									</Link>
 
-									<Link href='https://github.com/heidariomid/uber-eats-backend' passHref>
+									<Link href='https://github.com/heidariomid/list-of-currencies' passHref>
 										<a title='code' target='_blank' rel='noopener noreferrer'>
 											<button className='btn px-10 py-2  ml-6'>Code</button>
 										</a>
@@ -120,16 +121,16 @@ const MofidProject = () => {
 					</div>
 				</div>
 				<div className='relative'>
-					<div className='md:absolute md:-top-16 md:left-16 -mt-16 md:-mt-0'>
+					<div className='md:absolute md:-top-8 md:left-16 -mt-16 md:-mt-0'>
 						<Image
 							className=' group-hover:opacity-10'
-							height={800}
+							height={700}
 							width={600}
-							src={require('../../public/assets/images/projects/uber-eats/mockup-uber-eats.png')}
+							src={require('../../public/assets/images/projects/uber-eats/crypto.png')}
 							alt='ReactJs'
 						/>
 					</div>
-					<div className='absolute md:top-8 -top-[380px] left-56 md:left-9 hidden md:flex '>
+					<div className='absolute md:top-8 -top-[380px] left-56 md:left-0 hidden md:flex '>
 						<div className='flex py-10 pl-14 flex-col   '>
 							<div className='mb-6 w-[54px] h-[54px] md:w-[64px] md:h-[64px] animate-iconUp bg-white rounded-full border-2 border-white'>
 								<Image src={require('../../public/assets/images/skills/next-js.png')} alt='NextJs' layout='responsive' />

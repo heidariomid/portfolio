@@ -34,7 +34,7 @@ const UberEatsProject = () => {
 			initial='initial'
 			whileInView='whileInView'
 			variants={variants}
-			className={`flex relative col-span-3  justify-center items-center  w-full ${isDark && 'shadow-center shadow-purple-400'} bg-black `}
+			className={`flex relative col-span-3 justify-center items-center  w-full ${isDark && 'shadow-center shadow-purple-400'} bg-black `}
 		>
 			<div className='grid md:grid-cols-2 '>
 				<div className='bg-purple-800 text-white absolute top-0 h-full md:text-2xl left-0  w-9 justify-center items-center md:flex flex-col  text-center hidden'>
@@ -59,7 +59,7 @@ const UberEatsProject = () => {
 									where
 								</motion.span>
 								<motion.span className='md:text-2xl text-lg mr-2 mb-4 text-center' variants={title}>
-									I added several features and functionalities to enhance the application, including <span className='text-xl'>:</span>
+									I added several features <span className='text-xl'>:</span>
 								</motion.span>
 							</div>
 						</div>
