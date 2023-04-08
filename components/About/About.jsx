@@ -9,7 +9,10 @@ const About = () => {
 	const {isDark} = state.theme;
 
 	return (
-		<div id='about' className='snap-start w-full md:h-screen h-fit mx-auto flex flex-col items-center justify-center bg-transparent'>
+		<div
+			id='about'
+			className={`snap-start w-full md:h-screen h-fit mx-auto flex flex-col items-center justify-center bg-transparent ${isDark ? 'bg-zinc-900' : 'bg-gray-200'}  `}
+		>
 			<motion.div className=' max-w-[1240px] mx-auto md:grid grid-cols-3 gap-8  '>
 				<motion.div className='col-span-2 '>
 					<motion.h2
@@ -24,21 +27,26 @@ const About = () => {
 						About Me
 					</motion.h2>
 					<p className={` ${isDark ? 'text-zinc-200' : 'text-zinc-600'} md:text-2xl md:py-4  text-justify m-10 md:m-0  md:leading-loose  pr-4 `}>
-						For years I have searched for a career that would provide me happiness and the freedom I crave. Ever since I struggled to find something that fulfilled my
-						professional life. Eventually I began studying and educating myself on web development academies like{' '}
+						Software developer with advanced skills in <span className={` ${isDark ? 'text-white' : 'text-zinc-800'} font-semibold `}>ReactJS</span>,{' '}
+						<span className={` ${isDark ? 'text-white' : 'text-zinc-800'} font-semibold `}>Next.js</span>,{' '}
+						<span className={` ${isDark ? 'text-white' : 'text-zinc-800'} font-semibold `}>Redux</span>,{' '}
+						<span className={` ${isDark ? 'text-white' : 'text-zinc-800'} font-semibold `}>GraphQL</span>, and{' '}
+						<span className={` ${isDark ? 'text-white' : 'text-zinc-800'} font-semibold `}>Tailwind CSS</span>. While my focus is on the front-end, I have a good
+						understanding of back-end technologies such as <span className={` ${isDark ? 'text-white' : 'text-zinc-800'} font-semibold `}>Node.js</span>,{' '}
+						<span className={` ${isDark ? 'text-white' : 'text-zinc-800'} font-semibold `}>TypeScript</span>, and{' '}
+						<span className={` ${isDark ? 'text-white' : 'text-zinc-800'} font-semibold `}>Design Patterns</span>. While I have not yet had the opportunity to work for
+						a company, I have dedicated myself to advancing my skills through self-learning in academies like{' '}
 						<a className={` ${isDark ? 'text-white' : 'text-zinc-800'} font-semibold `} href='https://7learn.com/' target={'_blank'} rel='noreferrer'>
 							7Learn
-						</a>
-						,{' '}
-						<a className={` ${isDark ? 'text-white' : 'text-zinc-800'} font-semibold `} href='https://www.udemy.com/' target={'_blank'} rel='noreferrer'>
+						</a>{' '}
+						and{' '}
+						<a className={` ${isDark ? 'text-white' : 'text-zinc-800'} font-semibold `} href='https://udemy.com/' target={'_blank'} rel='noreferrer'>
 							Udemy
-						</a>
-						,{' '}
-						<a className={` ${isDark ? 'text-white' : 'text-zinc-800'} font-semibold `} href='https://frontendmasters.com/' target={'_blank'} rel='noreferrer'>
-							Frontend Masters
-						</a>
-						, etc ... . Now, I seek to become a web developer and cannot wait to provide my services and skills to the world. I am always seeking to learn new things
-						and strive for success. I have experience working with a variety of technologies and languages, but I am most passionate about JavaScript and React.
+						</a>{' '}
+						and have completed many advanced personal projects. I prefer working on the front end because it allows me to see the finished product and the design
+						process. While I enjoy the flexibility of remote work, I am also excited about the opportunity to work collaboratively as part of a dynamic and fast-paced
+						team. My goal is to leverage my skills and experience to deliver exceptional results in an environment that values innovation, teamwork, and professional
+						growth.
 					</p>
 				</motion.div>
 				<motion.div
@@ -53,7 +61,7 @@ const About = () => {
 							ease: 'easeIn',
 						}}
 					>
-						<Image className='absolute ' src={Me} alt='Profile' layout='fill' objectFit='cover' unoptimized={true} />
+						<Image className='absolute' src={Me} alt='Profile' layout='fill' objectFit='cover' unoptimized={true} />
 
 						{/* <video className='absolute ' src={Me} alt='Profile' autoPlay loop muted /> */}
 					</motion.div>
