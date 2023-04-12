@@ -60,7 +60,7 @@ const ContactForm = () => {
 	const sendEmail = (e) => {
 		e.preventDefault();
 		setIsLoading(true);
-		emailjs.sendForm('service_v7hm19x', 'template_o5gyj0r', form.current, 'CtIYhqPI6ko6qKCJn').then(
+		emailjs.sendForm('service_49isx74', 'template_w8zbf4p', form.current, 'CtIYhqPI6ko6qKCJn').then(
 			(result) => {
 				if (result.text === 'OK') {
 					setIsMessageSent('success');

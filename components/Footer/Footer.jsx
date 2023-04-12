@@ -29,7 +29,7 @@ const navigation = {
 		},
 		{
 			name: 'Email',
-			href: 'mailto:heidariomid.dev@gmail.com',
+			href: 'mailto:info@heidariomid.com',
 			icon: (props) => <AiOutlineMail className='h-6 w-6 md:h-8 md:w-8' />,
 		},
 
