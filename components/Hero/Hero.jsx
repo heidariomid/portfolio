@@ -109,7 +109,7 @@ const Hero = () => {
 								</motion.div>
 							</a>
 						</Link>
-						<Link href='mailto:heidariomid.dev@gmail.com' passHref>
+						<Link href='mailto:info@heidariomid.com' passHref>
 							<a title='mail' target='_blank' rel='noopener noreferrer'>
 								<motion.div
 									variants={item}

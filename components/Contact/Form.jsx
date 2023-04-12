@@ -142,11 +142,11 @@ const Form = () => {
 												<span className='sr-only'>Email</span>
 											</dt>
 											<motion.dd variants={item} className='flex text-base text-teal-50'>
-												<a href='mailto:heidariomid.dev@gmail.com' target={'_blank'} rel='noreferrer'>
+												<a href='mailto:info@heidariomid.com' target={'_blank'} rel='noreferrer'>
 													<FaEnvelope size={24} />
 												</a>
-												<a href='mailto:heidariomid.dev@gmail.com' target={'_blank'} rel='noreferrer'>
-													<span className='ml-3'>heidariomid.dev@gmail.com</span>
+												<a href='mailto:info@heidariomid.com' target={'_blank'} rel='noreferrer'>
+													<span className='ml-3'>info@heidariomid.com</span>
 												</a>
 											</motion.dd>
 										</dl>
