@@ -9,7 +9,7 @@ const ContactForm = () => {
 	const [isLoading, setIsLoading] = useState(false);
 	const {isDark} = state.theme;
 	useEffect(() => {
-		if (isMessageSent) {
+		if (isMessageSent === 'success') {
 			form.current.reset();
 		}
 		const clearMessage = setTimeout(() => {
