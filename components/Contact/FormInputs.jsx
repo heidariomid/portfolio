@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
 import useStateValue from '../../store/useContext';
-
+import axios from 'axios';
 const ContactForm = () => {
 	const form = useRef();
 	const [state] = useStateValue();
@@ -57,10 +57,25 @@ const ContactForm = () => {
 			);
 		}
 	};
-	const sendEmail = (e) => {
+
+	const sendEmail = async (e) => {
 		e.preventDefault();
 		setIsLoading(true);
-		emailjs.sendForm('service_49isx74', 'template_w8zbf4p', form.current, 'CtIYhqPI6ko6qKCJn').then(
+		// await axios('http://localhost:3000/api/form').then(
+		// 	(result) => {
+		// 		console.log(result);
+		// 		if (result.statusText === 'OK') {
+		// 			setIsMessageSent('success');
+		// 			setIsLoading(false);
+		// 		}
+		// 	},
+		// 	(error) => {
+		// 		console.log(error);
+		// 		setIsMessageSent('failed');
+		// 		setIsLoading(false);
+		// 	},
+		// );
+		emailjs.sendForm('service_v7hm19x', 'template_o5gyj0r', form.current, 'CtIYhqPI6ko6qKCJn').then(
 			(result) => {
 				if (result.text === 'OK') {
 					setIsMessageSent('success');
@@ -83,7 +98,7 @@ const ContactForm = () => {
 					placeholder=' '
 					id='first-name'
 					autoComplete='given-name'
-					className='peer  focus:ring-0  py-3 px-4 block w-full  shadow-sm  focus:ring-indigo-800 focus:border-fuchsia-700 border-gray-300 rounded-md'
+					className='peer  focus:ring-0  py-3 px-4 block w-full   shadow-sm  focus:ring-indigo-800 focus:border-fuchsia-700 border-gray-300 rounded-md'
 				/>
 				<label
 					htmlFor='first-name'
