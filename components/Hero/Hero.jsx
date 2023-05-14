@@ -3,7 +3,7 @@ import {AiOutlineMail} from 'react-icons/ai';
 import {FaGithub} from 'react-icons/fa';
 import {motion} from 'framer-motion';
 import useStateValue from '../../store/useContext';
-import ProfileImg from '../../public/assets/images/omid-heidari.png';
+import ProfileImg from '../../public/assets/images/omid-heidari.jpeg';
 import Image from 'next/image';
 import Link from 'next/link';
 import {HiOutlineChevronDown} from 'react-icons/hi';
@@ -38,7 +38,7 @@ const Hero = () => {
 		>
 			<div className=' max-w-[1240px] w-full  h-full mx-auto p-2 flex flex-col justify-center items-center '>
 				<motion.div className={` mb-10 rounded-full mx-auto block  px-2 p-2 w-48 md:w-64 shadow-innerCenter  shadow-gray-400`}>
-					<Image className='absolute rounded-full ' src={ProfileImg} alt='Profile' layout='responsive' />
+					<Image className='absolute rounded-full' src={ProfileImg} alt='Profile' layout='responsive' />
 				</motion.div>
 				<div>
 					<h1 className={`text-3xl md:text-5xl ${isDark ? 'text-white' : 'text-zinc-500'} `}>
@@ -57,8 +57,8 @@ const Hero = () => {
 					</motion.h2>
 					<p className={`max-w-[60%] mx-auto text-center  md:text-xl py-4 ${isDark ? 'text-zinc-300' : 'text-zinc-500'}`}>
 						Transforming your ideas into <span className={`${isDark ? 'text-white  ' : 'animate-textColor '} font-semibold `}>beautiful</span> and{' '}
-						<span className={`${isDark ? 'text-white  ' : 'animate-textColor '} font-semibold `}>high-performance</span> web applications with advanced{' '}
-						<span className={`${isDark ? 'text-white  ' : 'animate-textColor '} font-semibold `}>front-end</span> skills{' '}
+						<span className={`${isDark ? 'text-white  ' : 'animate-textColor '} font-semibold `}>high-performance</span> web applications with
+						advanced <span className={`${isDark ? 'text-white  ' : 'animate-textColor '} font-semibold `}>front-end</span> skills{' '}
 					</p>
 
 					<div className='flex mx-auto items-center justify-center py-5 w-full '>
@@ -143,7 +143,13 @@ const Hero = () => {
 										isDark ? 'text-white bg-gradient ' : 'bg-white text-zinc-600  shadow-gray-400 shadow-lg'
 									}  `}
 								>
-									<Image className='justify-center  items-center text-center ' src={isDark ? resumeWhiteImg : resumeImg} alt='resume' width={32} height={32} />
+									<Image
+										className='justify-center  items-center text-center '
+										src={isDark ? resumeWhiteImg : resumeImg}
+										alt='resume'
+										width={32}
+										height={32}
+									/>
 								</motion.div>
 							</a>
 						</Link>
