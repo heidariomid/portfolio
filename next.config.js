@@ -27,3 +27,7 @@ const nextConfig = {
 
 module.exports = nextConfig;
 module.exports = withVideos();
+
+module.exports = {
+	output: 'standalone',
+};

@@ -21,13 +21,7 @@ function MyApp({Component, pageProps}) {
 	};
 	return (
 		<StateProvider>
-			<motion.div
-				key={router.route}
-				initial='initial'
-				animate='animate'
-				exit='exit'
-				variants={variants}
-			>
+			<motion.div key={router.route} initial='initial' animate='animate' exit='exit' variants={variants}>
 				<Navbar />
 				<Component {...pageProps} />
 			</motion.div>
