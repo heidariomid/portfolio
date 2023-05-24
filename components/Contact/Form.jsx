@@ -54,15 +54,6 @@ const Form = () => {
 							initial='initial'
 							whileInView='whileInView'
 							variants={variants}
-							style={{
-								backgroundRepeat: 'no-repeat',
-								backgroundSize: 'cover',
-
-								backgroundImage: `url(${
-									isDark &&
-									'https://img.freepik.com/free-vector/monochrome-abstract-contour-line-illustration_53876-80536.jpg?w=2000&t=st=1663099843~exp=1663100443~hmac=55f5ddc29e8be6372015f6c5b0f314b66d91836d472c5477a8550b3a503ab784'
-								})`,
-							}}
 							className={`max-w-[1240px] m-5 md:mx-auto ${isDark && 'border-2 animate-borderColor'} `}
 						>
 							<div className='relative '>

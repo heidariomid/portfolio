@@ -1,8 +1,8 @@
-import React, {lazy, Suspense} from 'react';
 import Image from 'next/image';
+import React from 'react';
+// import Me from '../../public/assets/images/code.gif';
 import {motion} from 'framer-motion';
 import useStateValue from '../../store/useContext';
-// const GifAnimation = lazy(() => import('../../public/assets/images/code.gif'));
 const About = () => {
 	const [state] = useStateValue();
 	const {isDark} = state.theme;
@@ -75,7 +75,9 @@ const About = () => {
 							ease: 'easeIn',
 						}}
 					>
-						{/* <Image className='absolute' src={GifAnimation} alt='Profile' layout='fill' objectFit='cover' unoptimized={true} /> */}
+						{/* <Image className='absolute' src={Me} alt='Profile' layout='fill' objectFit='cover' unoptimized={true} /> */}
+
+						{/* <video className='absolute ' src={Me} alt='Profile' autoPlay loop muted /> */}
 					</motion.div>
 				</motion.div>
 			</motion.div>
