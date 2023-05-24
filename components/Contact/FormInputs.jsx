@@ -42,7 +42,11 @@ const ContactForm = () => {
 		} else if (isMessageSent === 'failed') {
 			return (
 				<div>
-					<p className={`text-sm p-4   ${isDark ? 'bg-red-500 text-white' : 'border-2  border-spacing-4 border-red-600 text-red-600'} flex justify-center items-center`}>
+					<p
+						className={`text-sm p-4   ${
+							isDark ? 'bg-red-500 text-white' : 'border-2  border-spacing-4 border-red-600 text-red-600'
+						} flex justify-center items-center`}
+					>
 						there was an error sending your message
 						<div className='pl-2'>
 							<svg width='20' height='20' fill='currentColor' viewBox='0 0 24 24'>
@@ -61,20 +65,38 @@ const ContactForm = () => {
 	const sendEmail = async (e) => {
 		e.preventDefault();
 		setIsLoading(true);
-		// await axios('http://localhost:3000/api/form').then(
-		// 	(result) => {
-		// 		console.log(result);
-		// 		if (result.statusText === 'OK') {
-		// 			setIsMessageSent('success');
+		// const data = {
+		// 	name: document.getElementById('first-name').value,
+		// 	lastName: document.getElementById('last-name').value,
+		// 	email: document.getElementById('email').value,
+		// 	message: document.getElementById('message').value,
+		// 	phone: document.getElementById('phone').value,
+		// 	subject: document.getElementById('subject').value,
+		// };
+		// await axios
+		// 	.post(
+		// 		'http://localhost:3000/api/form',
+		// 		{data},
+		// 		{
+		// 			headers: {
+		// 				'Content-Type': 'application/json',
+		// 			},
+		// 		},
+		// 	)
+		// 	.then(
+		// 		(result) => {
+		// 			console.log(result);
+		// 			if (result.statusText === 'OK') {
+		// 				setIsMessageSent('success');
+		// 				setIsLoading(false);
+		// 			}
+		// 		},
+		// 		(error) => {
+		// 			console.log(error);
+		// 			setIsMessageSent('failed');
 		// 			setIsLoading(false);
-		// 		}
-		// 	},
-		// 	(error) => {
-		// 		console.log(error);
-		// 		setIsMessageSent('failed');
-		// 		setIsLoading(false);
-		// 	},
-		// );
+		// 		},
+		// 	);
 		emailjs.sendForm('service_v7hm19x', 'template_o5gyj0r', form.current, 'CtIYhqPI6ko6qKCJn').then(
 			(result) => {
 				if (result.text === 'OK') {

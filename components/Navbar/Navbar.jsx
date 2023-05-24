@@ -1,6 +1,6 @@
+import React, {forwardRef, useEffect, useState} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, {useEffect, useState} from 'react';
 import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai';
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa';
 import {BsFillPersonLinesFill} from 'react-icons/bs';
@@ -8,6 +8,7 @@ import Toggle from '../Buttom/Toggle';
 import useStateValue from '../../store/useContext';
 import logoWhite from '../../public/assets/images/logo-white.svg';
 import logo from '../../public/assets/images/logo.svg';
+// eslint-disable-next-line react/display-name
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
 	const [state] = useStateValue();
@@ -52,7 +53,9 @@ const Navbar = () => {
 					<div
 						className={
 							nav
-								? `fixed left-0 top-0 w-[75%] sm:w-[60%] overflow-scroll md:w-[45%] h-screen ${isDark ? 'bg-gray-900' : 'bg-gray-100'} p-10 ease-in duration-500`
+								? `fixed left-0 top-0 w-[75%] sm:w-[60%] overflow-scroll md:w-[45%] h-screen ${
+										isDark ? 'bg-gray-900' : 'bg-gray-100'
+								  } p-10 ease-in duration-500`
 								: 'fixed left-[-100%] top-0  p-10 ease-in duration-500'
 						}
 					>
@@ -62,7 +65,10 @@ const Navbar = () => {
 								<div className=' col-span-1 flex items-center justify-center'>
 									<Toggle />
 								</div>
-								<div onClick={() => setNav(!nav)} className={`md:hidden  ${isDark ? 'bg-white ' : 'shadow-gray-400 shadow-lg '} rounded-full p-2 cursor-pointer`}>
+								<div
+									onClick={() => setNav(!nav)}
+									className={`md:hidden  ${isDark ? 'bg-white ' : 'shadow-gray-400 shadow-lg '} rounded-full p-2 cursor-pointer`}
+								>
 									<AiOutlineClose size={16} />
 								</div>
 							</div>
@@ -110,7 +116,11 @@ const Navbar = () => {
 							<h2 className={`text-center  ${isDark ? 'text-white' : 'text-black'} uppercase tracking-widest `}>Let&apos;s Connect</h2>
 							<div className='h-1 my-4 bg-gradient'></div>
 
-							<div className={`flex flex-row justify-around mx-auto ${isDark ? 'text-white' : 'text-black'} items-center justify-center my-4 w-full `}>
+							<div
+								className={`flex flex-row justify-around mx-auto ${
+									isDark ? 'text-white' : 'text-black'
+								} items-center justify-center my-4 w-full `}
+							>
 								<div
 									className={`rounded-full  ${
 										isDark ? 'border-[1px] border-white' : 'shadow-gray-400 shadow-lg'
