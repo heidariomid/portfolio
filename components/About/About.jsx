@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import React from 'react';
 // import Me from '../../public/assets/images/code.gif';
 import {motion} from 'framer-motion';
@@ -34,10 +34,10 @@ const About = () => {
 						<span className={` ${isDark ? 'text-white' : 'text-zinc-800'} font-semibold `}>TypeScript</span>,{' '}
 						<span className={` ${isDark ? 'text-white' : 'text-zinc-800'} font-semibold `}>Redux</span>,{' '}
 						<span className={` ${isDark ? 'text-white' : 'text-zinc-800'} font-semibold `}>GraphQL</span>, and{' '}
-						<span className={` ${isDark ? 'text-white' : 'text-zinc-800'} font-semibold `}>Tailwind CSS</span>. Skilled in developing intuitive and
-						visually appealing user interfaces, my aim is to deliver clean and structured code that will be easy to maintain in the future and build
-						for you scalable web applications. I am continuously dedicated to learning and staying up-to-date with the latest industry trends in
-						order to deliver the best possible service and improve my skills as a developer.
+						<span className={` ${isDark ? 'text-white' : 'text-zinc-800'} font-semibold `}>Tailwind CSS</span>. I hold a Master&rsquo;s degree in
+						Computer Science and possess 3 years of professional experience in front-end development, consistently delivering clean and maintainable
+						code. I have a deep understanding of pure JavaScript mechanisms and the ability to write comprehensive tests. Additionally, I am
+						dedicated to staying up to date with the latest industry trends and best practices.
 					</p>
 				</motion.div>
 				<motion.div

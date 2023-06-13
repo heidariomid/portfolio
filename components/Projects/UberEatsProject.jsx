@@ -42,24 +42,17 @@ const UberEatsProject = () => {
 				</div>
 				<div className='md:mb-6 mt-6  flex flex-col justify-between  items-center'>
 					<h1 className='md:text-[70px]  tracking-wider text-white'>
-						Uber <span className='text-green-500'>Eats</span>
+						Food <span className='text-green-500'>Delivery</span>
 					</h1>
 					<div className=''>
 						<div className=' p-4 md:ml-12 md:leading-[45px] flex flex-col  w-full ' style={{fontFamily: 'Raleway'}}>
 							<div className=''>
 								<motion.span className='md:text-2xl text-lg md:mr-2 mb-4 ' variants={title}>
-									This was an advanced project from
+									This was an advanced project that I worked on. In my role as a front-end developer,
 								</motion.span>
-								<motion.span className='md:text-2xl text-lg mr-2 mb-4 text-center text-red-700' variants={title}>
-									<Link href='https://nomadcoders.co/nuber-eats' passHref>
-										<a className='text-green-500' title='uber-eats-project' target='_blank' rel='noopener noreferrer'>
-											Nomad Coders&rsquo; course
-										</a>
-									</Link>{' '}
-									where
-								</motion.span>
+
 								<motion.span className='md:text-2xl text-lg mr-2 mb-4 text-center' variants={title}>
-									I added several features <span className='text-xl'>:</span>
+									I implemented several features and functionality enhancements, including <span className='text-xl'>:</span>
 								</motion.span>
 							</div>
 						</div>
