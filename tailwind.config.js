@@ -1,8 +1,20 @@
 /** @type {import('tailwindcss').Config} */
+function withOpacity(variableName) {
+	return ({opacityValue}) => {
+		if (opacityValue !== undefined) {
+			return `rgba(var(${variableName}), ${opacityValue})`;
+		}
+		return `rgb(var(${variableName}))`;
+	};
+}
+
 module.exports = {
 	content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		extend: {
+			colors: {
+				amazon: {default: withOpacity('--color-amazon'), bold: withOpacity('--color-amazon-bold')},
+			},
 			boxShadow: {
 				down: '10px 10px 24px -12px',
 				center: '4px 0px 45px -12px',

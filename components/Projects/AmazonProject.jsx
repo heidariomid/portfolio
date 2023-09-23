@@ -5,7 +5,7 @@ import uberEatsMockImg from '../../public/assets/images/projects/uber-eats/mocku
 import useStateValue from '../../store/useContext';
 import Link from 'next/link';
 
-const UberEatsProject = () => {
+const AmazonProject = () => {
 	const [state] = useStateValue();
 	const {isDark} = state.theme;
 	const variants = {
@@ -37,22 +37,23 @@ const UberEatsProject = () => {
 			className={`flex relative col-span-3 justify-center items-center  w-full ${isDark && 'shadow-center shadow-purple-400'} bg-black `}
 		>
 			<div className='grid md:grid-cols-2 '>
-				<div className='bg-green-500 text-white absolute top-0 h-full md:text-2xl left-0  w-9 justify-center items-center md:flex flex-col  text-center hidden'>
+				<div className='bg-amazon-bold text-white absolute top-0 h-full md:text-2xl left-0  w-9 justify-center items-center md:flex flex-col  text-center hidden'>
 					<span className='-rotate-90 w-6 justify-center items-center h-full flex'>Advanced</span>
 				</div>
 				<div className='md:mb-6 mt-6  flex flex-col justify-between  items-center'>
-					<h1 className='md:text-[70px]  tracking-wider text-white'>
-						Food <span className='text-green-500'>Delivery</span>
+					<h1 className='md:text-[55px]  tracking-wider text-white'>
+						Amazon.ae <span className='text-amazon-bold'>Shop</span>
 					</h1>
 					<div className=''>
 						<div className=' p-4 md:ml-12 md:leading-[45px] flex flex-col  w-full ' style={{fontFamily: 'Raleway'}}>
 							<div className=''>
 								<motion.span className='md:text-2xl text-lg md:mr-2 mb-4 ' variants={title}>
-									This was an advanced project that I worked on. In my role as a front-end developer,
+									In this project, I seamlessly integrated the Amazon API to enable users to purchase products from Amazon.ae and
 								</motion.span>
 
 								<motion.span className='md:text-2xl text-lg mr-2 mb-4 text-center' variants={title}>
-									I implemented several features and functionality enhancements, including <span className='text-xl'>:</span>
+									empower users to seamlessly search for products and input Amazon product links, enabling the retrieval and real-time display
+									of precise product data .
 								</motion.span>
 							</div>
 						</div>
@@ -60,35 +61,36 @@ const UberEatsProject = () => {
 							<div className=' col-span-2 md:col-span-6 w-full '>
 								<div className='w-full' style={{fontFamily: 'Raleway'}}>
 									<motion.li variants={item} className='text-white my-2 md:ml-16 ml-5 w-full'>
-										improving the UI/UX <span className='hidden md:inline-flex'> by customizing the design for each dashboard </span>
+										Integrating Next.js Application with WooCommerce <span className='hidden md:inline-flex'> for Payment Processing </span>
 									</motion.li>
 								</div>
 								<div className='w-full  ' style={{fontFamily: 'Raleway'}}>
 									<motion.li variants={item} className='text-white my-2 md:ml-16 ml-5 '>
-										implementing a payment gateway using a design pattern
+										Authentic Amazon Look and Feel
 									</motion.li>
 								</div>
-								<div className='grid md:grid-cols-2 w-full  md:text-lg' style={{fontFamily: 'Raleway'}}>
-									<motion.li variants={item} className='text-white md:text-md my-2 md:ml-16 ml-5'>
-										checkout page
+								<div className='w-full  ' style={{fontFamily: 'Raleway'}}>
+									<motion.li variants={item} className='text-white my-2 md:ml-16 ml-5 '>
+										Precise Price and Stock Updates
 									</motion.li>
-									<motion.li variants={item} className='text-white md:text-md my-2 md:ml-16 ml-5'>
-										local storage
+								</div>
+								<div className='w-full  ' style={{fontFamily: 'Raleway'}}>
+									<motion.li variants={item} className='text-white my-2 md:ml-16 ml-5 '>
+										Robust Cart System with Redux-Toolkit
+									</motion.li>
+								</div>
+								<div className='grid md:grid-cols-2 w-full  md:text-md' style={{fontFamily: 'Raleway'}}>
+									<motion.li variants={item} className='text-white my-2 md:ml-16 ml-5'>
+										Synchronization Expertise
 									</motion.li>
 									<motion.li variants={item} className='text-white my-2 md:ml-16 ml-5'>
-										light/dark Mode
+										React Query Optimization
 									</motion.li>
 									<motion.li variants={item} className='text-white my-2 md:ml-16 ml-5'>
-										order history
+										Speedy Performance
 									</motion.li>
 									<motion.li variants={item} className='text-white my-2 md:ml-16 ml-5'>
-										cart system
-									</motion.li>
-									<motion.li variants={item} className='text-white my-2 md:ml-16 ml-5'>
-										protected pages
-									</motion.li>
-									<motion.li variants={item} className='text-white my-2 md:ml-16 ml-5'>
-										etc...
+										Future-Ready Code
 									</motion.li>
 								</div>
 								<div className='mt-8 mb-4 text-center mx-auto hidden md:block'>
@@ -196,4 +198,4 @@ const UberEatsProject = () => {
 	);
 };
 
-export default UberEatsProject;
+export default AmazonProject;

@@ -37,7 +37,7 @@ const MofidProject = () => {
 			className={`flex relative col-span-3 mt-5 justify-center items-center  w-full ${isDark && 'shadow-center shadow-purple-400'} bg-black  `}
 		>
 			<div className='grid md:grid-cols-2 '>
-				<div className='bg-violet-500 text-white absolute top-0 h-full md:text-2xl left-0  w-9 justify-center items-center md:flex flex-col  text-center hidden'>
+				<div className='bg-orange-500 text-white absolute top-0 h-full md:text-2xl left-0  w-9 justify-center items-center md:flex flex-col  text-center hidden'>
 					<span className='-rotate-90 w-6 justify-center items-center h-full flex'>Intermediate</span>
 				</div>
 				<div className='md:mb-6 mt-6  flex flex-col justify-between  items-center'>
