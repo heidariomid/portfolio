@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
 const withVideos = require('next-videos');
-
+const withPWA = require('next-pwa')({
+	dest: 'public',
+	register: true,
+	skipWaiting: true,
+});
 const nextConfig = {
 	reactStrictMode: true,
 	webpack: (config) => {
@@ -27,6 +31,7 @@ const nextConfig = {
 
 module.exports = nextConfig;
 module.exports = withVideos();
+module.exports = withPWA();
 
 module.exports = {
 	output: 'standalone',

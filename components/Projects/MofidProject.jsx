@@ -91,13 +91,13 @@ const MofidProject = () => {
 								<div className='mt-8 mb-4 text-center mx-auto hidden md:block'>
 									<Link href='https://cryptocurrency.heidariomid.com/' passHref>
 										<a title='demo' target='_blank' rel='noopener noreferrer'>
-											<button className='btn px-10 py-2 '>Demo</button>
+											<button className='shadow-gray-400 rounded-xl bg-orange-500 text-white px-10 py-2 '>Demo</button>
 										</a>
 									</Link>
 
 									<Link href='https://github.com/heidariomid/list-of-currencies' passHref>
 										<a title='code' target='_blank' rel='noopener noreferrer'>
-											<button className='btn px-10 py-2  ml-6'>Code</button>
+											<button className='shadow-gray-400 rounded-xl bg-orange-400 text-white px-10 py-2  ml-6'>Code</button>
 										</a>
 									</Link>
 								</div>
@@ -148,8 +148,17 @@ const MofidProject = () => {
 					</div>
 				</div>
 				<div className='mt-8 mb-14 text-center mx-auto flex md:hidden'>
-					<button className='btn px-10 py-2 mt-4 '>Demo</button>
-					<button className='btn px-10 py-2 mt-4 ml-6'>Code</button>
+					<Link href='https://cryptocurrency.heidariomid.com/' passHref>
+						<a title='demo' target='_blank' rel='noopener noreferrer'>
+							<button className='shadow-gray-400 rounded-xl bg-orange-500 text-white px-6 py-2 '>Demo</button>
+						</a>
+					</Link>
+
+					<Link href='https://github.com/heidariomid/list-of-currencies' passHref>
+						<a title='code' target='_blank' rel='noopener noreferrer'>
+							<button className='shadow-gray-400 rounded-xl bg-orange-400 text-white px-6 py-2  ml-6'>Code</button>
+						</a>
+					</Link>
 				</div>
 			</div>
 			{/* <div className='hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]  '>

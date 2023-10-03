@@ -2,10 +2,10 @@
 import React from 'react';
 // import Me from '../../public/assets/images/code.gif';
 import {motion} from 'framer-motion';
-import useStateValue from '../../store/useContext';
+// import useStateValue from '../../store/useContext';
 const About = () => {
-	const [state] = useStateValue();
-	const {isDark} = state.theme;
+	// const [state] = useStateValue();
+	const isDark = false;
 
 	return (
 		<div
