@@ -1,7 +1,7 @@
 import {actions} from './actions';
 
 export const initialState = {
-	theme: {isDark: false},
+	theme: {isDark: true},
 };
 
 export const reducer = (state = initialState, action) => {

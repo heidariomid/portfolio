@@ -1,30 +1,30 @@
+import {useEffect} from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import '../styles/globals.css';
-import {motion} from 'framer-motion';
 import {useRouter} from 'next/router';
 import {StateProvider} from '../store/context';
+import useStateValue from '../store/useContext';
+
+// Keeps the <html data-theme> attribute in sync with the isDark context so the
+// design's CSS-variable token system (light/dark) drives every component.
+function ThemeSync() {
+	const [state] = useStateValue();
+	const {isDark} = state.theme;
+	useEffect(() => {
+		document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+	}, [isDark]);
+	return null;
+}
+
 function MyApp({Component, pageProps}) {
 	const router = useRouter();
-	const variants = {
-		initial: {
-			opacity: 1,
-			transition: {
-				duration: 0.8,
-			},
-		},
-		animate: {
-			opacity: 1,
-			transition: {
-				duration: 0.8,
-			},
-		},
-	};
 	return (
 		<StateProvider>
-			<motion.div key={router.route} initial='initial' animate='animate' exit='exit' variants={variants}>
+			<ThemeSync />
+			<div key={router.route}>
 				<Navbar />
 				<Component {...pageProps} />
-			</motion.div>
+			</div>
 		</StateProvider>
 	);
 }

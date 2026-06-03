@@ -1,65 +1,56 @@
+import React from 'react';
 import Link from 'next/link';
-import {AiOutlineMail} from 'react-icons/ai';
-import {FaGithub} from 'react-icons/fa';
-import useStateValue from '../../store/useContext';
-import resumeImg from '../../public/assets/images/resume-footer.svg';
-import Image from 'next/image';
-/* This example requires Tailwind CSS v2.0+ */
-const navigation = {
-	main: [
-		{name: 'About', href: '#'},
-		{name: 'Skills', href: '#'},
-		{name: 'Projects', href: '#'},
-		{name: 'Contact', href: '#'},
-	],
-	social: [
-		{
-			name: 'LinkedIn',
-			href: 'https://www.linkedin.com/in/heidariomid/',
-			icon: (props) => (
-				<svg className='h-6 w-6 md:h-8 md:w-8' stroke='currentColor' fill='currentColor' strokeWidth='0' viewBox='0 0 448 512' xmlns='http://www.w3.org/2000/svg'>
-					<path d='M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z'></path>
-				</svg>
-			),
-		},
-		{
-			name: 'Github',
-			href: 'https://github.com/heidariomid',
-			icon: (props) => <FaGithub className='h-6 w-6 md:h-8 md:w-8' />,
-		},
-		{
-			name: 'Email',
-			href: 'mailto:info@heidariomid.com',
-			icon: (props) => <AiOutlineMail className='h-6 w-6 md:h-8 md:w-8' />,
-		},
 
-		{
-			name: 'Resume',
-			href: '/assets/resume.pdf',
-			icon: (props) => (
-				<div className='h-6 w-6 md:h-8 md:w-8'>
-					<Image src={resumeImg} alt='resume' width={32} height={32} />
-				</div>
-			),
-		},
-	],
-};
+const footNav = [
+	{name: 'About', href: '/#about'},
+	{name: 'Skills', href: '/#skills'},
+	{name: 'Work', href: '/#projects'},
+	{name: 'Contact', href: '/#contact'},
+	{name: 'GitHub', href: 'https://github.com/heidariomid', external: true},
+	{name: 'LinkedIn', href: 'https://www.linkedin.com/in/heidariomid/', external: true},
+];
 
 const Footer = () => {
-	const [state] = useStateValue();
-	const {isDark} = state.theme;
+	const toTop = () => {
+		if (typeof window !== 'undefined') window.scrollTo({top: 0, behavior: 'smooth'});
+	};
+
 	return (
-		<footer className={`${isDark ? 'bg-black text-white' : 'bg-white'}`}>
-			<div className='max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8'>
-				<div className='mt-8 flex justify-center space-x-6'>
-					{navigation.social.map((item) => (
-						<a key={item.name} href={item.href} target='_blank' rel='noreferrer' className='text-gray-400 hover:text-gray-500'>
-							<span className='sr-only'>{item.name}</span>
-							<item.icon className='h-6 w-6' aria-hidden='true' />
-						</a>
-					))}
-				</div>
-				<p className='mt-8 text-center text-base text-gray-400'>&copy; 2023 Omid Heidari. All rights reserved.</p>
+		<footer className='site-footer wrap'>
+			<div className='foot-grid'>
+				<Link href='/#home'>
+					<a className='flex items-center gap-[0.7rem] text-[1.05rem] font-semibold tracking-[-0.02em]'>
+						<span className='h-[9px] w-[9px] rounded-full' style={{background: 'var(--fg)'}} />
+						Omid Heidari
+					</a>
+				</Link>
+
+				<ul className='foot-nav'>
+					{footNav.map((l) =>
+						l.external ? (
+							<li key={l.name}>
+								<a href={l.href} target='_blank' rel='noreferrer'>
+									{l.name}
+								</a>
+							</li>
+						) : (
+							<li key={l.name}>
+								<Link href={l.href}>
+									<a>{l.name}</a>
+								</Link>
+							</li>
+						),
+					)}
+				</ul>
+
+				<span className='foot-copy'>© 2026 Omid Heidari</span>
+
+				<span className='to-top' onClick={toTop}>
+					Back to top
+					<svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2'>
+						<path d='M12 19V5M6 11l6-6 6 6' />
+					</svg>
+				</span>
 			</div>
 		</footer>
 	);
