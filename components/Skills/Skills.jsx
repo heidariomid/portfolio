@@ -1,550 +1,90 @@
-import Image from 'next/image';
 import React from 'react';
-import {motion} from 'framer-motion';
-import useStateValue from '../../store/useContext';
+
+// level: number of filled dots (out of 3) — 3 Advanced, 2 Intermediate, 1 Learning
+const categories = [
+	{
+		name: 'Frontend',
+		items: [
+			{name: 'React', level: 3},
+			{name: 'Next.js', level: 3},
+			{name: 'Redux', level: 3},
+			{name: 'Tailwind CSS', level: 3},
+			{name: 'React Native', level: 2},
+		],
+	},
+	{
+		name: 'Languages & Data',
+		items: [
+			{name: 'JavaScript', level: 3},
+			{name: 'TypeScript', level: 2},
+			{name: 'Node.js', level: 2},
+			{name: 'GraphQL', level: 2},
+		],
+	},
+	{
+		name: 'Tools & Design',
+		items: [
+			{name: 'WordPress', level: 2},
+			{name: 'Photoshop', level: 2},
+			{name: 'Illustrator', level: 2},
+			{name: 'Figma', level: 1},
+		],
+	},
+];
+
+const Meter = ({level}) => (
+	<span className='flex items-center gap-1'>
+		{[1, 2, 3].map((i) => (
+			<i key={i} className={`meter-dot${i <= level ? ' on' : ''}`} />
+		))}
+	</span>
+);
 
 const Skills = () => {
-	const [state] = useStateValue();
-	const {isDark} = state.theme;
-	const variants = {
-		whileInView: {
-			transition: {
-				staggerChildren: 0.2,
-			},
-		},
-	};
-	const item = {
-		initial: {opacity: 0},
-		whileInView: {
-			opacity: 1,
-			transition: {duration: 0.8, ease: 'easeInOut'},
-		},
-	};
 	return (
-		<motion.div
-			id='skills'
-			initial='initial'
-			whileInView='whileInView'
-			variants={variants}
-			className='snap-start mt-20 w-full md:h-screen h-fit mx-auto flex flex-col items-center justify-center '
-		>
-			<motion.div className='max-w-[1240px] mx-auto flex flex-col h-full  justify-center '>
-				<motion.h2
-					initial={{opacity: 0, x: -400}}
-					whileInView={{opacity: 1, x: 0}}
-					transition={{
-						duration: 1.2,
-						ease: 'easeInOut',
-					}}
-					className={`tracking-widest pb-6 	${isDark ? 'text-white' : 'text-zinc-700'} px-10 md:px-0 md:pb-12 uppercase `}
-				>
-					Skills
-				</motion.h2>
+		<section id='skills' className='block wrap'>
+			<div className='sec-head reveal flex-wrap'>
+				<span className='sec-num'>02</span>
+				<h2 className='sec-title'>Skills</h2>
+				<span className='sec-line' />
+				<div className='ml-auto flex flex-wrap items-center gap-[1.4rem] self-center'>
+					<span className='mono flex items-center gap-2 text-[0.7rem]' style={{color: 'var(--fg-dim)'}}>
+						<Meter level={3} /> Advanced
+					</span>
+					<span className='mono flex items-center gap-2 text-[0.7rem]' style={{color: 'var(--fg-dim)'}}>
+						<Meter level={2} /> Intermediate
+					</span>
+					<span className='mono flex items-center gap-2 text-[0.7rem]' style={{color: 'var(--fg-dim)'}}>
+						<Meter level={1} /> Learning
+					</span>
+				</div>
+			</div>
 
-				<motion.div className='max-w-[1240px]  m-5 md:m-0 grid grid-cols-2 px-2 gap-x-2 gap-y-4  lg:grid-cols-4  lg:gap-14 '>
-					{/* ---------------------------ReactJs-------------------------- */}
-					<motion.div className={`p-6 ${isDark ? 'shadow-down shadow-purple-500' : 'shadow-md'}  rounded-md hover:scale-105 ease-in duration-300 relative`}>
-						<div className='bg-purple-800 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full  flex'>Advanced</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='mx-auto '>
-								<Image src={require('../../public/assets/images/skills/react.png')} alt='react-js' width={'64px'} height={'64px'} />
-							</div>
-							<div className={`flex flex-col text-sm md:text-base items-center justify-center ${isDark ? 'text-white' : 'text-zinc-700'}`}>
-								<h3>ReactJS</h3>
-							</div>
-						</div>
-					</motion.div>
-					{/* ---------------------------NextJs-------------------------- */}
-					<motion.div className={`p-6  ${isDark ? 'shadow-down shadow-purple-500' : 'shadow-md'} rounded-lg hover:scale-105 ease-in duration-300 relative`}>
-						<div className='bg-purple-800 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>Advanced</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto'>
-								<Image
-									className='bg-white rounded-full '
-									src={require('../../public/assets/images/skills/next-js.png')}
-									alt='NextJs'
-									width={'64px'}
-									height={'64px'}
-								/>
-							</div>
-							<div className={`flex flex-col text-sm md:text-base items-center justify-center ${isDark ? 'text-white' : 'text-zinc-700'} `}>
-								<h3>NextJs</h3>
-							</div>
-						</div>
-					</motion.div>
-					{/* ---------------------------Redux-------------------------- */}
-					<motion.div className={`p-6 ${isDark ? 'shadow-down shadow-purple-500' : 'shadow-md'}  rounded-md hover:scale-105 ease-in duration-300 relative`}>
-						<div className='bg-purple-800 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>Advanced</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto'>
-								<Image src={require('../../public/assets/images/skills/redux.png')} alt='react-redux' width={'64px'} height={'64px'} />
-							</div>
-							<div className={`flex flex-col text-sm md:text-base items-center justify-center ${isDark ? 'text-white' : 'text-zinc-700'}`}>
-								<h3>Redux</h3>
-							</div>
-						</div>
-					</motion.div>
-					{/* ---------------------------Tailwind CSS-------------------------- */}
-					<motion.div className={`p-6  ${isDark ? 'shadow-down shadow-purple-500' : 'shadow-md'} rounded-lg hover:scale-105 ease-in duration-300 relative`}>
-						<div className='bg-purple-800 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base  md:w-6 w-5 justify-center items-center h-full flex'>Advanced</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto'>
-								<Image src={require('../../public/assets/images/skills/tailwind.png')} alt='tailwind' width={'64px'} height={'64px'} />
-							</div>
-							<div className={`flex flex-col text-sm md:text-base  items-center justify-center ${isDark ? 'text-white' : 'text-zinc-700'} `}>
-								<h3>Tailwind CSS </h3>
-							</div>
-						</div>
-					</motion.div>
-					{/* ---------------------------React Native-------------------------- */}
-					<motion.div
-						variants={item}
-						className={`p-6  ${isDark ? 'shadow-down shadow-violet-400' : 'shadow-md'} rounded-lg hover:scale-105 ease-in duration-300 relative`}
-					>
-						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>Intermediate</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto'>
-								<Image src={require('../../public/assets/images/skills/react-native.png')} alt='React Native' width={'94px'} height={'64px'} />
-							</div>
-							<div className={`flex flex-col text-sm md:text-base items-center justify-center ${isDark ? 'text-white' : 'text-zinc-700'} `}>
-								<h3>React Native</h3>
-							</div>
-						</div>
-					</motion.div>
-					{/* ---------------------------GraphQL-------------------------- */}
-
-					<motion.div
-						variants={item}
-						className={`p-6  ${isDark ? 'shadow-down shadow-violet-400' : 'shadow-md'} rounded-lg hover:scale-105 ease-in duration-300 relative`}
-					>
-						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>Intermediate</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='ml-5'>
-								<Image src={require('../../public/assets/images/skills/graphql.png')} alt='GraphQL' width={'64px'} height={'64px'} />
-							</div>
-							<div className={`flex flex-col text-sm md:text-base items-center justify-center ${isDark ? 'text-white' : 'text-zinc-700'} `}>
-								<h3>GraphQL</h3>
-							</div>
-						</div>
-					</motion.div>
-					{/* ---------------------------TypeScript-------------------------- */}
-					<motion.div
-						variants={item}
-						className={`p-6  ${isDark ? 'shadow-down shadow-violet-400' : 'shadow-md'} rounded-lg hover:scale-105 ease-in duration-300 relative`}
-					>
-						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>Intermediate</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto'>
-								<Image src={require('../../public/assets/images/skills/typescript.png')} alt='TypeScript' width={'64px'} height={'64px'} />
-							</div>
-							<div className={`flex flex-col text-sm md:text-base items-center justify-center ${isDark ? 'text-white' : 'text-zinc-700'} `}>
-								<h3>TypeScript</h3>
-							</div>
-						</div>
-					</motion.div>
-
-					{/* ---------------------------Node JS-------------------------- */}
-					<motion.div
-						variants={item}
-						className={`p-6  ${isDark ? 'shadow-down shadow-violet-400' : 'shadow-md'} rounded-lg hover:scale-105 ease-in duration-300 relative`}
-					>
-						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>Intermediate</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto'>
-								<Image src={require('../../public/assets/images/skills/node.png')} alt='NodeJs' width={'64px'} height={'64px'} />
-							</div>
-							<div className={`flex flex-col text-sm md:text-base items-center justify-center ${isDark ? 'text-white' : 'text-zinc-700'} `}>
-								<h3>NodeJs</h3>
-							</div>
-						</div>
-					</motion.div>
-
-					{/* ---------------------------WordPress-------------------------- */}
-					<motion.div
-						variants={item}
-						className={`p-6  ${isDark ? 'shadow-down shadow-violet-400' : 'shadow-md'} rounded-lg hover:scale-105 ease-in duration-300 relative`}
-					>
-						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>Intermediate</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto'>
-								<Image
-									className='bg-white rounded-full'
-									src={require('../../public/assets/images/skills/wordPress.png')}
-									alt='WordPress'
-									width={'64px'}
-									height={'64px'}
-								/>
-							</div>
-							<div className={`flex flex-col text-sm md:text-base items-center justify-center ${isDark ? 'text-white' : 'text-zinc-700'} `}>
-								<h3>WordPress</h3>
-							</div>
-						</div>
-					</motion.div>
-					{/* ---------------------------GitHub-------------------------- */}
-					{/* <motion.div
-						variants={item}
-						className={`p-6  ${
-							isDark ? 'shadow-down shadow-violet-400' : 'shadow-md'
-						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
-					>
-						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
-								Intermediate
+			<div className='grid gap-[clamp(1.75rem,4vw,3.5rem)] border-t pt-[clamp(1.75rem,3vw,2.5rem)] sm:grid-cols-2 lg:grid-cols-3' style={{borderColor: 'var(--line)'}}>
+				{categories.map((cat, idx) => (
+					<div key={cat.name} className='reveal' data-d={idx + 1}>
+						<div className='mb-[0.4rem] flex items-baseline justify-between gap-2 border-b pb-[1rem]' style={{borderColor: 'var(--line)'}}>
+							<span className='mono text-[0.74rem] uppercase tracking-[0.16em]' style={{color: 'var(--fg)'}}>
+								{cat.name}
+							</span>
+							<span className='mono text-[0.74rem]' style={{color: 'var(--fg-faint)'}}>
+								{String(cat.items.length).padStart(2, '0')}
 							</span>
 						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto '>
-								<Image
-									className='bg-white rounded-full'
-									src='/../public/assets/images/skills/github1.png'
-									alt='GitHub'
-									width={'64px'}
-									height={'64px'}
-								/>
-							</div>
+						{cat.items.map((item) => (
 							<div
-								className={`flex flex-col text-sm md:text-base items-center justify-center ${
-									isDark ? 'text-white' : 'text-zinc-700'
-								} `}
+								key={item.name}
+								className='skill-item flex items-center justify-between gap-4 border-b py-[0.85rem]'
+								style={{borderColor: 'var(--line)'}}
 							>
-								<h3>GitHub</h3>
+								<span className='text-[clamp(1rem,1.6vw,1.18rem)] font-medium tracking-[-0.01em]'>{item.name}</span>
+								<Meter level={item.level} />
 							</div>
-						</div>
-					</motion.div> */}
-					{/* ---------------------------styled-components-------------------------- */}
-					{/* <motion.div
-						variants={item}
-						className={`p-6 ${
-							isDark ? 'shadow-down shadow-violet-400' : 'shadow-md'
-						}  rounded-md hover:scale-105 ease-in duration-300 relative`}
-					>
-						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
-								Intermediate
-							</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto '>
-								<Image
-									className='bg-white'
-									src='/../public/assets/images/skills/styled-components.png'
-									alt='styled-components'
-									width={'64px'}
-									height={'64px'}
-								/>
-							</div>
-							<div
-								className={`flex flex-col text-sm md:text-base items-center justify-center ${
-									isDark ? 'text-white' : 'text-zinc-700'
-								}`}
-							>
-								<h3>Styled Components</h3>
-							</div>
-						</div>
-					</motion.div> */}
-					{/* ---------------------------adobe-photoshop-------------------------- */}
-					<motion.div
-						variants={item}
-						className={`p-6 ${isDark ? 'shadow-down shadow-violet-400' : 'shadow-md'}  rounded-md hover:scale-105 ease-in duration-300 relative`}
-					>
-						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>Intermediate</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto'>
-								<Image src={require('../../public/assets/images/skills/adobe-photoshop.png')} alt='adobe-photoshop' width={'64px'} height={'64px'} />
-							</div>
-							<div className={`flex flex-col text-sm md:text-base items-center justify-center ${isDark ? 'text-white' : 'text-zinc-700'}`}>
-								<h3>Photoshop</h3>
-							</div>
-						</div>
-					</motion.div>
-					{/* ---------------------------adobe-illustrator-------------------------- */}
-					<motion.div
-						variants={item}
-						className={`p-6 ${isDark ? 'shadow-down shadow-violet-400' : 'shadow-md'}  rounded-md hover:scale-105 ease-in duration-300 relative`}
-					>
-						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>Intermediate</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto'>
-								<Image src={require('../../public/assets/images/skills/adobe-ilustrator.png')} alt='adobe-illustrator' width={'64px'} height={'64px'} />
-							</div>
-							<div className={`flex flex-col text-sm md:text-base items-center justify-center ${isDark ? 'text-white' : 'text-zinc-700'}`}>
-								<h3>Illustrator</h3>
-							</div>
-						</div>
-					</motion.div>
-					{/* ---------------------------Nest JS-------------------------- */}
-					{/* <motion.div
-						variants={item}
-						className={`p-6 rounded-lg ${isDark ? ' shadow-down shadow-purple-400' : 'shadow-md'} hover:scale-105 ease-in duration-300 relative`}
-					>
-						<div className='bg-purple-400 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>Beginner</span>
-						</div>
-
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto'>
-								<Image src={require('../../public/assets/images/skills/nestjs.png')} alt='nestjs' width={'64px'} height={'64px'} />
-							</div>
-							<div className={`flex flex-col text-sm md:text-base items-center justify-center ${isDark ? 'text-white' : 'text-zinc-700'} `}>
-								<h3>Nest Js</h3>
-							</div>
-						</div>
-					</motion.div> */}
-					{/* ---------------------------Figma-------------------------- */}
-					<motion.div
-						variants={item}
-						className={`p-6 rounded-lg ${isDark ? ' shadow-down shadow-purple-400' : 'shadow-md'} hover:scale-105 ease-in duration-300 relative`}
-					>
-						<div className='bg-purple-400 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>Beginner</span>
-						</div>
-
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto'>
-								<Image src={require('../../public/assets/images/skills/figma.png')} alt='figma' width={'56px'} height={'62px'} />
-							</div>
-							<div className={`flex flex-col text-sm md:text-base items-center justify-center ${isDark ? 'text-white' : 'text-zinc-700'} `}>
-								<h3>Figma</h3>
-							</div>
-						</div>
-					</motion.div>
-					{/* ---------------------------HTML5-------------------------- */}
-					{/* <motion.div
-						variants={item}
-						className={`p-6 ${
-							isDark ? 'shadow-down shadow-violet-400' : 'shadow-md'
-						}  rounded-md hover:scale-105 ease-in duration-300 relative`}
-					>
-						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
-								Intermediate
-							</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto'>
-								<Image
-									src='/../public/assets/images/skills/html.png'
-									alt='HTML5'
-									width={'64px'}
-									height={'64px'}
-								/>
-							</div>
-							<div
-								className={`flex flex-col text-sm md:text-base items-center justify-center ${
-									isDark ? 'text-white' : 'text-zinc-700'
-								}`}
-							>
-								<h3>HTML5</h3>
-							</div>
-						</div>
-					</motion.div> */}
-					{/* ---------------------------CSS-------------------------- */}
-					{/* <motion.div
-						variants={item}
-						className={`p-6 ${
-							isDark ? 'shadow-down shadow-violet-400' : 'shadow-md'
-						}  rounded-md hover:scale-105 ease-in duration-300 relative`}
-					>
-						<div className='bg-violet-500 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
-								Intermediate
-							</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto'>
-								<Image
-									src='/../public/assets/images/skills/css.png'
-									alt='CSS'
-									width={'64px'}
-									height={'64px'}
-								/>
-							</div>
-							<div
-								className={`flex flex-col text-sm md:text-base items-center justify-center ${
-									isDark ? 'text-white' : 'text-zinc-700'
-								}`}
-							>
-								<h3>CSS</h3>
-							</div>
-						</div>
-					</motion.div> */}
-
-					{/* ---------------------------mongoDb-------------------------- */}
-					{/* <motion.div
-						variants={item}
-						className={`p-6  ${
-							isDark ? 'shadow-down shadow-purple-400' : 'shadow-md'
-						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
-					>
-						<div className='bg-purple-400 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
-								Beginner
-							</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto'>
-								<Image
-									src='/../public/assets/images/skills/mongo.png'
-									alt='mongoDb'
-									width={'64px'}
-									height={'64px'}
-								/>
-							</div>
-							<div
-								className={`flex flex-col text-sm md:text-base items-center justify-center ${
-									isDark ? 'text-white' : 'text-zinc-700'
-								} `}
-							>
-								<h3>mongoDb</h3>
-							</div>
-						</div>
-					</motion.div> */}
-					{/* ---------------------------MySQL-------------------------- */}
-					{/* <motion.div
-						variants={item}
-						className={`p-6  ${
-							isDark ? 'shadow-down shadow-purple-400' : 'shadow-md'
-						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
-					>
-						<div className='bg-purple-400 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
-								Beginner
-							</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto'>
-								<Image
-									src='/../public/assets/images/skills/sql.png'
-									alt='MySQL'
-									width={'64px'}
-									height={'64px'}
-								/>
-							</div>
-							<div
-								className={`flex flex-col text-sm md:text-base items-center justify-center ${
-									isDark ? 'text-white' : 'text-zinc-700'
-								} `}
-							>
-								<h3>MySQL</h3>
-							</div>
-						</div>
-					</motion.div> */}
-
-					{/* ---------------------------PostgreSql-------------------------- */}
-					{/* <motion.div
-						variants={item}
-						className={`p-6  ${
-							isDark ? 'shadow-down shadow-purple-400' : 'shadow-md'
-						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
-					>
-						<div className='bg-purple-400 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
-								Beginner
-							</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto'>
-								<Image
-									src='/../public/assets/images/skills/postgresql.png'
-									alt='postgresql'
-									width={'64px'}
-									height={'64px'}
-								/>
-							</div>
-							<div
-								className={`flex flex-col text-sm md:text-base items-center justify-center ${
-									isDark ? 'text-white' : 'text-zinc-700'
-								} `}
-							>
-								<h3>PostgreSql</h3>
-							</div>
-						</div>
-					</motion.div> */}
-					{/* ---------------------------Docker-------------------------- */}
-					{/* <motion.div
-						variants={item}
-						className={`p-6  ${
-							isDark ? 'shadow-down shadow-purple-400' : 'shadow-md'
-						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
-					>
-						<div className='bg-purple-400 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
-								Beginner
-							</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto'>
-								<Image
-									src='/../public/assets/images/skills/docker.png'
-									alt='docker'
-									width={'64px'}
-									height={'64px'}
-								/>
-							</div>
-							<div
-								className={`flex flex-col text-sm md:text-base items-center justify-center ${
-									isDark ? 'text-white' : 'text-zinc-700'
-								} `}
-							>
-								<h3>Docker</h3>
-							</div>
-						</div>
-					</motion.div> */}
-					{/* ---------------------------Redis-------------------------- */}
-					{/* <motion.div
-						variants={item}
-						className={`p-6  ${
-							isDark ? 'shadow-down shadow-purple-400' : 'shadow-md'
-						} rounded-lg hover:scale-105 ease-in duration-300 relative`}
-					>
-						<div className='bg-purple-400 text-white absolute top-0 h-full left-0    text-center'>
-							<span className='-rotate-90 text-sm md:text-base md:w-6 w-5 justify-center items-center h-full flex'>
-								Beginner
-							</span>
-						</div>
-						<div className='grid grid-cols-2 gap-4 justify-center items-center'>
-							<div className='m-auto'>
-								<Image
-									src='/../public/assets/images/skills/redis.png'
-									alt='redis'
-									width={'65px'}
-									height={'64px'}
-								/>
-							</div>
-							<div
-								className={`flex flex-col text-sm md:text-base items-center justify-center ${
-									isDark ? 'text-white' : 'text-zinc-700'
-								} `}
-							>
-								<h3>Redis</h3>
-							</div>
-						</div>
-					</motion.div> */}
-				</motion.div>
-			</motion.div>
-		</motion.div>
+						))}
+					</div>
+				))}
+			</div>
+		</section>
 	);
 };
 

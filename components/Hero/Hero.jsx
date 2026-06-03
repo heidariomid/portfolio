@@ -1,170 +1,89 @@
 import React from 'react';
-import {AiOutlineMail} from 'react-icons/ai';
-import {FaGithub} from 'react-icons/fa';
-import {motion} from 'framer-motion';
-import useStateValue from '../../store/useContext';
-import ProfileImg from '../../public/assets/images/omid-heidari.jpeg';
 import Image from 'next/image';
 import Link from 'next/link';
-import {HiOutlineChevronDown} from 'react-icons/hi';
-import resumeImg from '../../public/assets/images/resume.svg';
-import resumeWhiteImg from '../../public/assets/images/resume-white.svg';
-const Hero = () => {
-	const [state] = useStateValue();
-	const {isDark} = state.theme;
-	const variants = {
-		animate: {
-			transition: {
-				staggerChildren: 0.2,
-			},
-		},
-	};
-	const item = {
-		initial: {opacity: 0, y: 20},
-		animate: {
-			opacity: 1,
-			y: 0,
-			transition: {duration: 0.8, ease: 'easeInOut', stiffness: 100},
-		},
-	};
-	return (
-		<motion.div
-			initial='initial'
-			animate='animate'
-			exit='exit'
-			variants={variants}
-			id='home'
-			className='snap-start w-full h-screen mx-auto flex flex-col items-center justify-center text-center'
-		>
-			<div className=' max-w-[1240px] w-full  h-full mx-auto p-2 flex flex-col justify-center items-center '>
-				<motion.div className={` mb-10 rounded-full mx-auto block  px-2 p-2 w-48 md:w-64 shadow-innerCenter  shadow-gray-400`}>
-					<Image className='absolute rounded-full' src={ProfileImg} alt='Profile' layout='responsive' />
-				</motion.div>
-				<div>
-					<h1 className={`text-3xl md:text-5xl ${isDark ? 'text-white' : 'text-zinc-500'} `}>
-						Hi, I&apos;m <span className={` ${isDark ? 'text-white' : 'animate-textColor'}`}>Omid</span>
-					</h1>
-					<motion.h2
-						initial={{opacity: 0, y: -10}}
-						whileInView={{opacity: 1, y: 0}}
-						transition={{
-							duration: 1.2,
-							ease: 'easeInOut',
-						}}
-						className={`  pt-4 pb-2 ${isDark ? 'text-gradient' : 'text-zinc-500'} tracking-wide`}
-					>
-						A <span className={`${!isDark && 'animate-textColor'}`}>Software</span> Developer
-					</motion.h2>
-					<p className={`max-w-[60%] mx-auto text-center  md:text-xl py-4 ${isDark ? 'text-zinc-300' : 'text-zinc-500'}`}>
-						Transforming your ideas into <span className={`${isDark ? 'text-white  ' : 'animate-textColor '} font-semibold `}>beautiful</span> and{' '}
-						<span className={`${isDark ? 'text-white  ' : 'animate-textColor '} font-semibold `}>high-performance</span> web applications with
-						advanced <span className={`${isDark ? 'text-white  ' : 'animate-textColor '} font-semibold `}>front-end</span> skills{' '}
-					</p>
+import {FaGithub, FaLinkedinIn} from 'react-icons/fa';
+import {AiOutlineMail} from 'react-icons/ai';
+import ProfileImg from '../../public/assets/images/omid-heidari.jpeg';
 
-					<div className='flex mx-auto items-center justify-center py-5 w-full '>
-						<Link href='https://www.linkedin.com/in/heidariomid/' passHref>
-							<a title='linkedin' target='_blank' rel='noopener noreferrer'>
-								<motion.div
-									whileHover={{
-										scale: 1.1,
-										transition: {
-											duration: 0.2,
-											ease: 'easeInOut',
-										},
-									}}
-									variants={item}
-									className={`rounded-full   hover:bg-zinc-300    p-3 md:p-4 cursor-pointer  mx-4 md:mx-8  ${
-										isDark ? 'text-white bg-gradient' : 'bg-white text-zinc-600  shadow-gray-400 shadow-lg'
-									}  `}
-								>
-									<svg
-										className='h-6 w-6 md:h-8 md:w-8'
-										stroke='currentColor'
-										fill='currentColor'
-										strokeWidth='0'
-										viewBox='0 0 448 512'
-										xmlns='http://www.w3.org/2000/svg'
-									>
-										<path d='M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z'></path>
+const marqueeItems = ['React', 'Next.js', 'TypeScript', 'Redux', 'GraphQL', 'Tailwind CSS', 'Node.js', 'React Native'];
+
+const Hero = () => {
+	return (
+		<>
+			<section id='home' className='wrap flex min-h-[100svh] items-center pt-24 pb-12'>
+				<div className='grid w-full items-center gap-[clamp(2rem,5vw,4.5rem)] md:grid-cols-[1.55fr_0.9fr]'>
+					{/* Text */}
+					<div>
+						<div className='reveal mb-[1.8rem] flex items-center gap-[0.8rem]'>
+							<span className='h-[7px] w-[7px] rounded-full' style={{background: 'var(--accent)', boxShadow: '0 0 10px var(--accent)'}} />
+							<span className='eyebrow'>Available for work · Front-End Developer</span>
+						</div>
+						<h1 className='reveal text-[clamp(3.4rem,11.5vw,9.5rem)] font-semibold leading-[0.86] tracking-[-0.05em]' data-d='1'>
+							Omid
+							<br />
+							<span className='font-light' style={{color: 'var(--fg-dim)'}}>
+								Heidari
+							</span>
+						</h1>
+						<p className='reveal mt-[1.8rem] max-w-[34ch] text-[clamp(1.05rem,2.4vw,1.6rem)] leading-relaxed' data-d='2' style={{color: 'var(--fg-dim)'}}>
+							I turn ideas into <b style={{color: 'var(--accent)'}}>beautiful</b>, <b style={{color: 'var(--accent)'}}>high-performance</b> web
+							applications — focused on the front end with React, Next.js &amp; TypeScript.
+						</p>
+
+						<div className='reveal mt-[2.4rem] flex flex-wrap items-center gap-[0.9rem]' data-d='3'>
+							<Link href='/#projects'>
+								<a className='btn btn-primary'>
+									View work
+									<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2'>
+										<path d='M5 12h14M13 6l6 6-6 6' />
 									</svg>
-								</motion.div>
-							</a>
-						</Link>
-						<Link href='https://github.com/heidariomid' passHref>
-							<a title='github' target='_blank' rel='noopener noreferrer'>
-								<motion.div
-									whileHover={{
-										scale: 1.1,
-										transition: {
-											duration: 0.2,
-											ease: 'easeInOut',
-										},
-									}}
-									variants={item}
-									className={`rounded-full   hover:bg-zinc-300   p-3 md:p-4 cursor-pointer  mx-4 md:mx-8  ${
-										isDark ? 'text-white bg-gradient' : 'bg-white text-zinc-600  shadow-gray-400 shadow-lg'
-									}  `}
-								>
-									<FaGithub className='h-6 w-6 md:h-8 md:w-8' />
-								</motion.div>
-							</a>
-						</Link>
-						<Link href='mailto:info@heidariomid.com' passHref>
-							<a title='mail' target='_blank' rel='noopener noreferrer'>
-								<motion.div
-									variants={item}
-									whileHover={{
-										scale: 1.1,
-										transition: {
-											duration: 0.2,
-											ease: 'easeInOut',
-										},
-									}}
-									className={`rounded-full  hover:bg-zinc-300   p-3 md:p-4 cursor-pointer  mx-4 md:mx-8  ${
-										isDark ? 'text-white bg-gradient ' : 'bg-white text-zinc-600  shadow-gray-400 shadow-lg'
-									}  `}
-								>
-									<AiOutlineMail className='h-6 w-6 md:h-8 md:w-8' />
-								</motion.div>
-							</a>
-						</Link>
-						<Link href='/assets/resume.pdf' passHref>
-							<a title='resume' target='_blank' rel='noopener noreferrer'>
-								<motion.div
-									whileHover={{
-										scale: 1.1,
-										transition: {
-											duration: 0.2,
-											ease: 'easeInOut',
-										},
-									}}
-									variants={item}
-									className={`flex rounded-full   hover:bg-zinc-300   p-[10px] md:p-4 cursor-pointer  mx-4 md:mx-8  ${
-										isDark ? 'text-white bg-gradient ' : 'bg-white text-zinc-600  shadow-gray-400 shadow-lg'
-									}  `}
-								>
-									<Image
-										className='justify-center  items-center text-center '
-										src={isDark ? resumeWhiteImg : resumeImg}
-										alt='resume'
-										width={32}
-										height={32}
-									/>
-								</motion.div>
-							</a>
-						</Link>
+								</a>
+							</Link>
+							<Link href='/#contact'>
+								<a className='btn btn-ghost'>Get in touch</a>
+							</Link>
+
+							<div className='ml-[0.4rem] flex gap-[0.5rem]'>
+								<a href='https://www.linkedin.com/in/heidariomid/' target='_blank' rel='noreferrer' aria-label='LinkedIn' className='social'>
+									<FaLinkedinIn />
+								</a>
+								<a href='https://github.com/heidariomid' target='_blank' rel='noreferrer' aria-label='GitHub' className='social'>
+									<FaGithub />
+								</a>
+								<a href='mailto:info@heidariomid.com' aria-label='Email' className='social'>
+									<AiOutlineMail />
+								</a>
+							</div>
+						</div>
+					</div>
+
+					{/* Photo */}
+					<div className='hero-photo reveal relative w-full max-w-[360px] justify-self-start md:justify-self-end' data-d='2'>
+						<div className='relative aspect-[1/1.07] overflow-hidden border' style={{borderColor: 'var(--line-2)', background: 'var(--bg-2)'}}>
+							<span className='absolute -right-px -top-px z-10 h-[14px] w-[14px] border' style={{borderColor: 'var(--fg)', borderLeft: 0, borderBottom: 0}} />
+							<Image src={ProfileImg} alt='Omid Heidari' layout='fill' objectFit='cover' className='hero-photo-img' />
+							<span
+								className='mono absolute -bottom-px -left-px z-10 px-[0.8rem] py-[0.5rem] text-[0.7rem] uppercase tracking-[0.1em]'
+								style={{background: 'var(--inv-bg)', color: 'var(--inv-fg)'}}
+							>
+								Based in · Remote
+							</span>
+						</div>
 					</div>
 				</div>
+			</section>
+
+			{/* Marquee */}
+			<div className='marquee border-y' style={{borderColor: 'var(--line)'}} aria-hidden='true'>
+				<div className='marquee-track'>
+					{[...marqueeItems, ...marqueeItems].map((item, i) => (
+						<span key={i} className='marquee-item'>
+							{item}
+						</span>
+					))}
+				</div>
 			</div>
-			<div className='hidden  sm:flex justify-center animate-scrollDown mb-10'>
-				<Link href={'/#about'}>
-					<div className={`rounded-full  ${isDark ? 'text-white' : 'text-black'} flex flex-col justify-center items-center   cursor-pointer `}>
-						<span className='text-xs '>scroll down</span>
-						<HiOutlineChevronDown size={36} />
-					</div>
-				</Link>
-			</div>
-		</motion.div>
+		</>
 	);
 };
 
