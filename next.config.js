@@ -7,6 +7,8 @@ const withPWA = require("next-pwa")({
   skipWaiting: true
 });
 
+// Served from https://heidariomid.github.io/portfolio in production, so every
+// asset/route must be prefixed with /portfolio. Locally (dev) we stay at root.
 const repoBase = "/portfolio";
 
 const nextConfig = {
