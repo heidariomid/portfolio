@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa';
 import {AiOutlineMail} from 'react-icons/ai';
+import {CONTACT_EMAIL} from '../Contact/contactInfo';
 import ProfileImg from '../../public/assets/images/omid-heidari.jpeg';
 
 const marqueeItems = ['React', 'Next.js', 'TypeScript', 'Redux', 'GraphQL', 'Tailwind CSS', 'Node.js', 'React Native'];
@@ -50,7 +51,7 @@ const Hero = () => {
 								<a href='https://github.com/heidariomid' target='_blank' rel='noreferrer' aria-label='GitHub' className='social'>
 									<FaGithub />
 								</a>
-								<a href='mailto:info@heidariomid.com' aria-label='Email' className='social'>
+								<a href={`mailto:${CONTACT_EMAIL}`} aria-label='Email' className='social'>
 									<AiOutlineMail />
 								</a>
 							</div>

@@ -1,5 +1,7 @@
 import Document, {Html, Head, Main, NextScript} from 'next/document';
 
+const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
+
 class MyDocument extends Document {
 	static async getInitialProps(ctx) {
 		const initialProps = await Document.getInitialProps(ctx);
@@ -12,8 +14,8 @@ class MyDocument extends Document {
 					<meta charSet='utf-8' />
 					{/* <meta name='viewport' content='width=device-width, initial-scale=1' /> */}
 					<meta name='description' content='Next.js + TypeScript example' />
-					<link rel='icon' href='/favicon.ico' />
-					<link rel='manifest' href='/manifest.json' />
+					<link rel='icon' href={`${basePath}/favicon.ico`} />
+					<link rel='manifest' href={`${basePath}/manifest.json`} />
 
 					<link rel='preconnect' href='https://fonts.googleapis.com' />
 					<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin />

@@ -1,5 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
+import {CONTACT_EMAIL} from './contactInfo';
 
 const ContactForm = () => {
 	const form = useRef();
@@ -73,8 +74,8 @@ const ContactForm = () => {
 					Thanks — your message has been sent. I&rsquo;ll be in touch.
 				</p>
 			)}
-			{isMessageSent === 'failed' && <p className='form-note'>Something went wrong. Please email info@heidariomid.com directly.</p>}
-			{!isMessageSent && <p className='form-note'>Prefer email? info@heidariomid.com</p>}
+			{isMessageSent === 'failed' && <p className='form-note'>Something went wrong. Please email {CONTACT_EMAIL} directly.</p>}
+			{!isMessageSent && <p className='form-note'>Prefer email? {CONTACT_EMAIL}</p>}
 		</form>
 	);
 };

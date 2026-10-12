@@ -1,4 +1,5 @@
 import React from 'react';
+import {CONTACT_EMAIL} from '../Contact/contactInfo';
 
 const Cta = () => {
 	return (
@@ -12,8 +13,8 @@ const Cta = () => {
 					<br />
 					something great.
 				</h2>
-				<a href='mailto:info@heidariomid.com' className='cta-mailto reveal' data-d='2'>
-					info@heidariomid.com
+				<a href={`mailto:${CONTACT_EMAIL}`} className='cta-mailto reveal' data-d='2'>
+					{CONTACT_EMAIL}
 					<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2'>
 						<path d='M5 12h14M13 6l6 6-6 6' />
 					</svg>

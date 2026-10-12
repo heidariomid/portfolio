@@ -24,7 +24,6 @@ const Home = () => {
 			<Head>
 				<title>Omid Heidari — Front-End Developer</title>
 				<meta name='description' content='Omid Heidari — Front-End Developer building beautiful, high-performance web applications with React, Next.js & TypeScript.' />
-				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Script async src={`https://www.googletagmanager.com/gtag/js?id=G-8JCQBPR9CP`} strategy='afterInteractive' />
 			<Script id='124dfs-analytics' strategy='afterInteractive'>

@@ -2,6 +2,7 @@ import React from 'react';
 import {FaGithub} from 'react-icons/fa';
 import Footer from '../Footer/Footer';
 import ContactForm from './FormInputs';
+import {CONTACT_EMAIL, WEBSITE_LABEL, WEBSITE_URL} from './contactInfo';
 
 const Icon = ({children}) => (
 	<span className='ic'>
@@ -14,8 +15,8 @@ const Icon = ({children}) => (
 const contactRows = [
 	{
 		k: 'Website',
-		v: 'heidariomid.com',
-		href: 'https://heidariomid.com/',
+		v: WEBSITE_LABEL,
+		href: WEBSITE_URL,
 		external: true,
 		icon: (
 			<>
@@ -26,8 +27,8 @@ const contactRows = [
 	},
 	{
 		k: 'Email',
-		v: 'info@heidariomid.com',
-		href: 'mailto:info@heidariomid.com',
+		v: CONTACT_EMAIL,
+		href: `mailto:${CONTACT_EMAIL}`,
 		icon: (
 			<>
 				<rect x='3' y='5' width='18' height='14' rx='2' />
