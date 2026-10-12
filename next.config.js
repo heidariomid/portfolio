@@ -3,6 +3,7 @@ const isProd = process.env.NODE_ENV === "production";
 const withVideos = require("next-videos");
 const withPWA = require("next-pwa")({
   dest: "public",
+  disable: !isProd,
   register: true,
   skipWaiting: true
 });
