@@ -13,7 +13,7 @@
   &nbsp;·&nbsp;
   <a href="https://www.linkedin.com/in/heidariomid/">LinkedIn</a>
   &nbsp;·&nbsp;
-  <a href="mailto:info@heidariomid.com">Email</a>
+  <a href="mailto:contact@heidariomid.ir">Email</a>
 </p>
 
 <p align="center">
@@ -64,4 +64,4 @@ pnpm build
 
 ## Contact
 
-[heidariomid.ir](https://heidariomid.ir) · [info@heidariomid.com](mailto:info@heidariomid.com) · [github.com/heidariomid](https://github.com/heidariomid)
+[heidariomid.ir](https://heidariomid.ir) · [contact@heidariomid.ir](mailto:contact@heidariomid.ir) · [github.com/heidariomid](https://github.com/heidariomid)

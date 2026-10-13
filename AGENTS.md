@@ -50,9 +50,20 @@ before writing App Router, metadata, font, or image code.
 - **Contact form:** `@emailjs/browser` from the browser, service
   `service_v7hm19x`, template `template_o5gyj0r`. Three states: sending, sent,
   failed.
-- **Analytics:** GA4 tag `G-8JCQBPR9CP` through `next/script` in the layout.
+- **Analytics:** `@vercel/analytics` only. `<Analytics />` from
+  `@vercel/analytics/next` sits in `app/layout.tsx`. GA4 is gone.
 - **Hosting:** production deploys from `main` to `https://heidariomid.ir` at
   the domain root. There is no `/portfolio` path and no `heidariomid.com`. The
-  GitHub Pages workflow is deleted. `metadataBase` is `https://heidariomid.ir`.
-- **Contact:** the website row is `https://heidariomid.ir`. The mailbox is still
-  `info@heidariomid.com` until mail exists on `heidariomid.ir`.
+  GitHub Pages is not used. `metadataBase` is `https://heidariomid.ir`.
+- **Contact:** the website row is `https://heidariomid.ir`. The mailbox is
+  `contact@heidariomid.ir`.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

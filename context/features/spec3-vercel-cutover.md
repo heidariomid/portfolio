@@ -6,9 +6,9 @@ Partly done. Production is already the rebuilt site. An anonymous
 fetch of `https://heidariomid.ir/` returns 200 and the hero heading.
 `www.heidariomid.ir` redirects there. There is no Vercel login page.
 
-What is still open: sitemap, robots, the analytics choice, and
-Lighthouse. GitHub Pages is not used. The repo website and the
-GitHub profile point at `https://heidariomid.ir`.
+What is still open: sitemap, robots, and Lighthouse. GitHub Pages
+is not used. Analytics is Vercel Web Analytics, not GA4. The repo
+website and the GitHub profile point at `https://heidariomid.ir`.
 
 ## Done
 
@@ -24,13 +24,14 @@ GitHub profile point at `https://heidariomid.ir`.
 - A push to `main` deploys with no workflow in `.github/`
 - `pnpm lint` and `pnpm build` pass
 - DNS for `heidariomid.ir` already points at Vercel
+- Analytics is `@vercel/analytics` in `app/layout.tsx`, enabled in
+  the Vercel project. GA4 is removed. One tool.
+  https://vercel.com/docs/analytics/quickstart?framework=nextjs#add-the-analytics-component-to-your-app
+- The public mailbox is `contact@heidariomid.ir`
 
 ## Still to do
 
 - Add `app/sitemap.ts` and `app/robots.ts`
-- Analytics is GA4 `G-8JCQBPR9CP`, already on the live site. Keep
-  that, or replace it with `@vercel/analytics` the way
-  `asma-portfolio` does. One tool, not both. The choice is still open
 - LinkedIn was not checked. Change it if it names `heidariomid.com`
 - `interview-practice/about-me.md` is not in this repo. If it exists
   elsewhere and names the old address, update it there
@@ -43,8 +44,6 @@ GitHub profile point at `https://heidariomid.ir`.
 ## Out of scope
 
 - Any change to how the page looks
-- Email on the domain. A mailbox for `info@` is a mail-host setting.
-  The contact email stays `info@heidariomid.com` until that exists
 - A contact form backend. emailjs stays
 
 ## Notes
