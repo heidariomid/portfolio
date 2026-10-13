@@ -14,8 +14,8 @@ const Icon = ({children}) => (
 const contactRows = [
 	{
 		k: 'Website',
-		v: 'heidariomid.com',
-		href: 'https://heidariomid.com/',
+		v: 'heidariomid.ir',
+		href: 'https://heidariomid.ir/',
 		external: true,
 		icon: (
 			<>

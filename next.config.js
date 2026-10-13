@@ -8,10 +8,7 @@ const withPWA = require("next-pwa")({
   skipWaiting: true
 });
 
-// Served from https://heidariomid.github.io/portfolio in production, so every
-// asset/route must be prefixed with /portfolio. Locally (dev) we stay at root.
-const repoBase = "/portfolio";
-
+// Home is https://heidariomid.ir at the domain root. No /portfolio prefix.
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -23,8 +20,6 @@ const nextConfig = {
     loader: "akamai",
     path: "/"
   },
-  basePath: isProd ? repoBase : undefined,
-  assetPrefix: isProd ? `${repoBase}/` : undefined,
   webpack: (config) => {
     config.module.rules.push({
       test: /\.pdf$/,

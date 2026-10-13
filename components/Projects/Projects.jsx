@@ -38,9 +38,9 @@ const projects = [
 		alt: 'Food Delivery app',
 		desc: 'An advanced food-delivery platform where, as front-end developer, I shipped a tailored dashboard UI/UX, a pattern-based payment gateway, and a full ordering experience end to end.',
 		feats: ['Custom dashboards', 'Payment gateway', 'Checkout & cart', 'Order history', 'Protected routes', 'Light/Dark mode'],
-		tags: ['React', 'Next.js', 'GraphQL', 'Tailwind'],
-		demo: 'https://ubereats.heidariomid.com/',
-		code: 'https://github.com/heidariomid/uber-eats-backend',
+		tags: ['React', 'Apollo', 'GraphQL', 'Tailwind'],
+		demo: null,
+		code: 'https://github.com/heidariomid/uber-eats-frontend',
 	},
 	{
 		num: 'Project 04 — Intermediate',
@@ -51,7 +51,7 @@ const projects = [
 		desc: 'A high-performance Next.js app integrating React Query to fetch and display live cryptocurrency data seamlessly, with caching and prefetching for instant navigation.',
 		feats: ['Query caching & prefetch', 'Search', 'Pagination', 'Error handling', 'Fully responsive'],
 		tags: ['Next.js', 'React Query', 'TypeScript', 'Tailwind'],
-		demo: 'https://cryptocurrency.heidariomid.com/',
+		demo: 'https://cryptocurrenciesprice.vercel.app/',
 		code: 'https://github.com/heidariomid/list-of-currencies',
 	},
 ];
@@ -97,12 +97,16 @@ const Projects = () => {
 						</div>
 
 						<div className='proj-links'>
-							<a href={p.demo} target='_blank' rel='noreferrer' className='btn btn-primary'>
-								Live demo
-								<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2'>
-									<path d='M7 17 17 7M9 7h8v8' />
-								</svg>
-							</a>
+							{p.demo ? (
+								<a href={p.demo} target='_blank' rel='noreferrer' className='btn btn-primary'>
+									Live demo
+									<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2'>
+										<path d='M7 17 17 7M9 7h8v8' />
+									</svg>
+								</a>
+							) : (
+								<span className='btn btn-ghost proj-disabled'>Demo · Offline</span>
+							)}
 							{p.code ? (
 								<a href={p.code} target='_blank' rel='noreferrer' className='btn btn-ghost'>
 									View code
