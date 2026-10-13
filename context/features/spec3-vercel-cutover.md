@@ -2,13 +2,14 @@
 
 ## Status
 
-Partly done. Production is already the rebuilt site. An anonymous
+Production is the rebuilt site. An anonymous
 fetch of `https://heidariomid.ir/` returns 200 and the hero heading.
 `www.heidariomid.ir` redirects there. There is no Vercel login page.
 
-What is still open: sitemap, robots, and Lighthouse. GitHub Pages
-is not used. Analytics is Vercel Web Analytics, not GA4. The repo
-website and the GitHub profile point at `https://heidariomid.ir`.
+GitHub Pages is not used. Analytics is Vercel Web Analytics, not
+GA4. The repo website points at `https://heidariomid.ir`. LinkedIn’s
+public page did not return a website field, so that profile was not
+changed from here.
 
 ## Done
 
@@ -28,18 +29,22 @@ website and the GitHub profile point at `https://heidariomid.ir`.
   the Vercel project. GA4 is removed. One tool.
   https://vercel.com/docs/analytics/quickstart?framework=nextjs#add-the-analytics-component-to-your-app
 - The public mailbox is `contact@heidariomid.ir`
+- `app/sitemap.ts` and `app/robots.ts` allow the whole site and list
+  `https://heidariomid.ir`
+- `interview-practice/about-me.md` now uses `https://heidariomid.ir`,
+  `contact@heidariomid.ir`, the crypto demo on Vercel, and an offline
+  food-delivery demo
+- A share of the production URL has the title, description, and
+  `https://heidariomid.ir/assets/images/omid-heidari.jpeg` (that image
+  returns 200)
+- Lighthouse on `https://heidariomid.ir`, mobile, 13 Oct 2026:
+  performance 99, accessibility 96, best practices 100, SEO 100
 
 ## Still to do
 
-- Add `app/sitemap.ts` and `app/robots.ts`
-- LinkedIn was not checked. Change it if it names `heidariomid.com`
-- `interview-practice/about-me.md` is not in this repo. If it exists
-  elsewhere and names the old address, update it there
-- Sharing the URL in a chat app shows the title, description, and
-  image. Not checked
-- Lighthouse on the production URL, mobile: performance and
-  accessibility both 90 or higher. Record the four scores. There is
-  no `current-feature.md` in this repo yet
+- LinkedIn. The public profile did not load a website field from
+  here. If the profile still says `heidariomid.com`, change it to
+  `https://heidariomid.ir`
 
 ## Out of scope
 
