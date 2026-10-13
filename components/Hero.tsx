@@ -10,7 +10,7 @@ const marqueeItems = ['React', 'Next.js', 'TypeScript', 'Redux Toolkit', 'TanSta
 const Hero = () => {
 	return (
 		<>
-			<section id='home' className='wrap flex min-h-[100svh] items-center pt-24 pb-12'>
+			<section id='home' className='wrap flex min-h-svh items-center pt-24 pb-12'>
 				<div className='grid w-full items-center gap-[clamp(2rem,5vw,4.5rem)] md:grid-cols-[1.55fr_0.9fr]'>
 					{/* Text */}
 					<div className='text-center md:text-left'>
@@ -18,7 +18,7 @@ const Hero = () => {
 							<span className='status-dot' aria-hidden='true' />
 							<span className='eyebrow'>Open to work · Front-End Developer</span>
 						</div>
-						<h1 className='reveal text-[clamp(3.4rem,11.5vw,9.5rem)] font-semibold leading-[0.86] tracking-[-0.05em]' data-d='1'>
+						<h1 className='reveal text-[clamp(3.4rem,11.5vw,9.5rem)] font-semibold leading-[0.86] tracking-tighter' data-d='1'>
 							Omid
 							<br />
 							<span className='font-light' style={{color: 'var(--fg-dim)'}}>
@@ -41,7 +41,7 @@ const Hero = () => {
 								Resume (PDF)
 							</a>
 
-							<div className='flex gap-[0.5rem] md:ml-[0.4rem]'>
+							<div className='flex gap-2 md:ml-[0.4rem]'>
 								<a href={LINKEDIN_URL} target='_blank' rel='noreferrer' aria-label='LinkedIn' className='social'>
 									<FaLinkedinIn />
 								</a>
@@ -56,12 +56,12 @@ const Hero = () => {
 					</div>
 
 					{/* Photo */}
-					<div className='hero-photo reveal relative w-full max-w-[360px] justify-self-center md:justify-self-end' data-d='2'>
+					<div className='hero-photo reveal relative w-full max-w-90 justify-self-center md:justify-self-end' data-d='2'>
 						<div className='relative aspect-[1/1.07] overflow-hidden border' style={{borderColor: 'var(--line-2)', background: 'var(--bg-2)'}}>
-							<span className='absolute -right-px -top-px z-10 h-[14px] w-[14px] border' style={{borderColor: 'var(--fg)', borderLeft: 0, borderBottom: 0}} />
+							<span className='absolute -right-px -top-px z-10 h-3.5 w-3.5 border' style={{borderColor: 'var(--fg)', borderLeft: 0, borderBottom: 0}} />
 							<Image src={ProfileImg} alt='Portrait of Omid Heidari' fill sizes='(max-width: 400px) 100vw, 360px' className='hero-photo-img object-cover' />
 							<span
-								className='mono absolute -bottom-px -left-px z-10 px-[0.8rem] py-[0.5rem] text-[0.7rem] uppercase tracking-[0.1em]'
+								className='mono absolute -bottom-px -left-px z-10 px-[0.8rem] py-2 text-[0.7rem] uppercase tracking-widest'
 								style={{background: 'var(--inv-bg)', color: 'var(--inv-fg)'}}
 							>
 								Open to remote

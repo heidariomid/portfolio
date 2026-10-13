@@ -67,7 +67,7 @@ const Skills = () => {
 			<div className='grid gap-[clamp(1.75rem,4vw,3.5rem)] border-t pt-[clamp(1.75rem,3vw,2.5rem)] sm:grid-cols-2 lg:grid-cols-3' style={{borderColor: 'var(--line)'}}>
 				{categories.map((cat, idx) => (
 					<div key={cat.name} className='reveal' data-d={idx + 1}>
-						<div className='mb-[0.4rem] flex items-baseline justify-between gap-2 border-b pb-[1rem]' style={{borderColor: 'var(--line)'}}>
+						<div className='mb-[0.4rem] flex items-baseline justify-between gap-2 border-b pb-4' style={{borderColor: 'var(--line)'}}>
 							<span className='mono text-[0.74rem] uppercase tracking-[0.16em]' style={{color: 'var(--fg)'}}>
 								{cat.name}
 							</span>

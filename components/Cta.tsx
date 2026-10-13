@@ -7,7 +7,7 @@ const Cta = () => {
 				<span className='eyebrow reveal' style={{color: 'color-mix(in srgb, var(--inv-fg) 55%, transparent)'}}>
 					Hiring a front-end developer?
 				</span>
-				<h2 className='reveal mt-[1.2rem] text-[clamp(2.6rem,8vw,7rem)] font-semibold leading-[0.92] tracking-[-0.05em]' data-d='1'>
+				<h2 className='reveal mt-[1.2rem] text-[clamp(2.6rem,8vw,7rem)] font-semibold leading-[0.92] tracking-tighter' data-d='1'>
 					Let&rsquo;s talk
 					<br />
 					about the role.

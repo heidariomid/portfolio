@@ -25,16 +25,16 @@ const Navbar = () => {
 	return (
 		<>
 			<nav
-				className='fixed top-0 left-0 right-0 z-[100] border-b transition-[background,border-color,backdrop-filter] duration-[400ms]'
+				className='fixed top-0 left-0 right-0 z-100 border-b transition-[background,border-color,backdrop-filter] duration-400'
 				style={{
 					borderBottomColor: scrolled ? 'var(--line)' : 'transparent',
 					background: scrolled ? 'color-mix(in srgb, var(--bg) 72%, transparent)' : 'transparent',
 					backdropFilter: scrolled ? 'blur(16px) saturate(1.4)' : 'none',
 				}}
 			>
-				<div className='mx-auto flex items-center justify-between gap-4 px-[var(--pad)] py-[1.1rem]' style={{maxWidth: 'var(--max)'}}>
+				<div className='mx-auto flex items-center justify-between gap-4 px-(--pad) py-[1.1rem]' style={{maxWidth: 'var(--max)'}}>
 					<Link href='/#home' className='flex items-center gap-[0.7rem] text-[1.05rem] font-semibold tracking-[-0.02em]'>
-						<span className='h-[9px] w-[9px] animate-navPulse rounded-full' style={{background: 'var(--fg)'}} />
+						<span className='h-2.25 w-2.25 animate-navPulse rounded-full' style={{background: 'var(--fg)'}} />
 						Omid Heidari
 					</Link>
 
@@ -69,7 +69,7 @@ const Navbar = () => {
 			{/* Mobile menu */}
 			<div
 				inert={!open}
-				className='fixed inset-0 z-[99] flex flex-col justify-center px-[var(--pad)] transition-transform duration-500 md:hidden'
+				className='fixed inset-0 z-99 flex flex-col justify-center px-(--pad) transition-transform duration-500 md:hidden'
 				style={{background: 'var(--bg)', transform: open ? 'translateY(0)' : 'translateY(-100%)'}}
 			>
 				{links.map((l) => (

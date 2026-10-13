@@ -43,7 +43,7 @@ const About = () => {
 						</p>
 					</div>
 
-					<div className='reveal mt-[0.5rem] grid grid-cols-1 gap-px border sm:grid-cols-3' data-d='1' style={{background: 'var(--line)', borderColor: 'var(--line)'}}>
+					<div className='reveal mt-2 grid grid-cols-1 gap-px border sm:grid-cols-3' data-d='1' style={{background: 'var(--line)', borderColor: 'var(--line)'}}>
 						{timeline.map((s) => (
 							<div key={s.l} className='px-[1.2rem] py-[1.6rem]' style={{background: 'var(--bg)'}}>
 								<div className='text-[clamp(2rem,4.5vw,3.2rem)] font-semibold leading-none tracking-[-0.04em]' style={{color: 'var(--accent)'}}>

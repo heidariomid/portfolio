@@ -17,7 +17,7 @@ const Footer = () => {
 		<footer className='site-footer wrap'>
 			<div className='foot-grid'>
 				<Link href='/#home' className='flex items-center gap-[0.7rem] text-[1.05rem] font-semibold tracking-[-0.02em]'>
-					<span className='h-[9px] w-[9px] rounded-full' style={{background: 'var(--fg)'}} />
+					<span className='h-2.25 w-2.25 rounded-full' style={{background: 'var(--fg)'}} />
 					Omid Heidari
 				</Link>
 
