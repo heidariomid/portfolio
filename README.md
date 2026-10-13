@@ -5,13 +5,15 @@
 <h1 align="center">Omid Heidari</h1>
 
 <p align="center">
-  Front-end developer. I turn ideas into beautiful, high-performance web applications.
+  Front-end developer. I build web apps in React, Next.js and TypeScript, and the backend they need to ship.
 </p>
 
 <p align="center">
   <a href="https://heidariomid.ir"><strong>heidariomid.ir</strong></a>
   &nbsp;·&nbsp;
   <a href="https://www.linkedin.com/in/heidariomid/">LinkedIn</a>
+  &nbsp;·&nbsp;
+  <a href="https://heidariomid.ir/assets/resume.pdf">Resume</a>
   &nbsp;·&nbsp;
   <a href="mailto:contact@heidariomid.ir">Email</a>
 </p>
@@ -25,28 +27,25 @@
 
 ---
 
-I specialise in React, Next.js, TypeScript, Redux, GraphQL, and Tailwind CSS. I hold a Master’s degree in Computer Science and have three years of professional experience shipping clean, maintainable front ends.
-
-| | | |
-| --- | --- | --- |
-| **3+** years | **MSc** Computer Science | **12+** technologies |
+Since 2021 I have built web apps in React and Next.js on my own and for small clients, including a live ordering site for a bakery. My projects also cover the backend: Postgres with row-level security, a headless CMS the client edits directly, and server-side functions that keep API keys out of the browser. Before that I worked in the IT department at Kish Exchange (2017–2020). I hold an MSc in IT Management from Shahid Beheshti University.
 
 The live site is [https://heidariomid.ir](https://heidariomid.ir). It is hosted on Vercel, at the domain root.
 
-## Selected work
+## Projects
 
 | Project | What it is | |
 | --- | --- | --- |
-| **AI Trip Planner** | An assistant that proposes the days, places, bookings, and packing list. One Expo app, on the web and on phones. | [Demo](https://plan-trip-ai.vercel.app/) · [Code](https://github.com/heidariomid/ai-trip-planner) |
-| **Amazon.ae Shop** | An Amazon-style storefront with live price and stock from the Amazon API. | [Demo](https://amazonkisha2z.netlify.app/) |
-| **Food Delivery** | Dashboards, checkout, and a payment flow. The demo is offline. | [Code](https://github.com/heidariomid/uber-eats-frontend) |
-| **Crypto Currency** | Live market data, search, and pagination, cached with React Query. | [Demo](https://cryptocurrenciesprice.vercel.app/) · [Code](https://github.com/heidariomid/list-of-currencies) |
+| **AI Trip Planner** | An AI assistant drafts a trip and the traveller decides what to keep. One Expo codebase for web and phones, Supabase with row-level security, model keys kept in Edge Functions. | [Demo](https://plan-trip-ai.vercel.app/) · [Code](https://github.com/heidariomid/ai-trip-planner) |
+| **Amazon.ae Shop** | A Persian storefront for Amazon.ae, first built for a client. Server-only product API calls behind a 24-hour Postgres price cache, email-code sign-in, per-account orders. | [Demo](https://amazon-ae.vercel.app/) · [Code](https://github.com/heidariomid/amazon-ae) |
+| **Ghanad Bashi Asal Bakery** | A live ordering site for a home bakery. Payload CMS inside Next.js with a Persian admin the owner edits directly, cart and orders, SMS alerts to the baker and to customers. | [Site](https://ghanadbashiasal.ir/) · [Code](https://github.com/heidariomid/ghanadbashi-asal) |
+| **Food Delivery** | The React and Apollo client for customer, owner and driver roles, with live order status over subscriptions. The NestJS API started from a course project and I extended it. The demo is offline. | [Front end](https://github.com/heidariomid/uber-eats-frontend) · [Back end](https://github.com/heidariomid/uber-eats-backend) |
+| **Crypto Prices** | The top 250 coins from one cached CoinGecko request, with search, sort and pagination in the browser and state in the URL. Tested with Vitest. | [Demo](https://cryptocurrenciesprice.vercel.app/) · [Code](https://github.com/heidariomid/list-of-currencies) |
 
 ## Stack
 
-**Advanced.** React, Next.js, Redux, Tailwind CSS, JavaScript.
+**Proficient.** React, Next.js, TypeScript, JavaScript, Tailwind CSS, Redux Toolkit, TanStack Query, Git.
 
-**Also.** TypeScript, React Native, Node.js, GraphQL, WordPress, Figma.
+**Familiar.** React Native and Expo, GraphQL and Apollo, Supabase and PostgreSQL, Node.js and NestJS, Vitest and Jest, Testing Library.
 
 ## Run it locally
 

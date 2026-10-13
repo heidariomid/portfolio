@@ -6,8 +6,8 @@ import ThemeToggle from './ThemeToggle';
 
 const links = [
 	{num: '01', label: 'About', href: '/#about'},
-	{num: '02', label: 'Skills', href: '/#skills'},
-	{num: '03', label: 'Work', href: '/#projects'},
+	{num: '02', label: 'Projects', href: '/#projects'},
+	{num: '03', label: 'Skills', href: '/#skills'},
 	{num: '04', label: 'Contact', href: '/#contact'},
 ];
 
@@ -53,7 +53,8 @@ const Navbar = () => {
 
 						<button
 							onClick={() => setOpen(!open)}
-							aria-label='Menu'
+							aria-label={open ? 'Close menu' : 'Open menu'}
+							aria-expanded={open}
 							className='grid h-10 w-10 place-items-center rounded-lg border md:hidden'
 							style={{borderColor: 'var(--line-2)', color: 'var(--fg)'}}
 						>
@@ -67,6 +68,7 @@ const Navbar = () => {
 
 			{/* Mobile menu */}
 			<div
+				inert={!open}
 				className='fixed inset-0 z-[99] flex flex-col justify-center px-[var(--pad)] transition-transform duration-500 md:hidden'
 				style={{background: 'var(--bg)', transform: open ? 'translateY(0)' : 'translateY(-100%)'}}
 			>

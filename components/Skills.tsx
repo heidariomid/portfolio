@@ -1,40 +1,46 @@
-// level: number of filled dots (out of 3) — 3 Advanced, 2 Intermediate, 1 Learning
+// level: number of filled dots (out of 3) — 3 Proficient, 2 Familiar, 1 Basic
 const categories = [
 	{
-		name: 'Frontend',
+		name: 'Front end',
 		items: [
 			{name: 'React', level: 3},
 			{name: 'Next.js', level: 3},
-			{name: 'Redux', level: 3},
-			{name: 'Tailwind CSS', level: 3},
-			{name: 'React Native', level: 2},
-		],
-	},
-	{
-		name: 'Languages & Data',
-		items: [
+			{name: 'TypeScript', level: 3},
 			{name: 'JavaScript', level: 3},
-			{name: 'TypeScript', level: 2},
-			{name: 'Node.js', level: 2},
-			{name: 'GraphQL', level: 2},
+			{name: 'Tailwind CSS', level: 3},
+			{name: 'React Native · Expo', level: 2},
 		],
 	},
 	{
-		name: 'Tools & Design',
+		name: 'State & data',
 		items: [
-			{name: 'WordPress', level: 2},
-			{name: 'Photoshop', level: 2},
-			{name: 'Illustrator', level: 2},
+			{name: 'Redux Toolkit', level: 3},
+			{name: 'TanStack Query', level: 3},
+			{name: 'GraphQL · Apollo', level: 2},
+			{name: 'Supabase · PostgreSQL', level: 2},
+			{name: 'Node.js · NestJS', level: 2},
+		],
+	},
+	{
+		name: 'Testing & tools',
+		items: [
+			{name: 'Git', level: 3},
+			{name: 'Vitest · Jest', level: 2},
+			{name: 'Testing Library', level: 2},
+			{name: 'Cypress', level: 1},
 			{name: 'Figma', level: 1},
 		],
 	},
 ];
 
-const Meter = ({level}: {level: number}) => (
+const levelNames = ['', 'Basic', 'Familiar', 'Proficient'];
+
+const Meter = ({level, announce = false}: {level: number; announce?: boolean}) => (
 	<span className='flex items-center gap-1'>
 		{[1, 2, 3].map((i) => (
-			<i key={i} className={`meter-dot${i <= level ? ' on' : ''}`} />
+			<i key={i} className={`meter-dot${i <= level ? ' on' : ''}`} aria-hidden='true' />
 		))}
+		{announce && <span className='sr-only'>{levelNames[level]}</span>}
 	</span>
 );
 
@@ -42,18 +48,18 @@ const Skills = () => {
 	return (
 		<section id='skills' className='block wrap'>
 			<div className='sec-head reveal flex-wrap'>
-				<span className='sec-num'>02</span>
+				<span className='sec-num'>03</span>
 				<h2 className='sec-title'>Skills</h2>
 				<span className='sec-line' />
 				<div className='ml-auto flex flex-wrap items-center gap-[1.4rem] self-center'>
 					<span className='mono flex items-center gap-2 text-[0.7rem]' style={{color: 'var(--fg-dim)'}}>
-						<Meter level={3} /> Advanced
+						<Meter level={3} /> Proficient
 					</span>
 					<span className='mono flex items-center gap-2 text-[0.7rem]' style={{color: 'var(--fg-dim)'}}>
-						<Meter level={2} /> Intermediate
+						<Meter level={2} /> Familiar
 					</span>
 					<span className='mono flex items-center gap-2 text-[0.7rem]' style={{color: 'var(--fg-dim)'}}>
-						<Meter level={1} /> Learning
+						<Meter level={1} /> Basic
 					</span>
 				</div>
 			</div>
@@ -76,7 +82,7 @@ const Skills = () => {
 								style={{borderColor: 'var(--line)'}}
 							>
 								<span className='text-[clamp(1rem,1.6vw,1.18rem)] font-medium tracking-[-0.01em]'>{item.name}</span>
-								<Meter level={item.level} />
+								<Meter level={item.level} announce />
 							</div>
 						))}
 					</div>

@@ -20,15 +20,30 @@ before writing App Router, metadata, font, or image code.
 - **Stack:** Next.js 16 App Router, React 19, TypeScript 6, Tailwind 4 through
   `@tailwindcss/postcss`, ESLint 9, pnpm. Same versions as `bakery`.
 - **Routes:** `app/layout.tsx` and `app/page.tsx` only. The page renders Navbar,
-  Hero, About, Skills, Projects, Cta, Contact, Footer, in that order.
+  Hero, About, Projects, Skills, Cta, Contact, Footer, in that order.
 - **Client components:** `Navbar` (scroll state, mobile menu), `ThemeToggle`,
-  `Reveal` (scroll-reveal observer), `ContactForm`, `BackToTop`. Everything
-  else is a server component.
+  `Reveal` (scroll-reveal observer), `ContactForm`, `BackToTop`,
+  `ServiceWorker`. Everything else is a server component.
+- **Home screen and offline:** `public/manifest.json` (dark `#0a0a0a` theme and
+  splash), `public/apple-touch-icon.png` for iOS, and `public/sw.js`, which
+  `ServiceWorker` registers in production only. Page loads go network-first
+  and fall back to the cached page; build files and images are cache-first.
+  Bump `CACHE` in `sw.js` when a file in `public/` changes at the same path.
 - **Project cards:** `data/projects.ts` holds the typed `projects` array.
   `demo: null` renders a disabled "Demo · Offline" button and `code: null`
-  renders "Code · Private".
-- **Contact details:** `data/contact.ts` holds the email address and the
-  Website row. Nothing else in the repo spells them out.
+ renders "Code · Private". An optional `backend` URL adds a "Back-end code"
+ button.
+- **Contact details:** `data/contact.ts` holds the email, website, GitHub,
+ LinkedIn and resume URLs. Components import them; nothing else in `app/` or
+ `components/` spells them out. There is no phone number on the site.
+- **Content facts:** degree is MSc IT Management (Shahid Beheshti, 2019).
+ Independent web developer since 2021 (own projects and small clients, including
+ the bakery), Kish Exchange IT department 2017–2020. The site shows no
+ years-of-experience count. Every project claim is checked against that
+ project's repo. Food Delivery: the front end is his; the NestJS API came from
+ a course and he extended it. The Amazon and bakery cards link clean public
+ copies (`amazon-ae`, `ghanadbashi-asal`); the original repos are private
+ because their history holds secrets.
 - **Design tokens:** `app/globals.css`. Colours are CSS variables under
   `:root`, `html[data-theme='dark']` and `html[data-theme='light']`. There is
   no `tailwind.config`; theme values live under `@theme`. Custom classes sit in
@@ -45,8 +60,8 @@ before writing App Router, metadata, font, or image code.
   changes how all text looks. The owner decides.
 - **Tailwind 3 look kept on purpose:** default border colour `#e5e7eb`,
   `cursor: pointer` on buttons, the `@tailwindcss/forms` focus ring pinned to
-  `#2563eb`, and `.project-img-clip`, which stands in for the clipping span the
-  old `next/image` rendered.
+ `#2563eb`. Project images fill their frame edge to edge (`object-fit: cover`,
+ no padding); `.project-img-clip` clips the hover zoom.
 - **Contact form:** `@emailjs/browser` from the browser, service
   `service_v7hm19x`, template `template_o5gyj0r`. Three states: sending, sent,
   failed.
@@ -55,7 +70,7 @@ before writing App Router, metadata, font, or image code.
 - **Hosting:** production deploys from `main` to `https://heidariomid.ir` at
   the domain root. There is no `/portfolio` path and no `heidariomid.com`. The
   GitHub Pages is not used. `metadataBase` is `https://heidariomid.ir`.
-- **Contact:** the website row is `https://heidariomid.ir`. The mailbox is
+- **Contact:** the site URL is `https://heidariomid.ir`. The mailbox is
   `contact@heidariomid.ir`.
 - **Git:** commits have one author. No `Co-authored-by` trailer. If a
   tool adds one, strip it before the commit is pushed. `/feature

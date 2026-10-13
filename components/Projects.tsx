@@ -5,8 +5,8 @@ const Projects = () => {
 	return (
 		<section id='projects' className='block wrap'>
 			<div className='sec-head reveal'>
-				<span className='sec-num'>03</span>
-				<h2 className='sec-title'>Selected Work</h2>
+				<span className='sec-num'>02</span>
+				<h2 className='sec-title'>Projects</h2>
 				<span className='sec-line' />
 			</div>
 
@@ -45,7 +45,7 @@ const Projects = () => {
 
 						<div className='proj-links'>
 							{p.demo ? (
-								<a href={p.demo} target='_blank' rel='noreferrer' className='btn btn-primary'>
+								<a href={p.demo} target='_blank' rel='noreferrer' className='btn btn-primary' aria-label={`Live demo of ${p.title}`}>
 									Live demo
 									<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2'>
 										<path d='M7 17 17 7M9 7h8v8' />
@@ -55,11 +55,16 @@ const Projects = () => {
 								<span className='btn btn-ghost proj-disabled'>Demo · Offline</span>
 							)}
 							{p.code ? (
-								<a href={p.code} target='_blank' rel='noreferrer' className='btn btn-ghost'>
-									View code
+								<a href={p.code} target='_blank' rel='noreferrer' className='btn btn-ghost' aria-label={`${p.backend ? 'Front-end code' : 'View code'} for ${p.title}`}>
+									{p.backend ? 'Front-end code' : 'View code'}
 								</a>
 							) : (
 								<span className='btn btn-ghost proj-disabled'>Code · Private</span>
+							)}
+							{p.backend && (
+								<a href={p.backend} target='_blank' rel='noreferrer' className='btn btn-ghost' aria-label={`Back-end code for ${p.title}`}>
+									Back-end code
+								</a>
 							)}
 						</div>
 					</div>

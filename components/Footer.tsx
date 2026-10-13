@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import BackToTop from './BackToTop';
+import {GITHUB_URL, LINKEDIN_URL, RESUME_URL} from '../data/contact';
 
 const footNav = [
 	{name: 'About', href: '/#about', external: false},
+	{name: 'Projects', href: '/#projects', external: false},
 	{name: 'Skills', href: '/#skills', external: false},
-	{name: 'Work', href: '/#projects', external: false},
 	{name: 'Contact', href: '/#contact', external: false},
-	{name: 'GitHub', href: 'https://github.com/heidariomid', external: true},
-	{name: 'LinkedIn', href: 'https://www.linkedin.com/in/heidariomid/', external: true},
+	{name: 'Resume', href: RESUME_URL, external: true},
+	{name: 'GitHub', href: GITHUB_URL, external: true},
+	{name: 'LinkedIn', href: LINKEDIN_URL, external: true},
 ];
 
 const Footer = () => {

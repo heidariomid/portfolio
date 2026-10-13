@@ -51,11 +51,11 @@ const ContactForm = () => {
 			</div>
 			<div className='field full'>
 				<label htmlFor='subject'>Subject</label>
-				<input id='subject' name='subject' type='text' placeholder='What&rsquo;s it about?' />
+				<input id='subject' name='subject' type='text' placeholder='What’s it about?' />
 			</div>
 			<div className='field full'>
 				<label htmlFor='message'>Message</label>
-				<textarea id='message' name='message' rows={4} placeholder='Tell me about your project...' required defaultValue='' />
+				<textarea id='message' name='message' rows={4} placeholder='Tell me about the role or project…' required defaultValue='' />
 			</div>
 
 			{/* Kept for the EmailJS template, hidden from the layout */}
@@ -76,11 +76,15 @@ const ContactForm = () => {
 			</button>
 
 			{isMessageSent === 'success' && (
-				<p className='form-note' style={{color: 'var(--accent)'}}>
-					Thanks — your message has been sent. I&rsquo;ll be in touch.
+				<p className='form-note' role='status' style={{color: 'var(--accent)'}}>
+					Thanks, your message has been sent. I&rsquo;ll get back to you by email.
 				</p>
 			)}
-			{isMessageSent === 'failed' && <p className='form-note'>Something went wrong. Please email {CONTACT_EMAIL} directly.</p>}
+			{isMessageSent === 'failed' && (
+				<p className='form-note' role='alert'>
+					The message could not be sent. Please email {CONTACT_EMAIL} directly.
+				</p>
+			)}
 			{!isMessageSent && <p className='form-note'>Prefer email? {CONTACT_EMAIL}</p>}
 		</form>
 	);

@@ -16,7 +16,7 @@ const ThemeToggle = () => {
 		<button
 			onClick={toggleTheme}
 			aria-label='Toggle theme'
-			className='relative h-7 w-[54px] flex-none rounded-full border transition-colors'
+			className="relative h-7 w-[54px] flex-none rounded-full border transition-colors before:absolute before:-inset-2 before:content-['']"
 			style={{borderColor: 'var(--line-2)', background: 'var(--bg-2)'}}
 		>
 			<span
