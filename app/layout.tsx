@@ -9,14 +9,17 @@ const title = 'Omid Heidari — Front-End Developer';
 const description = 'Omid Heidari — Front-End Developer building beautiful, high-performance web applications with React, Next.js & TypeScript.';
 
 export const metadata: Metadata = {
+	metadataBase: new URL('https://heidariomid.ir'),
 	title,
 	description,
+	alternates: {canonical: '/'},
 	icons: {icon: '/favicon.ico'},
 	manifest: '/manifest.json',
 	openGraph: {
 		title,
 		description,
 		type: 'website',
+		url: '/',
 		images: [{url: '/assets/images/omid-heidari.jpeg', alt: 'Omid Heidari'}],
 	},
 };

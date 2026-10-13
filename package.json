@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://heidariomid.github.io/",
+  "homepage": "https://heidariomid.ir/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

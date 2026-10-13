@@ -51,9 +51,9 @@ before writing App Router, metadata, font, or image code.
   `service_v7hm19x`, template `template_o5gyj0r`. Three states: sending, sent,
   failed.
 - **Analytics:** GA4 tag `G-8JCQBPR9CP` through `next/script` in the layout.
-- **Hosting:** nothing is deployed from this branch. The GitHub Pages workflow
-  is deleted, so `https://heidariomid.github.io/portfolio/` stays frozen on the
-  Next 12 build until `context/features/spec3-vercel-cutover.md` is built.
-  `metadataBase` is unset until then, so the build prints one warning about it.
-- **Open:** `heidariomid.com` is not registered. The contact address is still
-  `info@heidariomid.com` until the owner picks a working mailbox.
+- **Hosting:** the home is `https://heidariomid.ir` at the domain root. There is
+  no `/portfolio` path and no `heidariomid.com`. Nothing is deployed from this
+  branch yet. The GitHub Pages workflow is deleted. `metadataBase` is
+  `https://heidariomid.ir`.
+- **Contact:** the website row is `https://heidariomid.ir`. The mailbox is still
+  `info@heidariomid.com` until mail exists on `heidariomid.ir`.
