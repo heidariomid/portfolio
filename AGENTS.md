@@ -57,6 +57,10 @@ before writing App Router, metadata, font, or image code.
   GitHub Pages is not used. `metadataBase` is `https://heidariomid.ir`.
 - **Contact:** the website row is `https://heidariomid.ir`. The mailbox is
   `contact@heidariomid.ir`.
+- **Git:** commits have one author. No `Co-authored-by` trailer. If a
+  tool adds one, strip it before the commit is pushed. `/feature
+  complete` merges the feature branch into `main` and deletes that
+  branch locally and on the remote.
 
 <!-- BEGIN:nextjs-agent-rules -->
 
