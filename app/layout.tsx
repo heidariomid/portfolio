@@ -7,7 +7,9 @@ import {GITHUB_URL, LINKEDIN_URL, WEBSITE_URL} from '../data/contact';
 
 const title = 'Omid Heidari — Front-End Developer (React, Next.js, TypeScript)';
 const description =
-	'Front-end developer working in React, Next.js and TypeScript. Projects with live demos and source code: an AI trip planner on Expo and Supabase, an Amazon.ae storefront, a bakery ordering site on Payload CMS, a GraphQL food-delivery client and a crypto price table.';
+	'I turn complex technical challenges into reliable, production-ready software. Explore my work across AI-powered applications, e-commerce, food delivery, and data-driven platforms.';
+const shareTitle = 'Omid Heidari';
+const shareDescription = 'I turn complex technical challenges into reliable, production-ready software.';
 
 const personJsonLd = {
 	'@context': 'https://schema.org',
@@ -27,13 +29,14 @@ export const metadata: Metadata = {
 	manifest: '/manifest.json',
 	appleWebApp: {title: 'Omid Heidari', statusBarStyle: 'black'},
 	openGraph: {
-		title,
-		description,
+		title: shareTitle,
+		description: shareDescription,
+		siteName: shareTitle,
 		type: 'website',
 		url: '/',
-		images: [{url: '/assets/images/omid-heidari.jpeg', alt: 'Portrait of Omid Heidari'}],
+		images: [{url: '/og-image.png', width: 1200, height: 630, alt: 'Portrait of Omid Heidari, front-end developer'}],
 	},
-	twitter: {card: 'summary', title, description},
+	twitter: {card: 'summary_large_image', title: shareTitle, description: shareDescription, images: ['/og-image.png']},
 };
 
 export const viewport: Viewport = {themeColor: '#0a0a0a'};
