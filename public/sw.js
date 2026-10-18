@@ -1,4 +1,4 @@
-const CACHE = 'oh-v2';
+const CACHE = 'oh-v3';
 const PAGE = '/';
 const SHELL = [PAGE, '/manifest.json', '/favicon.ico', '/icon-192x192.png', '/icon-512x512.png', '/apple-touch-icon.png'];
 

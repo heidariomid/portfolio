@@ -7,7 +7,7 @@ import {GITHUB_URL, LINKEDIN_URL, WEBSITE_URL} from '../data/contact';
 
 const title = 'Omid Heidari — Front-End Developer (React, Next.js, TypeScript)';
 const description =
-	'I turn complex technical challenges into reliable, production-ready software. Explore my work across AI-powered applications, e-commerce, food delivery, and data-driven platforms.';
+	'I turn complex technical challenges into reliable, production-ready software. Explore my work across AI-powered applications, e-commerce, and data-driven platforms.';
 const shareTitle = 'Omid Heidari';
 const shareDescription = 'I turn complex technical challenges into reliable, production-ready software.';
 

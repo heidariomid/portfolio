@@ -2,7 +2,6 @@ import type {StaticImageData} from 'next/image';
 import tripImg from '../public/assets/images/projects/trip-planner.png';
 import amazonImg from '../public/assets/images/projects/amazon.png';
 import bakeryImg from '../public/assets/images/projects/bakery.png';
-import foodImg from '../public/assets/images/projects/uber-eats.jpeg';
 import cryptoImg from '../public/assets/images/projects/uber-eats/currency.png';
 
 export type Project = {
@@ -79,26 +78,6 @@ export const projects: Project[] = [
 	},
 	{
 		num: 'Project 04',
-		title: 'Food Delivery',
-		badge: 'Front end · 2022',
-		img: foodImg,
-		alt: 'Food Delivery project cover with the NestJS, React and Jest logos',
-		desc: 'The React client for a food-delivery platform with three roles: customers place orders, restaurant owners manage menus and incoming orders, and drivers take deliveries. The front end is my work. The NestJS GraphQL API started from a course project and I extended it. Order status reaches each role in real time over GraphQL subscriptions. The hosted demo is offline; both repositories are public.',
-		feats: [
-			'Customer, owner and driver screens behind protected routes',
-			'Live order status over GraphQL subscriptions (graphql-ws)',
-			'ZarinPal payment flow: pending, verify, success and failure screens',
-			'Sales charts for restaurant owners with Victory',
-			'Forms with React Hook Form, side effects in Redux-Saga',
-			'Testing Library component tests and Cypress sign-up and login tests',
-		],
-		tags: ['React', 'TypeScript', 'Apollo Client', 'GraphQL', 'Cypress'],
-		demo: null,
-		code: 'https://github.com/heidariomid/uber-eats-frontend',
-		backend: 'https://github.com/heidariomid/uber-eats-backend',
-	},
-	{
-		num: 'Project 05',
 		title: 'Crypto Prices',
 		badge: 'Front end · 2022, rebuilt 2026',
 		img: cryptoImg,

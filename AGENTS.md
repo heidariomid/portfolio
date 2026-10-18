@@ -40,8 +40,7 @@ before writing App Router, metadata, font, or image code.
  Independent web developer since 2021 (own projects and small clients, including
  the bakery), Kish Exchange IT department 2017–2020. The site shows no
  years-of-experience count. Every project claim is checked against that
- project's repo. Food Delivery: the front end is his; the NestJS API came from
- a course and he extended it. The Amazon and bakery cards link clean public
+ project's repo. The Amazon and bakery cards link clean public
  copies (`amazon-ae`, `ghanadbashi-asal`); the original repos are private
  because their history holds secrets.
 - **Design tokens:** `app/globals.css`. Colours are CSS variables under
