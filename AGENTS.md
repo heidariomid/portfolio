@@ -36,6 +36,18 @@ before writing App Router, metadata, font, or image code.
 - **Contact details:** `data/contact.ts` holds the email, website, GitHub,
  LinkedIn and resume URLs. Components import them; nothing else in `app/` or
  `components/` spells them out. There is no phone number on the site.
+- **Resume:** `resume/omid-heidari-resume.html` is the one source of
+ `public/assets/omid-heidari-resume.pdf` and `.docx`, and `RESUME_URL` points
+ at that PDF. `bash resume/build.sh` prints the PDF with headless Google Chrome
+ on macOS, fails unless it is one A4 page, then runs `resume/build-docx.py`
+ (needs `python-docx`), which reads the same HTML. The design follows the site
+ (accent `#ff631a` darkened to `#c74d14` for small text, DM Mono for dates,
+ links and stack lines) in one column. The PDF uses Avenir Next because Chrome
+ embeds General Sans as Type 3 fonts and its licence forbids converting the
+ files; DM Mono is the OFL copy in `resume/fonts/`. The `.docx` uses Arial and
+ Consolas so Windows renders it the same.
+ `public/assets/resume.pdf` and `resume.docx` are the 2023 versions, kept on
+ purpose and no longer linked.
 - **Content facts:** degree is MSc IT Management (Shahid Beheshti, 2019).
  Independent web developer since 2021 (own projects and small clients, including
  the bakery), Kish Exchange IT department 2017–2020. The site shows no

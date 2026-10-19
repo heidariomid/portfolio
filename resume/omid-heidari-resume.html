@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Omid Heidari – Front-End Developer – Resume</title>
+		<meta name="author" content="Omid Heidari" />
+		<meta name="description" content="Resume of Omid Heidari, front-end developer: React, Next.js, TypeScript." />
+		<style>
+			@page {
+				size: A4;
+				margin: 12mm 14mm 11mm;
+			}
+
+			/* DM Mono is the portfolio's mono face, under the SIL Open Font License (fonts/OFL.txt). */
+			@font-face {
+				font-family: 'DM Mono';
+				src: url('fonts/DMMono-Regular.ttf') format('truetype');
+				font-weight: 400;
+			}
+
+			@font-face {
+				font-family: 'DM Mono';
+				src: url('fonts/DMMono-Medium.ttf') format('truetype');
+				font-weight: 500;
+			}
+
+			/* --accent is the site's #ff631a darkened to 4.67:1 on white so small orange text stays readable. */
+			:root {
+				--ink: #141414;
+				--dim: #474747;
+				--faint: #6b6b6b;
+				--rule: #d6d6d6;
+				--accent: #c74d14;
+				--mono: 'DM Mono', Menlo, monospace;
+			}
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			/* Avenir Next embeds as TrueType; General Sans is CFF and Chrome would embed it as Type 3, which some ATS parsers mishandle. */
+			/* Ligatures are off so text extraction keeps "fi" and "fl" as two letters. */
+			html {
+				font-family: 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+				font-size: 9.2pt;
+				line-height: 1.41;
+				color: var(--ink);
+				font-variant-ligatures: none;
+				font-feature-settings: 'liga' 0, 'clig' 0;
+				-webkit-print-color-adjust: exact;
+				print-color-adjust: exact;
+			}
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			/* The name stays the first line of text: ATS parsers take the first line as the candidate's name. */
+			header h1 {
+				font-size: 24pt;
+				font-weight: 600;
+				line-height: 1;
+				letter-spacing: -0.02em;
+			}
+
+			header h1 .last {
+				font-weight: 300;
+				color: var(--faint);
+			}
+
+			.headline {
+				margin-top: 1.4mm;
+				font-size: 10.8pt;
+				font-weight: 500;
+			}
+
+			.accent {
+				color: var(--accent);
+				font-weight: 600;
+			}
+
+			.contact {
+				margin-top: 1.2mm;
+				font-size: 8.8pt;
+				color: var(--dim);
+			}
+
+			.contact a {
+				color: var(--ink);
+			}
+
+			.status::before {
+				content: '';
+				display: inline-block;
+				width: 1.5mm;
+				height: 1.5mm;
+				margin-right: 1.3mm;
+				border-radius: 50%;
+				background: var(--accent);
+				vertical-align: 0.05em;
+			}
+
+			.sep {
+				color: var(--faint);
+				padding: 0 0.45em;
+			}
+
+			section {
+				margin-top: 4mm;
+			}
+
+			/* The rule is a box, not text, so the heading still extracts as one word. No letter-spacing: tracked letters extract as "P R OJ E C T S". */
+			h2 {
+				display: flex;
+				align-items: center;
+				gap: 3mm;
+				margin-bottom: 1.3mm;
+				font-size: 11.5pt;
+				font-weight: 600;
+				line-height: 1.1;
+				letter-spacing: -0.01em;
+				color: var(--accent);
+			}
+
+			h2::after {
+				content: '';
+				flex: 1;
+				height: 0.6pt;
+				background: var(--rule);
+			}
+
+			.entry + .entry {
+				margin-top: 2.8mm;
+			}
+
+			.row {
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+				gap: 4mm;
+			}
+
+			h3 {
+				font-size: 10pt;
+				font-weight: 600;
+			}
+
+			h4 {
+				font-size: 9.4pt;
+				font-weight: 600;
+			}
+
+			h3 .meta,
+			h4 .meta {
+				font-weight: 400;
+				color: var(--dim);
+			}
+
+			.sub {
+				margin-top: 1.8mm;
+			}
+
+			.when,
+			.links,
+			.stack {
+				font-family: var(--mono);
+				font-size: 7.9pt;
+				color: var(--dim);
+			}
+
+			.when,
+			.links {
+				flex: none;
+				white-space: nowrap;
+			}
+
+			.links a {
+				color: var(--accent);
+				font-weight: 500;
+			}
+
+			.stack {
+				margin-top: 0.2mm;
+				color: var(--ink);
+			}
+
+			.lead {
+				margin-top: 0.3mm;
+				color: var(--dim);
+			}
+
+			ul {
+				margin-top: 0.5mm;
+				padding-left: 3.6mm;
+			}
+
+			li {
+				padding-left: 0.6mm;
+			}
+
+			li + li {
+				margin-top: 0.35mm;
+			}
+
+			li::marker {
+				color: var(--accent);
+			}
+
+			.skills p + p {
+				margin-top: 0.5mm;
+			}
+
+			.label {
+				font-weight: 600;
+			}
+
+			.edu .row + .row {
+				margin-top: 0.5mm;
+			}
+
+			.training {
+				margin-top: 1mm;
+				color: var(--dim);
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Omid <span class="last">Heidari</span></h1>
+			<p class="headline">Front-End Developer · <span class="accent">React, Next.js, TypeScript</span></p>
+			<p class="contact">
+				<a href="mailto:contact@heidariomid.ir">contact@heidariomid.ir</a><span class="sep">|</span><a href="https://heidariomid.ir/">heidariomid.ir</a><span class="sep">|</span><a href="https://github.com/heidariomid">github.com/heidariomid</a><span class="sep">|</span><a href="https://www.linkedin.com/in/heidariomid/">linkedin.com/in/heidariomid</a><span class="sep">|</span><span class="status">Open to remote roles</span>
+			</p>
+		</header>
+
+		<section>
+			<h2>Summary</h2>
+			<p>
+				Front-end developer who ships the whole feature: React and Next.js interfaces in strict TypeScript, and the back end they need, from PostgreSQL row-level security to a
+				headless CMS and server-side API calls that keep keys out of the browser. Freelancing since 2021, with a client site live in production. Seeking a front-end or
+				full-stack role on a product team.
+			</p>
+		</section>
+
+		<section>
+			<h2>Experience</h2>
+
+			<div class="entry">
+				<div class="row">
+					<h3>Freelance Web Developer</h3>
+					<span class="when">2021 – Present</span>
+				</div>
+				<p class="lead">Build web apps for small clients, from requirements and stack choice to deployment and handover.</p>
+
+				<div class="sub">
+					<div class="row">
+						<h4>Ghanad Bashi Asal <span class="meta">· Ordering site for a home bakery · 2026</span></h4>
+						<span class="links"
+							><a href="https://ghanadbashiasal.ir/">ghanadbashiasal.ir</a><span class="sep">|</span><a href="https://github.com/heidariomid/ghanadbashi-asal">Code</a></span
+						>
+					</div>
+					<p class="stack">Next.js · Payload CMS · PostgreSQL · TypeScript · Tailwind CSS</p>
+					<ul>
+						<li>
+							Launched a live Persian, right-to-left ordering site on the Next.js 16 App Router, Payload CMS 3 and PostgreSQL; the owner, who does not code, manages products, prices, photos
+							and orders in its Persian admin.
+						</li>
+						<li>Chose Payload over Sanity (no Persian editor) and WordPress (plugin upkeep), and embedded it in the Next.js app.</li>
+						<li>
+							Built the cart and order flow: shop-style order numbers, deposit receipt upload, SMS.ir texts to the baker on new orders and to customers on status changes,
+							optional phone one-time codes, and on-demand page revalidation.
+						</li>
+					</ul>
+				</div>
+
+				<div class="sub">
+					<div class="row">
+						<h4>Amazon.ae Shop <span class="meta">· Persian storefront for Amazon.ae · 2023, rebuilt 2026</span></h4>
+						<span class="links"
+							><a href="https://amazon-ae.vercel.app/">amazon-ae.vercel.app</a><span class="sep">|</span><a href="https://github.com/heidariomid/amazon-ae">Code</a></span
+						>
+					</div>
+					<p class="stack">Next.js · Redux Toolkit · TanStack Query · Supabase · Tailwind CSS</p>
+					<ul>
+						<li>
+							Built the storefront for a client’s WooCommerce shop in 2023 with Next.js, Redux Toolkit and TanStack Query; in 2026 rebuilt the back end on Supabase to run it
+							as a standalone demo.
+						</li>
+						<li>
+							Kept every Rainforest API call in Next.js route handlers behind a 24-hour PostgreSQL price cache and a 30-call daily cap, and added email one-time-code sign-in
+							with row-level security on every table.
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="entry">
+				<div class="row">
+					<h3>IT Department <span class="meta">· Kish Exchange</span></h3>
+					<span class="when">2017 – 2020</span>
+				</div>
+				<ul>
+					<li>Built small WordPress sites and improved project UI and UX through user research and requirements gathering.</li>
+					<li>Designed logos, posters and social media graphics in Photoshop and Illustrator, and produced product tutorial videos.</li>
+				</ul>
+			</div>
+		</section>
+
+		<section>
+			<h2>Projects</h2>
+
+			<div class="entry">
+				<div class="row">
+					<h3>AI Trip Planner <span class="meta">· Full-stack web and mobile app · 2026</span></h3>
+					<span class="links"
+						><a href="https://plan-trip-ai.vercel.app/">plan-trip-ai.vercel.app</a><span class="sep">|</span><a href="https://github.com/heidariomid/ai-trip-planner">Code</a></span
+					>
+				</div>
+				<p class="stack">React Native · Expo Router · TypeScript · Supabase · NativeWind</p>
+				<ul>
+					<li>
+						Built one Expo and React Native codebase in strict TypeScript that runs as an installable web app and on phones; an AI assistant streams its reply as action cards,
+						and nothing is saved until the traveller taps one.
+					</li>
+					<li>Called Gemini and Cloudflare Workers AI only from Supabase Edge Functions, so model keys never reach the app.</li>
+					<li>
+						Enforced owner, editor and viewer roles on shared trips with PostgreSQL row-level security, kept the schema in ordered SQL migrations, and added email and Google
+						sign-in with real account deletion.
+					</li>
+				</ul>
+			</div>
+
+			<div class="entry">
+				<div class="row">
+					<h3>Crypto Prices <span class="meta">· Market data table · 2022, rebuilt 2026</span></h3>
+					<span class="links"
+						><a href="https://cryptocurrenciesprice.vercel.app/">cryptocurrenciesprice.vercel.app</a><span class="sep">|</span
+						><a href="https://github.com/heidariomid/list-of-currencies">Code</a></span
+					>
+				</div>
+				<p class="stack">Next.js · TanStack Query · TypeScript · Tailwind CSS · Vitest</p>
+				<ul>
+					<li>
+						Built a searchable, sortable table of the top 250 cryptocurrencies within CoinGecko’s free rate limit: one request, cached for 5&nbsp;minutes in TanStack Query,
+						and no retries on HTTP 429.
+					</li>
+					<li>Stored page, search and sort in the URL for shareable views, with Vitest and React Testing Library tests.</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="skills">
+			<h2>Skills</h2>
+			<p><span class="label">Front end:</span> React, Next.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, Redux Toolkit, TanStack Query, REST APIs</p>
+			<p><span class="label">Back end (working knowledge):</span> Supabase, PostgreSQL, Payload CMS, Node.js, NestJS, GraphQL, Apollo Client</p>
+			<p><span class="label">Mobile (working knowledge):</span> React Native, Expo, Expo Router, NativeWind</p>
+			<p><span class="label">Testing and tools:</span> Vitest, Jest, React Testing Library (working knowledge); Git, GitHub, Vercel, Figma (basic)</p>
+		</section>
+
+		<section class="edu">
+			<h2>Education</h2>
+			<div class="row">
+				<h4>MSc in Information Technology Management <span class="meta">· Shahid Beheshti University, Tehran</span></h4>
+				<span class="when">2017 – 2019</span>
+			</div>
+			<div class="row">
+				<h4>Bachelor of Business Administration <span class="meta">· Allameh Tabataba’i University, Tehran</span></h4>
+				<span class="when">2011 – 2015</span>
+			</div>
+			<p class="training">Courses: 7Learn (full-stack JavaScript, design patterns), Frontend Masters, Nomad Coders, Code with Mosh, Udemy</p>
+		</section>
+	</body>
+</html>

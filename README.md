@@ -13,7 +13,7 @@
   &nbsp;·&nbsp;
   <a href="https://www.linkedin.com/in/heidariomid/">LinkedIn</a>
   &nbsp;·&nbsp;
-  <a href="https://heidariomid.ir/assets/resume.pdf">Resume</a>
+  <a href="https://heidariomid.ir/assets/omid-heidari-resume.pdf">Resume</a>
   &nbsp;·&nbsp;
   <a href="mailto:contact@heidariomid.ir">Email</a>
 </p>
