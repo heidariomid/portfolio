@@ -60,12 +60,6 @@ const Hero = () => {
 						<div className='relative aspect-[1/1.07] overflow-hidden border' style={{borderColor: 'var(--line-2)', background: 'var(--bg-2)'}}>
 							<span className='absolute -right-px -top-px z-10 h-3.5 w-3.5 border' style={{borderColor: 'var(--fg)', borderLeft: 0, borderBottom: 0}} />
 							<Image src={ProfileImg} alt='Portrait of Omid Heidari' fill sizes='(max-width: 400px) 100vw, 360px' className='hero-photo-img object-cover' />
-							<span
-								className='mono absolute -bottom-px -left-px z-10 px-[0.8rem] py-2 text-[0.7rem] uppercase tracking-widest'
-								style={{background: 'var(--inv-bg)', color: 'var(--inv-fg)'}}
-							>
-								Open to remote
-							</span>
 						</div>
 					</div>
 				</div>

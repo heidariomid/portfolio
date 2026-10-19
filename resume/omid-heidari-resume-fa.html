@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+	<head>
+		<meta charset="utf-8" />
+		<title>امید حیدری – برنامه‌نویس Front-End – رزومه</title>
+		<meta name="author" content="امید حیدری" />
+		<meta name="description" content="رزومه امید حیدری، برنامه‌نویس Front-End: React، Next.js و TypeScript." />
+		<style>
+			@page {
+				size: A4;
+				margin: 12mm 14mm 11mm;
+			}
+
+			/* Vazirmatn (fonts/OFL-Vazirmatn.txt) and DM Mono (fonts/OFL-DMMono.txt) are under the SIL Open Font License. Static TrueType files: Chrome embeds variable fonts as Type 3. */
+			@font-face {
+				font-family: 'Vazirmatn';
+				src: url('fonts/Vazirmatn-Light.ttf') format('truetype');
+				font-weight: 300;
+			}
+
+			@font-face {
+				font-family: 'Vazirmatn';
+				src: url('fonts/Vazirmatn-Regular.ttf') format('truetype');
+				font-weight: 400;
+			}
+
+			@font-face {
+				font-family: 'Vazirmatn';
+				src: url('fonts/Vazirmatn-Medium.ttf') format('truetype');
+				font-weight: 500;
+			}
+
+			@font-face {
+				font-family: 'Vazirmatn';
+				src: url('fonts/Vazirmatn-SemiBold.ttf') format('truetype');
+				font-weight: 600;
+			}
+
+			@font-face {
+				font-family: 'DM Mono';
+				src: url('fonts/DMMono-Regular.ttf') format('truetype');
+				font-weight: 400;
+			}
+
+			@font-face {
+				font-family: 'DM Mono';
+				src: url('fonts/DMMono-Medium.ttf') format('truetype');
+				font-weight: 500;
+			}
+
+			/* Same tokens as omid-heidari-resume.html. */
+			:root {
+				--ink: #141414;
+				--dim: #474747;
+				--faint: #6b6b6b;
+				--rule: #d6d6d6;
+				--accent: #c74d14;
+				--mono: 'DM Mono', 'Vazirmatn', monospace;
+			}
+
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			/* Only the optional Latin ligatures are off; Persian letter joining is required shaping and stays on. */
+			html {
+				font-family: 'Vazirmatn', sans-serif;
+				font-size: 9.2pt;
+				line-height: 1.4;
+				color: var(--ink);
+				font-feature-settings: 'liga' 0, 'clig' 0;
+				-webkit-print-color-adjust: exact;
+				print-color-adjust: exact;
+			}
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 5mm;
+			}
+
+			header > div {
+				flex: 1;
+			}
+
+			/* The name stays the first line of text: ATS parsers take the first line as the candidate's name. */
+			header h1 {
+				font-size: 24pt;
+				font-weight: 600;
+				line-height: 1.15;
+			}
+
+			header h1 .last {
+				font-weight: 300;
+				color: var(--faint);
+			}
+
+			.photo {
+				flex: none;
+				width: 23mm;
+				height: 24.6mm;
+				object-fit: cover;
+				border-radius: 1.2mm;
+			}
+
+			.headline {
+				margin-top: 0.8mm;
+				font-size: 10.8pt;
+				font-weight: 500;
+			}
+
+			.accent {
+				color: var(--accent);
+				font-weight: 600;
+			}
+
+			.contact {
+				margin-top: 1mm;
+				font-size: 8.5pt;
+				color: var(--dim);
+			}
+
+			.contact + .contact {
+				margin-top: 0.2mm;
+			}
+
+			.contact a {
+				color: var(--ink);
+			}
+
+			.status::before {
+				content: '';
+				display: inline-block;
+				width: 1.5mm;
+				height: 1.5mm;
+				margin-inline-end: 1.3mm;
+				border-radius: 50%;
+				background: var(--accent);
+				vertical-align: 0.05em;
+			}
+
+			.sep {
+				color: var(--faint);
+				padding: 0 0.45em;
+			}
+
+			section {
+				margin-top: 3mm;
+			}
+
+			/* The rule is a box, not text, so the heading still extracts as one word. */
+			h2 {
+				display: flex;
+				align-items: center;
+				gap: 3mm;
+				margin-bottom: 1mm;
+				font-size: 11.5pt;
+				font-weight: 600;
+				line-height: 1.2;
+				color: var(--accent);
+			}
+
+			h2::after {
+				content: '';
+				flex: 1;
+				height: 0.6pt;
+				background: var(--rule);
+			}
+
+			.entry + .entry {
+				margin-top: 2.2mm;
+			}
+
+			.row {
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+				gap: 4mm;
+			}
+
+			h3 {
+				font-size: 10pt;
+				font-weight: 600;
+			}
+
+			h4 {
+				font-size: 9.4pt;
+				font-weight: 600;
+			}
+
+			h3 .meta,
+			h4 .meta {
+				font-weight: 400;
+				color: var(--dim);
+			}
+
+			.sub {
+				margin-top: 1.5mm;
+			}
+
+			.when {
+				font-size: 8.6pt;
+				color: var(--dim);
+			}
+
+			.links,
+			.stack {
+				font-family: var(--mono);
+				font-size: 7.9pt;
+				color: var(--dim);
+			}
+
+			.when,
+			.links {
+				flex: none;
+				white-space: nowrap;
+			}
+
+			.links a {
+				color: var(--accent);
+				font-weight: 500;
+			}
+
+			.stack {
+				color: var(--ink);
+			}
+
+			.lead {
+				color: var(--dim);
+			}
+
+			ul {
+				margin-top: 0.3mm;
+				padding-inline-start: 3.6mm;
+			}
+
+			li {
+				padding-inline-start: 0.6mm;
+			}
+
+			li + li {
+				margin-top: 0.2mm;
+			}
+
+			li::marker {
+				color: var(--accent);
+			}
+
+			.label {
+				font-weight: 600;
+			}
+
+			.edu .row + .row {
+				margin-top: 0.3mm;
+			}
+
+			.training {
+				margin-top: 0.6mm;
+				color: var(--dim);
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div>
+				<h1>امید <span class="last">حیدری</span></h1>
+				<p class="headline">برنامه‌نویس Front-End · <span class="accent">React، Next.js و TypeScript</span></p>
+				<p class="contact">
+					<a href="tel:+989373798553">+98 937 379 8553</a><span class="sep">|</span><a href="mailto:contact@heidariomid.ir">contact@heidariomid.ir</a><span class="sep">|</span><a href="https://heidariomid.ir/">heidariomid.ir</a>
+				</p>
+				<p class="contact">
+					<a href="https://github.com/heidariomid">github.com/heidariomid</a><span class="sep">|</span><a href="https://www.linkedin.com/in/heidariomid/">linkedin.com/in/heidariomid</a>
+				</p>
+				<p class="contact"><span class="status">آماده همکاری دورکاری</span><span class="sep">|</span>وضعیت نظام وظیفه: معاف</p>
+			</div>
+			<img class="photo" src="../public/assets/images/omid-heidari.jpeg" alt="عکس امید حیدری" />
+		</header>
+
+		<section>
+			<h2>خلاصه</h2>
+			<p>
+				برنامه‌نویس Front-End با رویکرد تحویل کامل هر قابلیت: رابط کاربری React و Next.js با TypeScript در حالت strict و بک‌اند موردنیاز آن، از row-level security در
+				PostgreSQL تا headless CMS و فراخوانی API در سمت سرور که کلیدها را از مرورگر دور نگه می‌دارد. فعالیت فریلنسری از ۱۴۰۰، با یک سایت مشتری در حال بهره‌برداری.
+				علاقه‌مند به نقش Front-End یا Full-Stack در یک تیم محصول.
+			</p>
+		</section>
+
+		<section>
+			<h2>تجربه کاری</h2>
+
+			<div class="entry">
+				<div class="row">
+					<h3>توسعه‌دهنده وب فریلنسر</h3>
+					<span class="when">۱۴۰۰ – اکنون</span>
+				</div>
+				<p class="lead">ساخت وب‌اپلیکیشن برای مشتریان کوچک، از دریافت نیازمندی‌ها و انتخاب فناوری تا استقرار و تحویل پروژه.</p>
+
+				<div class="sub">
+					<div class="row">
+						<h4>قناد باشی عسل <span class="meta">· سایت سفارش آنلاین قنادی خانگی · ۱۴۰۵</span></h4>
+						<span class="links"
+							><a href="https://ghanadbashiasal.ir/">ghanadbashiasal.ir</a><span class="sep">|</span><a href="https://github.com/heidariomid/ghanadbashi-asal">کد</a></span
+						>
+					</div>
+					<p class="stack">Next.js · Payload CMS · PostgreSQL · TypeScript · Tailwind CSS</p>
+					<ul>
+						<li>
+							راه‌اندازی سایت سفارش آنلاین فارسی و راست‌چین با Next.js 16 App Router، Payload CMS 3 و PostgreSQL؛ صاحب کسب‌وکار بدون دانش برنامه‌نویسی، محصولات، قیمت‌ها،
+							عکس‌ها و سفارش‌ها را از پنل مدیریت فارسی آن اداره می‌کند.
+						</li>
+						<li>انتخاب Payload به‌جای Sanity (نبود ویرایشگر فارسی) و WordPress (نگهداری افزونه‌ها) و ادغام آن در خود اپلیکیشن Next.js.</li>
+						<li>
+							پیاده‌سازی سبد خرید و فرایند سفارش: شماره سفارش به سبک فروشگاهی، بارگذاری رسید بیعانه، پیامک SMS.ir به قناد برای سفارش جدید و به مشتری با هر تغییر وضعیت، کد
+							یک‌بارمصرف اختیاری با شماره موبایل و revalidation صفحات هنگام تغییر محتوا.
+						</li>
+					</ul>
+				</div>
+
+				<div class="sub">
+					<div class="row">
+						<h4>Amazon.ae Shop <span class="meta">· فروشگاه فارسی خرید از Amazon.ae · ۱۴۰۲، بازسازی ۱۴۰۵</span></h4>
+						<span class="links"
+							><a href="https://amazon-ae.vercel.app/">amazon-ae.vercel.app</a><span class="sep">|</span><a href="https://github.com/heidariomid/amazon-ae">کد</a></span
+						>
+					</div>
+					<p class="stack">Next.js · Redux Toolkit · TanStack Query · Supabase · Tailwind CSS</p>
+					<ul>
+						<li>
+							ساخت فرانت‌اند فروشگاه WooCommerce یک مشتری در ۱۴۰۲ با Next.js، Redux Toolkit و TanStack Query؛ بازسازی بک‌اند روی Supabase در ۱۴۰۵ برای اجرا به‌صورت دموی
+							مستقل.
+						</li>
+						<li>
+							انجام همه فراخوانی‌های Rainforest API در route handlerهای Next.js، پشت کش ۲۴ ساعته قیمت در PostgreSQL و سقف ۳۰ فراخوانی در روز، به‌همراه ورود با کد یک‌بارمصرف
+							ایمیلی و row-level security روی همه جدول‌ها.
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="entry">
+				<div class="row">
+					<h3>واحد فناوری اطلاعات <span class="meta">· صرافی کیش</span></h3>
+					<span class="when">۱۳۹۶ – ۱۳۹۹</span>
+				</div>
+				<ul>
+					<li>ساخت وب‌سایت‌های کوچک با WordPress و بهبود UI و UX پروژه‌ها از طریق تحقیق کاربر و جمع‌آوری نیازمندی‌ها.</li>
+					<li>طراحی لوگو، پوستر و گرافیک شبکه‌های اجتماعی با Photoshop و Illustrator و تولید ویدیوهای آموزشی محصولات.</li>
+				</ul>
+			</div>
+		</section>
+
+		<section>
+			<h2>پروژه‌ها</h2>
+
+			<div class="entry">
+				<div class="row">
+					<h3>AI Trip Planner <span class="meta">· اپلیکیشن Full-Stack وب و موبایل · ۱۴۰۵</span></h3>
+					<span class="links"
+						><a href="https://plan-trip-ai.vercel.app/">plan-trip-ai.vercel.app</a><span class="sep">|</span><a href="https://github.com/heidariomid/ai-trip-planner">کد</a></span
+					>
+				</div>
+				<p class="stack">React Native · Expo Router · TypeScript · Supabase · NativeWind</p>
+				<ul>
+					<li>
+						ساخت یک کدبیس واحد با Expo و React Native در TypeScript با حالت strict که به‌صورت وب‌اپ قابل نصب و روی گوشی اجرا می‌شود؛ دستیار هوش مصنوعی پاسخ را به‌صورت جریانی
+						در قالب کارت‌های اقدام نمایش می‌دهد و تا مسافر یکی را انتخاب نکند، چیزی ذخیره نمی‌شود.
+					</li>
+					<li>فراخوانی Gemini و Cloudflare Workers AI فقط از طریق Supabase Edge Functions، تا کلیدهای مدل هرگز به اپلیکیشن نرسند.</li>
+					<li>
+						اعمال نقش‌های owner، editor و viewer برای سفرهای اشتراکی با row-level security در PostgreSQL، نگهداری schema در migrationهای مرتب SQL و ورود با ایمیل و Google
+						همراه با حذف واقعی حساب کاربری.
+					</li>
+				</ul>
+			</div>
+
+			<div class="entry">
+				<div class="row">
+					<h3>Crypto Prices <span class="meta">· جدول قیمت رمزارزها · ۱۴۰۱، بازسازی ۱۴۰۵</span></h3>
+					<span class="links"
+						><a href="https://cryptocurrenciesprice.vercel.app/">cryptocurrenciesprice.vercel.app</a><span class="sep">|</span
+						><a href="https://github.com/heidariomid/list-of-currencies">کد</a></span
+					>
+				</div>
+				<p class="stack">Next.js · TanStack Query · TypeScript · Tailwind CSS · Vitest</p>
+				<ul>
+					<li>
+						ساخت جدول قابل جست‌وجو و مرتب‌سازی ۲۵۰ رمزارز برتر در محدوده rate limit رایگان CoinGecko: یک درخواست، کش ۵ دقیقه‌ای در TanStack Query و بدون تلاش مجدد در پاسخ
+						HTTP 429.
+					</li>
+					<li>نگهداری صفحه، جست‌وجو و مرتب‌سازی در URL برای اشتراک‌گذاری نما، همراه با تست‌های Vitest و React Testing Library.</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="skills">
+			<h2>مهارت‌ها</h2>
+			<p><span class="label">فرانت‌اند:</span> React، Next.js، TypeScript، JavaScript، HTML، CSS، Tailwind CSS، Redux Toolkit، TanStack Query، REST API</p>
+			<p><span class="label">بک‌اند (آشنایی کاربردی):</span> Supabase، PostgreSQL، Payload CMS، Node.js، NestJS، GraphQL، Apollo Client</p>
+			<p><span class="label">موبایل (آشنایی کاربردی):</span> React Native، Expo، Expo Router، NativeWind</p>
+			<p><span class="label">تست و ابزارها:</span> Vitest، Jest، React Testing Library (آشنایی کاربردی)؛ Git، GitHub، Vercel، Figma (مقدماتی)</p>
+			<p><span class="label">زبان:</span> انگلیسی (متوسط)</p>
+		</section>
+
+		<section class="edu">
+			<h2>تحصیلات</h2>
+			<div class="row">
+				<h4>کارشناسی ارشد مدیریت فناوری اطلاعات <span class="meta">· دانشگاه شهید بهشتی، تهران</span></h4>
+				<span class="when">۱۳۹۶ – ۱۳۹۸</span>
+			</div>
+			<div class="row">
+				<h4>کارشناسی مدیریت بازرگانی <span class="meta">· دانشگاه علامه طباطبائی، تهران</span></h4>
+				<span class="when">۱۳۹۰ – ۱۳۹۴</span>
+			</div>
+			<p class="training">دوره‌ها: 7Learn (فول‌استک JavaScript و الگوهای طراحی)، Frontend Masters، Nomad Coders، Code with Mosh، Udemy</p>
+		</section>
+
+		<script>
+			// Each run of Latin words becomes its own left-to-right isolate. Without it the bidi algorithm merges "React، Next.js"
+			// into one left-to-right block and Persian readers meet the list items in reverse.
+			const LATIN = /(\+?[A-Za-z0-9](?:[A-Za-z0-9.+#@\/\-]*[A-Za-z0-9+#])?(?: [A-Za-z0-9](?:[A-Za-z0-9.+#@\/\-]*[A-Za-z0-9+#])?)*)/;
+			const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+			const nodes = [];
+			while (walker.nextNode()) if (walker.currentNode.parentNode.nodeName !== 'SCRIPT') nodes.push(walker.currentNode);
+			for (const node of nodes) {
+				const parts = node.nodeValue.split(LATIN);
+				if (parts.length === 1) continue;
+				const fragment = document.createDocumentFragment();
+				parts.forEach((part, i) => {
+					if (i % 2 === 0) return part && fragment.append(part);
+					const run = document.createElement('span');
+					run.dir = 'ltr';
+					run.textContent = part;
+					fragment.append(run);
+				});
+				node.replaceWith(fragment);
+			}
+		</script>
+	</body>
+</html>

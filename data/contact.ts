@@ -4,4 +4,4 @@ export const GITHUB_LABEL = 'github.com/heidariomid';
 export const GITHUB_URL = 'https://github.com/heidariomid';
 export const LINKEDIN_LABEL = 'linkedin.com/in/heidariomid';
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/heidariomid/';
-export const RESUME_URL = '/assets/omid-heidari-resume.pdf';
+export const RESUME_URL = '/assets/omid-heidari-resume-v2-en.pdf';

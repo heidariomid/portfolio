@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Omid Heidari – Front-End Developer – Resume</title>
+		<meta name="author" content="Omid Heidari" />
+		<meta name="description" content="Resume of Omid Heidari, front-end developer: React, Next.js, TypeScript." />
+		<script>
+			if (location.hash === '#ats') document.documentElement.dataset.variant = 'ats';
+		</script>
+		<link rel="stylesheet" href="resume.css" />
+	</head>
+	<body>
+		<header>
+			<div>
+				<h1>Omid <span class="last">Heidari</span></h1>
+				<p class="headline">Front-End Developer · <span class="accent">React, Next.js, TypeScript</span></p>
+				<p class="contact">
+					<a href="mailto:contact@heidariomid.ir">contact@heidariomid.ir</a><span class="sep">|</span><a href="https://heidariomid.ir/">heidariomid.ir</a><span class="sep">|</span><a href="https://github.com/heidariomid">github.com/heidariomid</a><span class="sep">|</span><a href="https://www.linkedin.com/in/heidariomid/">linkedin.com/in/heidariomid</a>
+				</p>
+			</div>
+			<p class="where"><span>Kish Island, Iran</span><span class="sep ats-only">|</span><span class="status">Open to remote work and relocation</span></p>
+		</header>
+
+		<section>
+			<h2>Summary</h2>
+			<p>
+				Front-end developer specializing in React, Next.js and TypeScript, building ordering, e-commerce and AI-assisted web and mobile apps with the back end they need.
+				Freelancing since 2021, with a client ordering site live in production.
+			</p>
+		</section>
+
+		<section>
+			<h2>Experience</h2>
+
+			<div class="entry">
+				<div class="row">
+					<h3>Freelance Web Developer <span class="meta">· Sole developer on client projects</span></h3>
+					<span class="when">2021 – Present</span>
+				</div>
+
+				<div class="sub">
+					<div class="row">
+						<h4>Ghanad Bashi Asal <span class="meta">· Client project, live · 2026</span></h4>
+						<span class="links"
+							><a href="https://ghanadbashiasal.ir/">ghanadbashiasal.ir</a><span class="sep">|</span
+							><a href="https://github.com/heidariomid/ghanadbashi-asal"><span class="short">Code</span><span class="full">github.com/heidariomid/ghanadbashi-asal</span></a></span
+						>
+					</div>
+					<p class="stack"><span class="ats-only">Stack: </span>Next.js 16 · Payload CMS 3 · PostgreSQL · TypeScript · Tailwind CSS</p>
+					<ul>
+						<li>
+							Delivered and handed over a home bakery’s ordering site: the owner, who does not code, updates products, prices and photos and tracks orders in a Persian
+							admin, and pages refresh as soon as content changes.
+						</li>
+						<li>Chose Payload over Sanity (no Persian admin) and WordPress (ongoing upkeep), running it inside Next.js.</li>
+						<li>
+							Implemented the order flow: cart, shop-style order numbers, deposit-receipt upload, SMS.ir texts to the baker for new orders and to customers on status changes,
+							and optional phone one-time codes.
+						</li>
+					</ul>
+				</div>
+
+				<div class="sub">
+					<div class="row">
+						<h4>Amazon.ae Shop <span class="meta">· Client project · 2023, rebuilt 2026</span></h4>
+						<span class="links"
+							><a href="https://amazon-ae.vercel.app/">amazon-ae.vercel.app</a><span class="sep">|</span
+							><a href="https://github.com/heidariomid/amazon-ae"><span class="short">Code</span><span class="full">github.com/heidariomid/amazon-ae</span></a></span
+						>
+					</div>
+					<p class="stack"><span class="ats-only">Stack: </span>Next.js · Redux Toolkit · TanStack Query · Supabase · Tailwind CSS</p>
+					<ul>
+						<li>Developed a Persian Amazon.ae storefront for a client’s WooCommerce shop, since rebuilt on Supabase as a demo.</li>
+						<li>
+							Routed every Rainforest API call through Next.js Route Handlers to keep the key off the browser; a 24-hour PostgreSQL price cache and a 30-call daily cap
+							keep the demo free to run.
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="entry">
+				<div class="row">
+					<h3>Web and Graphic Design <span class="meta">· IT Department, Kish Exchange</span></h3>
+					<span class="when">2017 – 2020</span>
+				</div>
+				<ul>
+					<li>Built small WordPress sites and improved project UI through user research and requirements gathering.</li>
+					<li>Designed logos, posters and social media graphics in Photoshop and Illustrator, and made product tutorial videos.</li>
+				</ul>
+			</div>
+		</section>
+
+		<section>
+			<h2>Personal Projects</h2>
+
+			<div class="entry">
+				<div class="row">
+					<h3>AI Trip Planner <span class="meta">· Web and mobile app · 2026</span></h3>
+					<span class="links"
+						><a href="https://plan-trip-ai.vercel.app/">plan-trip-ai.vercel.app</a><span class="sep">|</span
+						><a href="https://github.com/heidariomid/ai-trip-planner"><span class="short">Code</span><span class="full">github.com/heidariomid/ai-trip-planner</span></a></span
+					>
+				</div>
+				<p class="stack"><span class="ats-only">Stack: </span>React Native · Expo Router · TypeScript · Supabase · NativeWind</p>
+				<ul>
+					<li>
+						Built one Expo codebase that runs as an installable web app and on phones; an AI assistant drafts days, places, bookings and a packing list as streamed
+						action cards, and nothing is saved until the user taps one.
+					</li>
+					<li>Called Gemini and Cloudflare Workers AI only from Supabase Edge Functions, so no API key ships with the app.</li>
+					<li>Enforced owner, editor and viewer roles with PostgreSQL row-level security (RLS), defined in ordered SQL migrations.</li>
+				</ul>
+			</div>
+
+			<div class="entry">
+				<div class="row">
+					<h3>Crypto Prices <span class="meta">· 2022, rebuilt 2026</span></h3>
+					<span class="links"
+						><a href="https://cryptocurrenciesprice.vercel.app/">cryptocurrenciesprice.vercel.app</a><span class="sep">|</span
+						><a href="https://github.com/heidariomid/list-of-currencies"><span class="short">Code</span><span class="full">github.com/heidariomid/list-of-currencies</span></a></span
+					>
+				</div>
+				<p class="stack"><span class="ats-only">Stack: </span>Next.js · TanStack Query · TypeScript · Tailwind CSS · Vitest</p>
+				<ul>
+					<li>
+						Fit a searchable, sortable table of the top 250 cryptocurrencies into CoinGecko’s free rate limit: one request loads the list, TanStack Query caches it for
+						five minutes, and HTTP&nbsp;429 responses are not retried.
+					</li>
+					<li>Kept page, search and sort in the URL for shareable views, tested with Vitest and React Testing Library.</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="skills">
+			<h2>Skills</h2>
+			<p>
+				<span class="label">Front end (proficient):</span> React, Next.js, TypeScript, JavaScript, HTML, CSS, Tailwind&nbsp;CSS, Redux&nbsp;Toolkit, TanStack&nbsp;Query,
+				REST&nbsp;APIs, right-to-left (RTL) layouts
+			</p>
+			<p><span class="label">Back end (working knowledge):</span> Supabase, PostgreSQL, Payload&nbsp;CMS, Node.js, NestJS, GraphQL, Apollo&nbsp;Client</p>
+			<p><span class="label">Mobile and testing (working knowledge):</span> React&nbsp;Native, Expo, Vitest, Jest, React&nbsp;Testing&nbsp;Library</p>
+			<div class="pair">
+				<p><span class="label">Tools:</span> Git, GitHub, Vercel; Cypress and Figma (basic)</p>
+				<p><span class="label">Languages:</span> Persian (native), English (intermediate)</p>
+			</div>
+		</section>
+
+		<section class="edu">
+			<h2>Education</h2>
+			<div class="row">
+				<h4>MSc in Information Technology Management <span class="meta">· Shahid Beheshti University, Tehran</span></h4>
+				<span class="when">2017 – 2019</span>
+			</div>
+			<div class="row">
+				<h4>Bachelor of Business Administration <span class="meta">· Allameh Tabataba’i University, Tehran</span></h4>
+				<span class="when">2011 – 2015</span>
+			</div>
+			<p class="training">Courses: Frontend Masters, 7Learn (full-stack JavaScript), Nomad Coders, Code with Mosh</p>
+		</section>
+	</body>
+</html>

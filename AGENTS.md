@@ -37,8 +37,7 @@ before writing App Router, metadata, font, or image code.
  LinkedIn and resume URLs. Components import them; nothing else in `app/` or
  `components/` spells them out. There is no phone number on the site.
 - **Resume:** `resume/omid-heidari-resume.html` is the one source of
- `public/assets/omid-heidari-resume.pdf` and `.docx`, and `RESUME_URL` points
- at that PDF. `bash resume/build.sh` prints the PDF with headless Google Chrome
+ `public/assets/omid-heidari-resume.pdf` and `.docx`. `bash resume/build.sh` prints the PDF with headless Google Chrome
  on macOS, fails unless it is one A4 page, then runs `resume/build-docx.py`
  (needs `python-docx`), which reads the same HTML. The design follows the site
  (accent `#ff631a` darkened to `#c74d14` for small text, DM Mono for dates,
@@ -46,6 +45,22 @@ before writing App Router, metadata, font, or image code.
  embeds General Sans as Type 3 fonts and its licence forbids converting the
  files; DM Mono is the OFL copy in `resume/fonts/`. The `.docx` uses Arial and
  Consolas so Windows renders it the same.
+ `resume/omid-heidari-resume-fa.html` is the Persian translation and the source
+ of `omid-heidari-resume-fa.pdf` (built by the same script, also one page). It
+ follows Iranian norms: photo, phone, military status, Solar Hijri years in
+ Persian digits, Vazirmatn (static TTFs, OFL). Its inline script wraps each run
+ of English words in a left-to-right isolate so lists keep right-to-left order.
+ It is the only resume with the phone number; it is not linked from the site.
+ `resume/v2/` holds the rewritten 2026 resumes: `en.html` and `fa.html` share
+ `resume.css`. `bash resume/v2/build.sh` prints each twice into
+ `public/assets/omid-heidari-resume-v2-{en,en-ats,fa,fa-ats}.pdf` and fails
+ unless each is one page. The `#ats` URL hash switches to the plain layout:
+ one column, no photo, full URLs, all-ink text, labelled stack lines. Facts
+ are the same in all four; only the Persian ones carry the phone number and
+ military status. v2's accent is the 2023 resume's teal `#307584`, not the
+ site orange. The header gives Kish Island, Iran, open to remote work and
+ relocation. The v1 files above are left as they are. `RESUME_URL` and the
+ README link point at `omid-heidari-resume-v2-en.pdf`.
  `public/assets/resume.pdf` and `resume.docx` are the 2023 versions, kept on
  purpose and no longer linked.
 - **Content facts:** degree is MSc IT Management (Shahid Beheshti, 2019).
